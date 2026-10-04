@@ -1,0 +1,16 @@
+name = "introspection-twin"
+# `lake build` builds the library AND runs the hostile tests (a wrong verdict is a build error).
+defaultTargets = ["IntrospectionTwin", "Test"]
+
+[[lean_lib]]
+name = "IntrospectionTwin"
+
+[[lean_lib]]
+name = "Test"
+globs = ["Test.+"]
+
+# Deliberately poisoned: adds a declaration WITHOUT kernel checking. Never a default target.
+# Built only by scripts/check_kernel_replay.sh, which requires lean4checker to reject it.
+[[lean_lib]]
+name = "Bypass"
+globs = ["Bypass.+"]

@@ -1,0 +1,62 @@
+# Build + hostile suite + independent kernel replay, on every push and PR.
+# Nightly: FRESH replay (library + Init + Lean from scratch, ~5 min on the author's machine).
+#
+# The replay record artifact names the exact commit and toolchain that passed. It is NOT
+# signed by this workflow. For a signed, commit-bound record, add GitHub artifact attestations
+# (actions/attest-build-provenance) once the repo's plan supports them.
+name: ci
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 7 * * *"   # nightly FRESH replay
+
+jobs:
+  build-and-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan (toolchain comes from lean-toolchain)
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Build library and run hostile suite (a wrong verdict fails the build)
+        run: |
+          lake build 2>&1 | tee build.log
+          ! grep -q '^warning' build.log || { echo "warnings are failures"; exit 1; }
+
+      - name: Build lean4checker at the matching toolchain tag
+        run: |
+          tag="$(sed 's/.*://' lean-toolchain)"          # leanprover/lean4:v4.22.0 -> v4.22.0
+          git clone --depth 1 --branch "$tag" https://github.com/leanprover/lean4checker /tmp/lean4checker
+          (cd /tmp/lean4checker && lake build lean4checker)
+
+      - name: Independent kernel replay
+        env:
+          LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
+          FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: scripts/check_kernel_replay.sh | tee replay.log
+
+      - name: Replay record
+        if: always()
+        run: |
+          {
+            echo "commit:    $GITHUB_SHA"
+            echo "toolchain: $(cat lean-toolchain)"
+            echo "fresh:     ${{ github.event_name == 'schedule' }}"
+            echo "result:    $(tail -1 replay.log 2>/dev/null || echo 'not run')"
+          } > replay-record.txt
+          cat replay-record.txt
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: replay-record
+          path: |
+            replay-record.txt
+            replay.log
+            build.log
