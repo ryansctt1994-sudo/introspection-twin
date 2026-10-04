@@ -14,6 +14,7 @@
 #   * every library and honest test module replays cleanly, and
 #   * both poisoned modules are REFUSED, each for its own expected reason.
 set -u
+set -o pipefail
 cd "$(dirname "$0")/.."
 LC="${LEAN4CHECKER:-lean4checker}"
 command -v "$LC" >/dev/null 2>&1 || [ -x "$LC" ] || { echo "lean4checker not found (set LEAN4CHECKER)"; exit 1; }

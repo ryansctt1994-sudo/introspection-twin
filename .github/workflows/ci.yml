@@ -39,7 +39,10 @@ jobs:
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
           FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: scripts/check_kernel_replay.sh | tee replay.log
+        run: |
+          set -o pipefail
+          bash scripts/check_kernel_replay.sh | tee replay.log
+          grep -q 'KERNEL REPLAY: PASS' replay.log
 
       - name: Replay record
         if: always()
