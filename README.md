@@ -1,8 +1,5 @@
 # IntrospectionTwin v0.1.1
 
-> [!NOTE]
-> **Portfolio evidence status (2026-10-06): E2 / W0 / O0.** Local builds, hostile tests, kernel replay, or externally reported reruns remain bounded evidence. No run is admitted as portfolio-independent reproduction unless its operator/environment/receipt satisfy the portfolio witness criteria.
-
 Lean 4 receipt lattice and authority gate. v0.1 is an evolution of the MIT IntrospectionTwin v0,
 which is itself an independent reimplementation of the kernel-receipt pattern from the
 meta-introspector repositories. No code is imported from `lean-worker`, `aok`,
@@ -37,7 +34,7 @@ verdict. lean4checker must be built at tag `v4.22.0` (instructions in the script
 
 | v0 | v0.1 | Why |
 | --- | --- | --- |
-| The **pasted draft** did not build on v4.22.0 (4 errors in `Receipt.lean`, 1 in `State.lean`). The actual `weaver/introspection-twin` tree had already been rewritten past these and did build (externally reported replay, 2026-10-04; not admitted as portfolio-independent evidence without a qualifying receipt) | Builds clean from zero | `rfl` can't see through `match r.status`; `<;> [a; b]` doesn't parse; `injection` fails on `do`-blocks |
+| The **pasted draft** did not build on v4.22.0 (4 errors in `Receipt.lean`, 1 in `State.lean`). The actual `weaver/introspection-twin` tree had already been rewritten past these and did build (externally reported rerun, 2026-10-04; not admitted as a qualifying portfolio-independent witness without a bound operator/environment/receipt) | Builds clean from zero | `rfl` can't see through `match r.status`; `<;> [a; b]` doesn't parse; `injection` fails on `do`-blocks |
 | Public constructors: `{ status := .kernel_checked, .. }` was a valid receipt | `private mk` on `Receipt` and `ReplayWitness`; public `Receipt.sketch` / `.foreign` open receipts only | Forgery (proved by the test file failing to compile 5 ways) |
 | Witness dropped on promotion | Retained (`witness : Option ReplayWitness`) | End-to-end theorem was unprovable |
 | Gate checked the receipt's *declared* allowance | Gate checks the retained witness against the *condition's* allowance | `evaluateGate_sound` now needs no hypotheses |
@@ -82,18 +79,23 @@ library's own theorems are run through its own gate there.
 Case 10 is the point: `collectAxioms` cannot see what the kernel never checked. Without
 `check_kernel_replay.sh` in CI, the gate can be handed a proof of `False`.
 
-## Kernel replay (author-reported until replayed on your side)
+## Kernel replay evidence
 
-Run on the author's machine; the externally reported replay of 2026-10-04 confirmed `lake build` and
-the hostile suite; it is not admitted as portfolio-independent evidence without a qualifying witness receipt but did not have lean4checker installed. `.github/workflows/ci.yml` runs the
-same replay on your runner and uploads a record naming the commit and toolchain.
+PR #1 at `bb6f2d34d382d598e3505360d022c963553e7432` has a hosted same-project CI
+record: [run 37652322604](https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/37652322604).
+That run executed the repaired driver, passed 10 shell-driver regressions, built with
+Lean 4.22.0, replayed 10 honest modules, and refused both expected poisoned modules.
 
 ```
-Honest modules (must replay):     10 / 10 replay ok   (discovered from the source tree)
-Poisoned modules (must be refused): Bypass.KernelBypass  refused ('bypass_false' has type)
-                                    Test.NativeDecide    refused (_nativeDecide_)
-FRESH replay of IntrospectionTwin + Init + Lean: ok, 277 s
+Honest modules (must replay):       10 / 10 replay ok
+Poisoned modules (must be refused): Bypass.KernelBypass  refused
+                                    Test.NativeDecide    refused
+Hosted run freshness:               FRESH=0
 ```
+
+The hosted run is not a qualifying independent witness: it is same-project CI, and the
+full dependency replay was not performed in that run. The earlier 2026-10-04 rerun is
+preserved as an externally reported rerun, not promoted to portfolio-independent evidence.
 
 Modules are discovered from the tree, not listed by hand: a module missing from a list is a
 module nobody checked.

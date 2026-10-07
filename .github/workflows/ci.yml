@@ -18,6 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Test replay driver failure handling (stub toolchain)
+        run: python3 -m unittest discover -s scripts/tests -v
+
       - name: Install elan (toolchain comes from lean-toolchain)
         run: |
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
@@ -39,7 +42,10 @@ jobs:
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
           FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: scripts/check_kernel_replay.sh | tee replay.log
+        run: |
+          set -o pipefail
+          bash scripts/check_kernel_replay.sh | tee replay.log
+          grep -qx 'KERNEL REPLAY: PASS' replay.log
 
       - name: Replay record
         if: always()
