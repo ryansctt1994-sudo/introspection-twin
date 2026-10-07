@@ -15,7 +15,7 @@
 #   * both poisoned modules are REFUSED, each for its own expected reason.
 set -u
 set -o pipefail
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/.." || exit 1
 LC="${LEAN4CHECKER:-lean4checker}"
 command -v "$LC" >/dev/null 2>&1 || [ -x "$LC" ] || { echo "lean4checker not found (set LEAN4CHECKER)"; exit 1; }
 
@@ -36,7 +36,12 @@ must_refuse() {  # module, expected substring of the refusal
 # Discover modules from the source tree: a module missing from a hand-written list would
 # never be replayed. Every module is checked unless it is one of the two known-poisoned ones.
 POISONED="Bypass.KernelBypass Test.NativeDecide"
-mods=$(find IntrospectionTwin Test -name '*.lean' | sed 's/\.lean$//; s#/#.#g' | sort; echo IntrospectionTwin)
+if ! mods=$(find IntrospectionTwin Test Bypass -name '*.lean' | sed 's/\.lean$//; s#/#.#g' | sort); then
+  echo "FAIL: module discovery"
+  exit 1
+fi
+[ -f IntrospectionTwin.lean ] || { echo "FAIL: missing root module"; exit 1; }
+mods=$(printf '%s\n' "$mods" IntrospectionTwin)
 echo "Honest modules (must replay):"
 n=0
 for m in $mods; do
