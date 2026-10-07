@@ -1,0 +1,14 @@
+# Gate Zero ownership scaffold
+# Metadata only: enforcement requires repository branch/ruleset settings.
+* @ryansctt1994-sudo
+
+# Formal/evidence-sensitive paths
+/.github/ @ryansctt1994-sudo
+/IntrospectionTwin/ @ryansctt1994-sudo
+/IntrospectionTwin.lean @ryansctt1994-sudo
+/Bypass/ @ryansctt1994-sudo
+/Test/ @ryansctt1994-sudo
+/scripts/ @ryansctt1994-sudo
+/lakefile.toml @ryansctt1994-sudo
+/lake-manifest.json @ryansctt1994-sudo
+/lean-toolchain @ryansctt1994-sudo
