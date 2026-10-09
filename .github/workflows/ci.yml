@@ -4,6 +4,12 @@
 # The replay record artifact names the exact commit and toolchain that passed. It is NOT
 # signed by this workflow. For a signed, commit-bound record, add GitHub artifact attestations
 # (actions/attest-build-provenance) once the repo's plan supports them.
+#
+# Fail-closed orchestration (reconciliation of PR #1 and PR #4):
+# - The elan installer and lake build are piped; pipefail is required or a failed
+#   producer can be masked by a successful consumer.
+# - Kernel replay is likewise piped. pipefail plus an exact PASS marker is required.
+# Neither check is Lean evidence or an independent witness.
 name: ci
 
 on:
@@ -18,14 +24,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Test fail-closed CI orchestration (stub toolchain)
+        run: python3 -m unittest discover -s scripts/tests -v
+
       - name: Install elan (toolchain comes from lean-toolchain)
         run: |
+          set -o pipefail
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
             | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
       - name: Build library and run hostile suite (a wrong verdict fails the build)
         run: |
+          set -o pipefail
           lake build 2>&1 | tee build.log
           ! grep -q '^warning' build.log || { echo "warnings are failures"; exit 1; }
 
@@ -39,7 +50,10 @@ jobs:
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
           FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: scripts/check_kernel_replay.sh | tee replay.log
+        run: |
+          set -o pipefail
+          bash scripts/check_kernel_replay.sh | tee replay.log
+          grep -qx 'KERNEL REPLAY: PASS' replay.log
 
       - name: Replay record
         if: always()
