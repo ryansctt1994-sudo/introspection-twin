@@ -24,8 +24,12 @@ jobs:
             | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
+      - name: Test build pipeline propagates failed lake exit codes
+        run: python3 -m unittest discover -s scripts/tests -p 'test_ci_build_pipeline.py' -v
+
       - name: Build library and run hostile suite (a wrong verdict fails the build)
         run: |
+          set -o pipefail
           lake build 2>&1 | tee build.log
           ! grep -q '^warning' build.log || { echo "warnings are failures"; exit 1; }
 
