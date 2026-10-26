@@ -26,6 +26,7 @@ jobs:
 
       - name: Build library and run hostile suite (a wrong verdict fails the build)
         run: |
+          set -o pipefail
           lake build 2>&1 | tee build.log
           ! grep -q '^warning' build.log || { echo "warnings are failures"; exit 1; }
 
@@ -39,7 +40,9 @@ jobs:
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
           FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: scripts/check_kernel_replay.sh | tee replay.log
+        run: |
+          set -o pipefail
+          scripts/check_kernel_replay.sh | tee replay.log
 
       - name: Replay record
         if: always()
