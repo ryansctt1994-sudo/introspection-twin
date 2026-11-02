@@ -47,7 +47,13 @@ jobs:
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
           FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: bash scripts/ci_replay_gate.sh
+        run: |
+          # Deliberate workflow-level RED test on this isolated branch ONLY.
+          # Same gate and tee pipeline; the payload prints the exact PASS line,
+          # then exits 23. This must make the GitHub job fail.
+          set -euo pipefail
+          printf '%s\n' '#!/usr/bin/env bash' "printf 'KERNEL REPLAY: PASS\\n'" 'exit 23' > /tmp/replay-exit23.sh
+          bash scripts/ci_replay_gate.sh /tmp/replay-exit23.sh
 
       - name: Replay record
         if: always()
