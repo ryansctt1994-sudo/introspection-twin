@@ -57,10 +57,14 @@ jobs:
             echo "toolchain: $(cat lean-toolchain)"
             echo "fresh:     ${{ github.event_name == 'schedule' }}"
             echo "step_outcome: ${{ steps.kernel-replay.outcome }}"
-            if [[ -s replay.log ]]; then
-              echo "result:    $(tail -n 1 replay.log)"
+            if [[ "${{ steps.kernel-replay.outcome }}" == "success" && -s replay.log ]] \
+               && [[ "$(tail -n 1 replay.log)" == "KERNEL REPLAY: PASS" ]]; then
+              echo "result:    VERIFIED_REPLAY_PASS"
             else
-              echo "result:    NOT_RUN_OR_EMPTY"
+              echo "result:    FAILED_OR_NOT_RUN"
+            fi
+            if [[ -s replay.log ]]; then
+              echo "last_log_line: $(tail -n 1 replay.log)"
             fi
           } > replay-record.txt
           cat replay-record.txt
