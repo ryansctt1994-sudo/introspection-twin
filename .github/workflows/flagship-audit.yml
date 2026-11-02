@@ -1,0 +1,41 @@
+name: flagship-formalization-audit
+
+on:
+  push:
+    paths:
+      - 'Audits/**'
+      - '.github/workflows/flagship-audit.yml'
+  pull_request:
+    paths:
+      - 'Audits/**'
+      - '.github/workflows/flagship-audit.yml'
+
+jobs:
+  flagship-theorem:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned elan toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Build theorem library and adversarial suite
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake build 2>&1 | tee flagship-build.log
+      - name: Print flagship theorem and transitive axioms
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake env lean Audits/Flagship.lean 2>&1 | tee flagship-axioms.log
+          grep -F "'IntrospectionTwin.evaluateGate_sound' depends on axioms: [propext, Quot.sound]" flagship-axioms.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: flagship-audit-output
+          path: |
+            flagship-build.log
+            flagship-axioms.log
