@@ -18,6 +18,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Replay gate negative controls (no Lean dependency)
+        shell: bash
+        run: bash scripts/test_ci_replay_gate.sh
+
       - name: Install elan (toolchain comes from lean-toolchain)
         run: |
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
@@ -25,7 +29,9 @@ jobs:
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
       - name: Build library and run hostile suite (a wrong verdict fails the build)
+        shell: bash
         run: |
+          set -euo pipefail
           lake build 2>&1 | tee build.log
           ! grep -q '^warning' build.log || { echo "warnings are failures"; exit 1; }
 
@@ -36,10 +42,12 @@ jobs:
           (cd /tmp/lean4checker && lake build lean4checker)
 
       - name: Independent kernel replay
+        id: kernel-replay
+        shell: bash
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
           FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: scripts/check_kernel_replay.sh | tee replay.log
+        run: bash scripts/ci_replay_gate.sh
 
       - name: Replay record
         if: always()
@@ -48,7 +56,12 @@ jobs:
             echo "commit:    $GITHUB_SHA"
             echo "toolchain: $(cat lean-toolchain)"
             echo "fresh:     ${{ github.event_name == 'schedule' }}"
-            echo "result:    $(tail -1 replay.log 2>/dev/null || echo 'not run')"
+            echo "step_outcome: ${{ steps.kernel-replay.outcome }}"
+            if [[ -s replay.log ]]; then
+              echo "result:    $(tail -n 1 replay.log)"
+            else
+              echo "result:    NOT_RUN_OR_EMPTY"
+            fi
           } > replay-record.txt
           cat replay-record.txt
 
