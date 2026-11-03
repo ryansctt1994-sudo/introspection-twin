@@ -25,6 +25,9 @@ jobs:
         shell: bash
         run: bash scripts/test_ci_replay_gate.sh
 
+      - name: EARR principal-lineage proposal fixtures (not independent witnessing)
+        run: python3 scripts/test_earr_lineage.py
+
       - name: Install elan (toolchain comes from lean-toolchain)
         run: |
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
