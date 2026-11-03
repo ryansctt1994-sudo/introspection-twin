@@ -49,9 +49,11 @@ must_refuse Test.NativeDecide "_nativeDecide_"
 
 # Optional, slower (~5 min): replay the library AND every dependency (Init, Lean) from scratch.
 if [ "${FRESH:-0}" = "1" ]; then
+  # The CLI treats names as prefixes. A unique leaf importing IntrospectionTwin
+  # selects exactly one .olean and carries its transitive Lean/Init dependencies.
   # Retain raw checker diagnostics even when fresh replay fails.
   # The CI artifact preserves this file without interpreting it as a PASS.
-  if lake env "$LC" --fresh IntrospectionTwin > fresh-replay-output.txt 2>&1; then
+  if lake env "$LC" --fresh Test.FreshReplayRoot > fresh-replay-output.txt 2>&1; then
     echo "  fresh replay ok IntrospectionTwin (+ all dependencies)"
   else
     echo "  FAIL           fresh replay of IntrospectionTwin"
