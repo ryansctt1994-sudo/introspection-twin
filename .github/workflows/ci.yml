@@ -47,27 +47,18 @@ jobs:
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
           FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: bash scripts/ci_replay_gate.sh
+        run: bash scripts/ci_replay_gate.sh scripts/check_kernel_replay.sh replay.log replay-record.txt
 
-      - name: Replay record
+      - name: Inspect observed replay receipt
         if: always()
+        shell: bash
         run: |
-          {
-            echo "commit:    $GITHUB_SHA"
-            echo "toolchain: $(cat lean-toolchain)"
-            echo "fresh:     ${{ github.event_name == 'schedule' }}"
-            echo "step_outcome: ${{ steps.kernel-replay.outcome }}"
-            if [[ "${{ steps.kernel-replay.outcome }}" == "success" && -s replay.log ]] \
-               && [[ "$(tail -n 1 replay.log)" == "KERNEL REPLAY: PASS" ]]; then
-              echo "result:    VERIFIED_REPLAY_PASS"
-            else
-              echo "result:    FAILED_OR_NOT_RUN"
-            fi
-            if [[ -s replay.log ]]; then
-              echo "last_log_line: $(tail -n 1 replay.log)"
-            fi
-          } > replay-record.txt
-          cat replay-record.txt
+          if [[ -s replay-record.txt ]]; then
+            cat replay-record.txt
+          else
+            # Absence denotes no recorded gate execution, not an inferred exit code.
+            echo "REPLAY RECORD: NOT_RUN (no observed receipt was written)"
+          fi
 
       - uses: actions/upload-artifact@v4
         if: always()
