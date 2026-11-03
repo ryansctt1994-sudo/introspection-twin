@@ -1,6 +1,6 @@
 # EARR-IT-075 — seven-field evidence record candidate (NON-CONFORMANT UNTIL SCHEMA IS PROVIDED)
 
-**Status: PRIMARY-SOURCE OBSERVED / PREPARED BY NON-CLAIMANT ASSISTANT / NO INDEPENDENT WITNESS / NOT FORMALLY EARR-ACCEPTED.**
+**Status: FIRST WORKED EXAMPLE / DELEGATED NON-CLAIMANT AGENT UNDER THE SAME PRINCIPAL / INDEPENDENCE CONDITION NOT MET / NOT FORMALLY EARR-ACCEPTED.**
 
 The authoritative EARR v0.2 seven-field schema, required field names and submission endpoint were **not present in the accessible source records**. The **seven fields below are a provisional working mapping, NOT a representation of Richard's official EARR contract**. They are completed factual entries for exactly one run. A human reviewer must independently inspect the GitHub records and map them to the actual form before claiming EARR milestone acceptance.
 
@@ -8,7 +8,7 @@ The authoritative EARR v0.2 seven-field schema, required field names and submiss
 **Record:** EARR-IT-075; repository [introspection-twin](https://github.com/ryansctt1994-sudo/introspection-twin); GitHub Actions [scheduled run #75 / 41660708557](https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/41660708557), job 126002819397 (build-and-replay), 2026-11-03. **Question:** Did the green run execute and complete its scheduled fresh independent Lean kernel replay?
 
 ## Field 2 — Claimant, preparer and independence disclosure
-**Claim source:** GitHub Actions status and the repository's replay workflow/record; underlying CI configuration maintained in the repository controlled by ryansctt1994-sudo. **Evidence preparer:** ChatGPT (GPT-6), inspecting source GitHub job data on 2026-11-03, distinct from the claimant but operating at the repository owner's request. **Independence:** NOT ESTABLISHED; the preparer is not an independently commissioned operator, a human witness, or an accredited reviewer. Richard did not author or sign this entry. No external adjudication is claimed.
+**Claim source:** GitHub Actions status and the repository's replay workflow/record; underlying CI configuration maintained in the repository controlled by ryansctt1994-sudo. **Evidence preparer:** ChatGPT (GPT-6), inspecting source GitHub job data on 2026-11-03, distinct from the claimant **as an agent** but operating at the repository owner's direction **under the same controlling principal**. **Proposed independence classification:** `agent_relation=DIFFERENT_AGENT`, `principal_relation=SAME_PRINCIPAL`, `review_class=DELEGATED_NON_INDEPENDENT`, `independent_witness=false`. **The independence condition is NOT MET**, not merely unverified. The preparer has no independent authority, separate commissioning principal, or independently controlled evidence custody. Richard did not author or sign this entry. No external adjudication is claimed. See [EARR independence amendment proposal](EARR_INDEPENDENCE_AMENDMENT_PROPOSAL_2026-11-03.md).
 
 ## Field 3 — Immutable object and custody references
 - GitHub workflow run ID: **41660708557**; run number **75**; event **schedule**; started **2026-11-03T15:08:14Z**; concluded **success**.
@@ -31,19 +31,19 @@ Job log:
 No kernel-replay PASS sentinel appears in the inspected log. The raw record does **not** expose the numeric replay-process exit status. Do not infer one from the successful final GitHub job conclusion.
 
 ## Field 6 — Discrepancy and narrow verdict
-**Verdict: FALSE-GREEN REPLAY ATTESTATION / NO VERIFIED FRESH REPLAY FOR THIS RUN.** The script invocation was blocked by permissions, and the pipeline (without pipefail) allowed the successful tee command to mask that failure. A record of intent and an empty result were presented under a green workflow outcome. Separate Lean compilation and checker build steps were reported successful; this verdict does not disprove those builds or any Lean theorem. The incident is an evidence-reporting/failure-propagation defect, not an observed malicious modification.
+**Verdict: FALSE-GREEN REPLAY ATTESTATION / SCHEDULED REPLAY DID NOT EXECUTE SUCCESSFULLY IN THIS RUN.** The script invocation was blocked by permissions, and the pipeline (without pipefail) allowed the successful tee command to mask that failure. A record of intent and an empty result were presented under a green workflow outcome. Separate Lean compilation and checker build steps were reported successful; this verdict does not disprove those builds or any Lean theorem. The incident is an evidence-reporting/failure-propagation defect, not an observed malicious modification.
 
 ## Field 7 — Corrective work, reproduction requirements and acceptance
 - Existing fail-closed candidate: [PR #7](https://github.com/ryansctt1994-sudo/introspection-twin/pull/7), which invokes through Bash, enables pipefail, checks exact final marker, and tests negative controls. Its successful candidate CI is NOT a replay of this scheduled source commit and did not validate scheduled fresh mode.
 - Proposed independent, observed-status receipt upgrade: stacked review branch **repair/replay-observed-receipt-20261103**; the gate records actual replay and tee exit statuses, source commit/tree and separate fresh-requested/fresh-observed fields **only after evaluation**.
 - Review gate: independent operator inspects exact GitHub records without first adopting this verdict; compares output, recorded exit, and actual replay evidence; reruns a scheduled FRESH=1 workflow on an authorized merged source commit. Keep EARR acceptance, witness status and production authority withheld until the official schema and independent review are met.
-- **E2 / W0 / O0 — HOLD; no promotion.**
+- **Milestone disposition:** First worked EARR example = YES (provisional seven-field mapping, grounded in primary logs). Required independent preparer/witness = NO (different agent, same principal). Official seven-field schema conformance = UNVERIFIED. External independent review = NOT PERFORMED. **E2 / W0 / O0 — HOLD; no promotion.**
 
 ---
 
 ## Annex A — complete scheduled-run log census
 
-From all 30 scheduled runs returned by GitHub for this repository on 2026-11-03, raw job logs were individually inspected. Every one showed a permission-denied replay invocation, an empty record result, and no kernel PASS sentinel, despite GitHub job success. These are **30 failed replay-verification attestations**, not necessarily failed Lean builds.
+**Across every scheduled run in the available 30-run history (October 5–November 3), the replay invocation failed; all thirty jobs reported green.** From all 30 scheduled runs returned by GitHub for this repository on 2026-11-03, raw job logs were individually inspected. Every one showed a permission-denied replay invocation, an empty record result, and no kernel PASS sentinel, despite GitHub job success. These are **30 failed replay-verification attestations**, not necessarily failed Lean builds.
 
 | Date UTC | Scheduled run ID | GitHub conclusion | Raw replay findings |
 |---|---|---|---|
