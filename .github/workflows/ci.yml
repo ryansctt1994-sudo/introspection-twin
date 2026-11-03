@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Qualify the exact PR source HEAD, not a synthetic merge checkout.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Replay gate negative controls (no Lean dependency)
         shell: bash
@@ -46,7 +49,8 @@ jobs:
         shell: bash
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
-          FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
+          # Exercise actual fresh replay before PR review and on nightly schedule.
+          FRESH: ${{ (github.event_name == 'schedule' || github.event_name == 'pull_request') && '1' || '0' }}
         run: bash scripts/ci_replay_gate.sh scripts/check_kernel_replay.sh replay.log replay-record.txt
 
       - name: Inspect observed replay receipt
