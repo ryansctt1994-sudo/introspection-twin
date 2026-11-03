@@ -101,15 +101,22 @@ class EARRLineageProvisionalTests(unittest.TestCase):
             ReviewClass.UNVERIFIED,
         )
 
-    def test_id_matching_is_exact_not_fuzzy(self):
-        # A near-match in names does not prove principal separation.
-        # Do not silently normalize identity: externally verify the identifiers.
+    def test_principal_whitespace_alias_cannot_fake_separation(self):
         self.assert_class(
             case(preparer_principal="repo-owner ", independent_appointment=True,
                  direct_primary_source_read=True,
                  separately_controlled_evidence_custody=True,
                  conflicts_assessed=True, unfiltered_access=True),
-            ReviewClass.ELIGIBLE_FOR_INDEPENDENT_ASSESSMENT,
+            ReviewClass.DELEGATED_NON_INDEPENDENT,
+        )
+
+    def test_agent_case_alias_cannot_fake_separation(self):
+        self.assert_class(
+            case(preparer_agent="CI-RUNNER", preparer_principal="outside",
+                 independent_appointment=True, direct_primary_source_read=True,
+                 separately_controlled_evidence_custody=True,
+                 conflicts_assessed=True, unfiltered_access=True),
+            ReviewClass.SELF_REVIEW,
         )
 
 
