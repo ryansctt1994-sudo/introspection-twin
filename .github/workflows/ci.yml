@@ -71,4 +71,5 @@ jobs:
           path: |
             replay-record.txt
             replay.log
+            fresh-replay-output.txt
             build.log
