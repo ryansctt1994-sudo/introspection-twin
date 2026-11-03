@@ -43,6 +43,15 @@ def _valid_identifier(value: str | None) -> bool:
     return type(value) is str and bool(value.strip())
 
 
+def _canonical_id(value: str) -> str:
+    """Conservatively collapse case and surrounding whitespace aliases.
+
+    Different strings still do not establish distinct legal principals:
+    identities must ultimately be authenticated outside this model.
+    """
+    return value.strip().casefold()
+
+
 def classify_lineage(case: ReviewLineage) -> ReviewDisposition:
     """Return a conservative lineage classification. Never grant W1 status.
 
@@ -60,11 +69,11 @@ def classify_lineage(case: ReviewLineage) -> ReviewDisposition:
             ReviewClass.UNVERIFIED, False, "missing_or_unverified_identity"
         )
 
-    if case.claimant_agent == case.preparer_agent:
+    if _canonical_id(case.claimant_agent) == _canonical_id(case.preparer_agent):
         return ReviewDisposition(
             ReviewClass.SELF_REVIEW, False, "same_reviewing_agent"
         )
-    if case.claimant_principal == case.preparer_principal:
+    if _canonical_id(case.claimant_principal) == _canonical_id(case.preparer_principal):
         return ReviewDisposition(
             ReviewClass.DELEGATED_NON_INDEPENDENT,
             False, "different_agents_same_controlling_principal",
