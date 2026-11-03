@@ -49,8 +49,16 @@ must_refuse Test.NativeDecide "_nativeDecide_"
 
 # Optional, slower (~5 min): replay the library AND every dependency (Init, Lean) from scratch.
 if [ "${FRESH:-0}" = "1" ]; then
-  if lake env "$LC" --fresh IntrospectionTwin >/dev/null 2>&1; then echo "  fresh replay ok IntrospectionTwin (+ all dependencies)"
-  else echo "  FAIL           fresh replay of IntrospectionTwin"; fail=1; fi
+  # Retain raw checker diagnostics even when fresh replay fails.
+  # The CI artifact preserves this file without interpreting it as a PASS.
+  if lake env "$LC" --fresh IntrospectionTwin > fresh-replay-output.txt 2>&1; then
+    echo "  fresh replay ok IntrospectionTwin (+ all dependencies)"
+  else
+    echo "  FAIL           fresh replay of IntrospectionTwin"
+    echo "  fresh checker diagnostic tail:"
+    tail -n 60 fresh-replay-output.txt
+    fail=1
+  fi
 fi
 
 [ $fail -eq 0 ] && echo "KERNEL REPLAY: PASS" || echo "KERNEL REPLAY: FAIL"
