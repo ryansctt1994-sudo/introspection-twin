@@ -1,0 +1,41 @@
+name: observation-limits-lean
+on:
+  push:
+    paths:
+      - 'Research/ObservationLimits.lean'
+      - '.github/workflows/observation-limits.yml'
+  pull_request:
+    paths:
+      - 'Research/ObservationLimits.lean'
+      - '.github/workflows/observation-limits.yml'
+
+jobs:
+  formal-model:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned Lean toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Rebuild existing library and hostile controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake build 2>&1 | tee observation-library-build.log
+      - name: Elaborate observation limits and print axioms
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake env lean Research/ObservationLimits.lean 2>&1 | tee observation-proofs.log
+          grep -F "depends on axioms:" observation-proofs.log
+          ! grep -F "sorryAx" observation-proofs.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: observation-limits-evidence
+          path: |
+            observation-library-build.log
+            observation-proofs.log
