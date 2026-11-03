@@ -23,7 +23,7 @@ GitHub reported workflow and replay step **success**. The workflow configured FR
 
 ## Field 5 — Direct primary observations (verbatim log excerpts)
 Job log:
-- 2026-11-03T15:08:41.7165117Z Run scripts/check_kernel_replay.sh | tee replay.log
+- 2026-11-03T15:08:41.7164629Z ##[group]Run scripts/check_kernel_replay.sh | tee replay.log
 - 2026-11-03T15:08:41.7254407Z /home/runner/work/_temp/4647a7b2-a052-4bd5-ad96-d365b838cae7.sh: line 1: scripts/check_kernel_replay.sh: Permission denied
 - 2026-11-03T15:08:41.7523156Z fresh:     true
 - 2026-11-03T15:08:41.7523416Z result:
