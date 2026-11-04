@@ -11,6 +11,7 @@ on:
   pull_request:
   schedule:
     - cron: "17 7 * * *"   # nightly FRESH replay
+    - cron: "45 14 4 11 *" # 2026-11-04 qualification; remove after observed scheduled run
 
 jobs:
   build-and-replay:
@@ -24,6 +25,10 @@ jobs:
       - name: Replay gate negative controls (no Lean dependency)
         shell: bash
         run: bash scripts/test_ci_replay_gate.sh
+
+      - name: Checker stderr and exit propagation controls (mock checker)
+        shell: bash
+        run: bash scripts/test_checker_logging.sh
 
       - name: EARR principal-lineage proposal fixtures (not independent witnessing)
         run: python3 scripts/test_earr_lineage.py
