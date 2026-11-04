@@ -33,6 +33,10 @@ FRESH=1 LEAN4CHECKER=... scripts/check_kernel_replay.sh                 # + all 
 `lake build` is the test run: every expectation is a command that fails the build on a wrong
 verdict. lean4checker must be built at tag `v4.22.0` (instructions in the script).
 
+Daily scheduled replay has explicit arrival/completion deadlines and a separate
+[liveness record and operating procedure](docs/evidence/SCHEDULE_LIVENESS_2026-11-04.md).
+Schedule delivery and kernel replay qualification are separate observations.
+
 ## What changed from v0
 
 | v0 | v0.1 | Why |
