@@ -23,13 +23,32 @@ lake build Bypass >/dev/null || { echo "FAIL: lake build Bypass"; exit 1; }
 
 fail=0
 must_pass() {
-  if out=$(lake env "$LC" "$1" 2>&1); then echo "  replay ok      $1"
-  else echo "  FAIL           $1 should replay cleanly:"; echo "$out" | tail -3; fail=1; fi
+  local out
+  echo "  checker stdout+stderr: $1"
+  if out=$(lake env "$LC" "$1" 2>&1); then
+    printf '%s\n' "$out"
+    echo "  replay ok      $1"
+  else
+    printf '%s\n' "$out"
+    echo "  FAIL           $1 should replay cleanly:"
+    fail=1
+  fi
 }
 must_refuse() {  # module, expected substring of the refusal
-  if out=$(lake env "$LC" "$1" 2>&1); then echo "  FAIL           $1 replayed cleanly but must be refused"; fail=1
-  elif echo "$out" | grep -qF "$2"; then echo "  refused ok     $1  ($2)"
-  else echo "  FAIL           $1 refused for the wrong reason:"; echo "$out" | tail -3; fail=1; fi
+  local out
+  echo "  checker stdout+stderr: $1"
+  if out=$(lake env "$LC" "$1" 2>&1); then
+    printf '%s\n' "$out"
+    echo "  FAIL           $1 replayed cleanly but must be refused"
+    fail=1
+  elif echo "$out" | grep -qF "$2"; then
+    printf '%s\n' "$out"
+    echo "  refused ok     $1  ($2)"
+  else
+    printf '%s\n' "$out"
+    echo "  FAIL           $1 refused for the wrong reason:"
+    fail=1
+  fi
 }
 
 # Discover modules from the source tree: a module missing from a hand-written list would
@@ -49,8 +68,21 @@ must_refuse Test.NativeDecide "_nativeDecide_"
 
 # Optional, slower (~5 min): replay the library AND every dependency (Init, Lean) from scratch.
 if [ "${FRESH:-0}" = "1" ]; then
-  if lake env "$LC" --fresh IntrospectionTwin >/dev/null 2>&1; then echo "  fresh replay ok IntrospectionTwin (+ all dependencies)"
-  else echo "  FAIL           fresh replay of IntrospectionTwin"; fail=1; fi
+  # The CLI treats names as prefixes. A unique leaf importing IntrospectionTwin
+  # selects exactly one .olean and carries its transitive Lean/Init dependencies.
+  # Stream the actual checker diagnostics to the job log AND preserve the file.
+  # Capture both exits before another command overwrites PIPESTATUS.
+  echo "Fresh checker stdout+stderr: Test.FreshReplayRoot"
+  lake env "$LC" --fresh Test.FreshReplayRoot 2>&1 | tee fresh-replay-output.txt
+  fresh_status=( "${PIPESTATUS[@]}" )
+  echo "fresh_checker_exit_status: ${fresh_status[0]}"
+  echo "fresh_log_tee_exit_status: ${fresh_status[1]}"
+  if [[ "${fresh_status[0]}" == "0" && "${fresh_status[1]}" == "0" ]]; then
+    echo "  fresh replay ok IntrospectionTwin (+ all dependencies)"
+  else
+    echo "  FAIL           fresh replay of IntrospectionTwin"
+    fail=1
+  fi
 fi
 
 [ $fail -eq 0 ] && echo "KERNEL REPLAY: PASS" || echo "KERNEL REPLAY: FAIL"

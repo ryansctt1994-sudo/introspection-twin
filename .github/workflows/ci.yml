@@ -11,12 +11,27 @@ on:
   pull_request:
   schedule:
     - cron: "17 7 * * *"   # nightly FRESH replay
+    - cron: "45 14 4 11 *" # 2026-11-04 qualification; remove after observed scheduled run
 
 jobs:
   build-and-replay:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Qualify the exact PR source HEAD, not a synthetic merge checkout.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Replay gate negative controls (no Lean dependency)
+        shell: bash
+        run: bash scripts/test_ci_replay_gate.sh
+
+      - name: Checker stderr and exit propagation controls (mock checker)
+        shell: bash
+        run: bash scripts/test_checker_logging.sh
+
+      - name: EARR principal-lineage proposal fixtures (not independent witnessing)
+        run: python3 scripts/test_earr_lineage.py
 
       - name: Install elan (toolchain comes from lean-toolchain)
         run: |
@@ -25,7 +40,9 @@ jobs:
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
       - name: Build library and run hostile suite (a wrong verdict fails the build)
+        shell: bash
         run: |
+          set -euo pipefail
           lake build 2>&1 | tee build.log
           ! grep -q '^warning' build.log || { echo "warnings are failures"; exit 1; }
 
@@ -36,21 +53,24 @@ jobs:
           (cd /tmp/lean4checker && lake build lean4checker)
 
       - name: Independent kernel replay
+        id: kernel-replay
+        shell: bash
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
-          FRESH: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: scripts/check_kernel_replay.sh | tee replay.log
+          # Exercise actual fresh replay before PR review and on nightly schedule.
+          FRESH: ${{ (github.event_name == 'schedule' || github.event_name == 'pull_request') && '1' || '0' }}
+        run: bash scripts/ci_replay_gate.sh scripts/check_kernel_replay.sh replay.log replay-record.txt
 
-      - name: Replay record
+      - name: Inspect observed replay receipt
         if: always()
+        shell: bash
         run: |
-          {
-            echo "commit:    $GITHUB_SHA"
-            echo "toolchain: $(cat lean-toolchain)"
-            echo "fresh:     ${{ github.event_name == 'schedule' }}"
-            echo "result:    $(tail -1 replay.log 2>/dev/null || echo 'not run')"
-          } > replay-record.txt
-          cat replay-record.txt
+          if [[ -s replay-record.txt ]]; then
+            cat replay-record.txt
+          else
+            # Absence denotes no recorded gate execution, not an inferred exit code.
+            echo "REPLAY RECORD: NOT_RUN (no observed receipt was written)"
+          fi
 
       - uses: actions/upload-artifact@v4
         if: always()
@@ -59,4 +79,5 @@ jobs:
           path: |
             replay-record.txt
             replay.log
+            fresh-replay-output.txt
             build.log
