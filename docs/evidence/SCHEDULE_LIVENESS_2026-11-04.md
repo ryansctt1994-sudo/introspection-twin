@@ -9,6 +9,17 @@ The 20-minute arrival limit below was adopted **after** that missed trigger.
 Its retrospective deadline was 15:05 UTC; this historical assessment is not
 represented as a precommitted test. Subsequent deadlines are prospective.
 
+**Later observation:** genuine scheduled run
+[41857790032](https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/41857790032)
+was created at **15:26:37 UTC** and completed successfully. Its actual job log
+records merged main `3b811cd008495b51c75f9d942b04a440580c1d88`, tree
+`172dc4e8e057ccbe63f9f1d3f2289c6d2ec42caf`, `FRESH=1`, both fresh flags true,
+all checker/logger exits zero, real poison-refusal diagnostics, and a PASS replay
+receipt. This satisfies the original scheduled FRESH execution requirement.
+It does not erase the earlier absence. The old workflow had no trigger record,
+so this event cannot be attributed to a particular one of its two cron entries.
+The run appeared 41 minutes 37 seconds after 14:45; no specific cause is proved.
+
 ## Operational expectation
 
 Daily FRESH replay moves to **15:47 UTC** (`47 15 * * *`), first expected on
@@ -77,7 +88,10 @@ are evidence for those exact events. Neither substitutes for a scheduled run.
 Scheduled qualification additionally requires the actual run's source SHA/tree,
 `trigger-record.json` with `TRIGGER_EVENT=schedule` and the expected cron,
 `fresh_requested=true`, `fresh_verified=true`, zero checker and logger exits,
-actual checker diagnostics in the job log, and the final replay receipt. API
+actual checker diagnostics in the job log, and the final replay receipt.
+The trigger-record requirement applies prospectively to this revised workflow;
+the earlier run above is qualified to the original requirement using GitHub's
+actual `event=schedule` metadata and its complete replay log. API
 creation time alone cannot distinguish a very late prior trigger from the
 intended slot; inspect the trigger record. A repeated daily cron string itself
 cannot prove which intended date caused a severely delayed event; preserve that
