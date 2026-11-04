@@ -1,0 +1,46 @@
+name: replay schedule liveness
+
+on:
+  schedule:
+    - cron: "29 16 * * *" # after the 16:27 UTC completion deadline
+  workflow_dispatch:
+    inputs:
+      expected_at:
+        description: "UTC slot to audit (optional ISO timestamp)"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Observe schedule arrival and completion
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          EXPECTED_AT: ${{ inputs.expected_at }}
+        shell: bash
+        run: |
+          args=()
+          if [[ -n "$EXPECTED_AT" ]]; then args+=(--expected-at "$EXPECTED_AT"); fi
+          python3 scripts/check_schedule_liveness.py "${args[@]}"
+      - name: Publish observation even on failure
+        if: always()
+        run: |
+          if [[ -s schedule-liveness.json ]]; then
+            cat schedule-liveness.json >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "INCONCLUSIVE: no liveness receipt produced" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: schedule-liveness
+          path: schedule-liveness.json
+          if-no-files-found: error

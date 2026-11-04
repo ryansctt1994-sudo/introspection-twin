@@ -1,5 +1,5 @@
 # Build + hostile suite + independent kernel replay, on every push and PR.
-# Nightly: FRESH replay (library + Init + Lean from scratch, ~5 min on the author's machine).
+# Daily: FRESH replay (library + Init + Lean from scratch, ~5 min on the author's machine).
 #
 # The replay record artifact names the exact commit and toolchain that passed. It is NOT
 # signed by this workflow. For a signed, commit-bound record, add GitHub artifact attestations
@@ -10,17 +10,35 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: "17 7 * * *"   # nightly FRESH replay
-    - cron: "45 14 4 11 *" # 2026-11-04 qualification; remove after observed scheduled run
+    - cron: "47 15 * * *" # daily FRESH; deadlines in .github/replay-schedule.json
 
 jobs:
   build-and-replay:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
           # Qualify the exact PR source HEAD, not a synthetic merge checkout.
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Record triggering event (separate from replay verdict)
+        env:
+          TRIGGER_EVENT: ${{ github.event_name }}
+          TRIGGER_CRON: ${{ github.event.schedule }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib
+          record = {key: os.environ.get(key, "") for key in (
+              "TRIGGER_EVENT", "TRIGGER_CRON", "GITHUB_RUN_ID", "GITHUB_RUN_ATTEMPT",
+              "GITHUB_SHA", "GITHUB_REF")}
+          text = json.dumps(record, indent=2) + "\n"
+          pathlib.Path("trigger-record.json").write_text(text)
+          print(text, end="")
+          PY
+
+      - name: Schedule liveness negative controls (mock API)
+        run: python3 scripts/test_schedule_liveness.py
 
       - name: Replay gate negative controls (no Lean dependency)
         shell: bash
@@ -57,7 +75,7 @@ jobs:
         shell: bash
         env:
           LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
-          # Exercise actual fresh replay before PR review and on nightly schedule.
+          # Exercise actual fresh replay before PR review and on daily schedule.
           FRESH: ${{ (github.event_name == 'schedule' || github.event_name == 'pull_request') && '1' || '0' }}
         run: bash scripts/ci_replay_gate.sh scripts/check_kernel_replay.sh replay.log replay-record.txt
 
@@ -77,6 +95,7 @@ jobs:
         with:
           name: replay-record
           path: |
+            trigger-record.json
             replay-record.txt
             replay.log
             fresh-replay-output.txt
