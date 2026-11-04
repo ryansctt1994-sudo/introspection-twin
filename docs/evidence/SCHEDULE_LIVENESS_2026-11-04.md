@@ -22,6 +22,9 @@ it matches the workflow's single daily cron.
   (trigger + 40 minutes). The replay job also has a 30-minute execution timeout.
 - At **16:29 UTC**, a separate watchdog checks the event and completion and
   publishes its JSON receipt and job summary, including failures.
+- At **16:57 UTC**, the configured ChatGPT task **Replay Schedule Watch** checks
+  actual GitHub evidence and reports to the owner. It also checks the GitHub
+  watchdog, whose arrival/completion deadlines are **16:49 / 16:54 UTC**.
 
 These are chosen operational thresholds, not a GitHub delivery guarantee.
 Changing them requires a new committed policy; late success does not erase the
@@ -52,10 +55,17 @@ within the waiting window. All output says `qualification: NOT_ASSESSED`.
 
 The GitHub watchdog shares the platform and owner with the replay. It cannot
 detect simultaneous scheduler failure by itself and is not an independent
-witness. **No continuously running external monitor or alert destination has
-been deployed by this change.** An external operator must schedule this command,
-retain each slot's receipt, and handle nonzero exits to close that gap. The
-watchdog provides an additional observation, not a guaranteed dead-man switch.
+witness. A separate ChatGPT task was accepted and enabled on 2026-11-04, with
+its first check scheduled for 16:57 UTC and daily thereafter. It is instructed to
+audit every elapsed slot, retain receipts/cursor where storage is available,
+report API failures as inconclusive, inspect actual FRESH logs, and send the owner
+a dated result. It cannot mutate the repository or substitute manual runs.
+
+This is **configured external scheduling, with no completed task execution yet**
+at this document's commit. The two schedulers remain under the same owner, and
+neither is claimed to have guaranteed availability or independent witnessing.
+An unavailable execution environment must be handled with connected read-only
+GitHub tools or an explicit inconclusive result, never silence or inferred health.
 
 ## Evidence separation
 
@@ -69,7 +79,9 @@ Scheduled qualification additionally requires the actual run's source SHA/tree,
 `fresh_requested=true`, `fresh_verified=true`, zero checker and logger exits,
 actual checker diagnostics in the job log, and the final replay receipt. API
 creation time alone cannot distinguish a very late prior trigger from the
-intended slot; inspect the trigger record. Owner-controlled CI remains evidence
+intended slot; inspect the trigger record. A repeated daily cron string itself
+cannot prove which intended date caused a severely delayed event; preserve that
+attribution uncertainty. Owner-controlled CI remains evidence
 under the same principal, not independent reproduction.
 
 GitHub [documents](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
