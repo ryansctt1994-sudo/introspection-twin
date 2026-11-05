@@ -1,0 +1,18 @@
+{
+  "schema": "portable-witness-forgeries/1",
+  "order": ["F01", "F02", "F03", "F04", "F05", "F06", "F07", "F08", "F09", "F10"],
+  "cases": [
+    {"id":"F01","name":"post-signature effect substitution","mechanism":"Change the effect value after signing, retaining the original signature.","required_access":"receipt bytes","predicted_outcome":"refused"},
+    {"id":"F02","name":"signature bit flip","mechanism":"Flip one signature bit without changing the payload.","required_access":"receipt bytes","predicted_outcome":"refused"},
+    {"id":"F03","name":"substitute signer","mechanism":"Sign with an attacker key while claiming the trusted issuer fingerprint.","required_access":"attacker signing key","predicted_outcome":"refused"},
+    {"id":"F04","name":"duplicate effect key","mechanism":"Supply two effect keys, first carrying a different effect and last carrying the signed effect; a last-key-wins parser would accept the signature.","required_access":"receipt bytes","predicted_outcome":"refused"},
+    {"id":"F05","name":"cross-audience receipt","mechanism":"Present an otherwise authentic receipt issued for a different audience.","required_access":"trusted-key fixture receipt for another audience","predicted_outcome":"refused"},
+    {"id":"F06","name":"expired receipt","mechanism":"Present an authentic receipt whose validity window has expired.","required_access":"expired trusted-key fixture receipt","predicted_outcome":"refused"},
+    {"id":"F07","name":"spent nonce replay","mechanism":"First execute the exact receipt legitimately, then replay its identical bytes against the unchanged ledger.","required_access":"previously admitted receipt","predicted_outcome":"refused"},
+    {"id":"F08","name":"allowed effect carrying extra effects","mechanism":"Sign an envelope containing the allowed effect plus an extra_effects field, testing rejection of hidden additional instructions.","required_access":"trusted issuer fixture key","predicted_outcome":"refused"},
+    {"id":"F09","name":"authentic ledger rollback","mechanism":"Snapshot the valid database, execute a receipt, restore the earlier authentic database, and replay the exact receipt. Preserve the first effect observation outside the restored database.","required_access":"privileged rollback of witness database","predicted_outcome":"effect-without-refusal"},
+    {"id":"F10","name":"trusted signer fabricates provenance","mechanism":"The trusted fixture issuer signs a claim that an independent witness observed an event that the fixture generator declares never occurred.","required_access":"trusted issuer fixture key","predicted_outcome":"effect-without-refusal"}
+  ],
+  "prediction_basis":"The local reference checks signatures, context, schema, current ledger and expiry. It has neither an external anti-rollback anchor nor an oracle for the truth of signed origin claims. These predictions are committed before execution and are not observed results.",
+  "independence":"All author-side fixture keys, processes, and observations share one controlling principal. A stranger's reproduction remains a separate evidentiary event."
+}

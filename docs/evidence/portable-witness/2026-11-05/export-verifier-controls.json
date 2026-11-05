@@ -1,0 +1,14 @@
+[
+  {
+    "mutation": "missing-log",
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Export verification incomplete/failed: ValueError: invalid manifest path\n"
+  },
+  {
+    "mutation": "altered-signed-response",
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Export verification incomplete/failed: InvalidSignature: \n"
+  }
+]

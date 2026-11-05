@@ -1,0 +1,91 @@
+{
+  "recorded_at": "2026-11-05T14:18:22.375857+00:00",
+  "stage": "implementation bundle before first controls and forgery execution",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+      "bytes": 14
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "4cad133d4f0a6cf4bba15f1b8bbae48d6a55f20b94f75487c51a93cc6a5af59f",
+      "bytes": 26
+    },
+    {
+      "path": "DESIGN-FREEZE.json",
+      "sha256": "272bdcfd4ec24c4ad5852403e09e121ed085d1657ea96130098808e8981f9b1d",
+      "bytes": 749
+    },
+    {
+      "path": "DESIGN-FREEZE.sha256",
+      "sha256": "b8911ada11b4f1b05eec494e2c7e1328ba53f9af7afb4d9e2ab3aef5696f618d",
+      "bytes": 85
+    },
+    {
+      "path": "README.md",
+      "sha256": "e8faf207e5ebe9dc0dc78fbed7dc03daeb35bc5b205a865217753aa19e20f78a",
+      "bytes": 9181
+    },
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "17bfad0a854977b096bb3e0c0f3f8243ca485a2cf5fe4caaf76a18355c85ac0b",
+      "bytes": 2169
+    },
+    {
+      "path": "SPEC.md",
+      "sha256": "ab20af16505cdbe891fccd23af8008c418031dedc6bb45de9240c1c41e3b2ce9",
+      "bytes": 5581
+    },
+    {
+      "path": "TAXONOMY.md",
+      "sha256": "422f6e691d395be0276cc09dec3df0801bb49d876557aa14df3a6871e9efe9a7",
+      "bytes": 3319
+    },
+    {
+      "path": "cases.json",
+      "sha256": "b694a8fc985f9417a859a1a4a52736a36df750dd37cc88e23fcb3292d2f19a46",
+      "bytes": 3115
+    },
+    {
+      "path": "portable_witness/__init__.py",
+      "sha256": "dcb1ae82fa246edec4b4b7d1f3e76e755fdcda92823a7ed95517256368a89382",
+      "bytes": 93
+    },
+    {
+      "path": "portable_witness/__main__.py",
+      "sha256": "f5b15a8c32d513a4e0b268b26ea8bab8e4458523fec53490473af1e0e9c9589d",
+      "bytes": 3526
+    },
+    {
+      "path": "portable_witness/campaign.py",
+      "sha256": "bb5b1d85a2fbde8e4ac483e4b15451ec55445fa129432ad98bd72a54d00cfae0",
+      "bytes": 11092
+    },
+    {
+      "path": "portable_witness/core.py",
+      "sha256": "698dfbb6b5a8de002ebf0aa3922e80627169330ef975b91e6b99966766dfa337",
+      "bytes": 9330
+    },
+    {
+      "path": "portable_witness/evidence.py",
+      "sha256": "77de5d47e039c9ad7678ff8d8f2bed94d859c8c2e0393a92d0063ed99208c12b",
+      "bytes": 6245
+    },
+    {
+      "path": "portable_witness/verify_export.py",
+      "sha256": "be40ecee000cb0baba3042431bd4160aa4dd6728ad9770a962051af76ffe492d",
+      "bytes": 7908
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "b47ee1be8d9af080a461f39aaebc6a4ca23c7564ccc8b298f493589e923a284a",
+      "bytes": 48
+    },
+    {
+      "path": "tests/test_controls.py",
+      "sha256": "a71732d9cfbcc41f31236e75263ccb0bd4b6703a05a26deb7ba1eb4e53f042a9",
+      "bytes": 4149
+    }
+  ]
+}
