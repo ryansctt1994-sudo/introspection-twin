@@ -1,0 +1,1612 @@
+{
+  "schema": "portable-witness-campaign/1",
+  "started_at": "2026-11-05T14:18:35.760853Z",
+  "operator": "Codex, author-controlled workspace",
+  "operator_principal": "Ryan / ryansctt1994-sudo",
+  "relationship_to_author": "Implementation and procedure author under the repository owner; no independence",
+  "independence": "operator declaration only; not established by this software",
+  "environment": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.12.14"
+  },
+  "design_manifest_sha256": "272bdcfd4ec24c4ad5852403e09e121ed085d1657ea96130098808e8981f9b1d",
+  "source_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 14,
+      "sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 26,
+      "sha256": "4cad133d4f0a6cf4bba15f1b8bbae48d6a55f20b94f75487c51a93cc6a5af59f"
+    },
+    {
+      "path": "DESIGN-FREEZE.json",
+      "bytes": 749,
+      "sha256": "272bdcfd4ec24c4ad5852403e09e121ed085d1657ea96130098808e8981f9b1d"
+    },
+    {
+      "path": "DESIGN-FREEZE.sha256",
+      "bytes": 85,
+      "sha256": "b8911ada11b4f1b05eec494e2c7e1328ba53f9af7afb4d9e2ab3aef5696f618d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9181,
+      "sha256": "e8faf207e5ebe9dc0dc78fbed7dc03daeb35bc5b205a865217753aa19e20f78a"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 2169,
+      "sha256": "17bfad0a854977b096bb3e0c0f3f8243ca485a2cf5fe4caaf76a18355c85ac0b"
+    },
+    {
+      "path": "SPEC.md",
+      "bytes": 5581,
+      "sha256": "ab20af16505cdbe891fccd23af8008c418031dedc6bb45de9240c1c41e3b2ce9"
+    },
+    {
+      "path": "TAXONOMY.md",
+      "bytes": 3319,
+      "sha256": "422f6e691d395be0276cc09dec3df0801bb49d876557aa14df3a6871e9efe9a7"
+    },
+    {
+      "path": "cases.json",
+      "bytes": 3115,
+      "sha256": "b694a8fc985f9417a859a1a4a52736a36df750dd37cc88e23fcb3292d2f19a46"
+    },
+    {
+      "path": "portable_witness/__init__.py",
+      "bytes": 93,
+      "sha256": "dcb1ae82fa246edec4b4b7d1f3e76e755fdcda92823a7ed95517256368a89382"
+    },
+    {
+      "path": "portable_witness/__main__.py",
+      "bytes": 3526,
+      "sha256": "f5b15a8c32d513a4e0b268b26ea8bab8e4458523fec53490473af1e0e9c9589d"
+    },
+    {
+      "path": "portable_witness/campaign.py",
+      "bytes": 11092,
+      "sha256": "bb5b1d85a2fbde8e4ac483e4b15451ec55445fa129432ad98bd72a54d00cfae0"
+    },
+    {
+      "path": "portable_witness/core.py",
+      "bytes": 9330,
+      "sha256": "698dfbb6b5a8de002ebf0aa3922e80627169330ef975b91e6b99966766dfa337"
+    },
+    {
+      "path": "portable_witness/evidence.py",
+      "bytes": 6245,
+      "sha256": "77de5d47e039c9ad7678ff8d8f2bed94d859c8c2e0393a92d0063ed99208c12b"
+    },
+    {
+      "path": "portable_witness/verify_export.py",
+      "bytes": 7908,
+      "sha256": "be40ecee000cb0baba3042431bd4160aa4dd6728ad9770a962051af76ffe492d"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 48,
+      "sha256": "b47ee1be8d9af080a461f39aaebc6a4ca23c7564ccc8b298f493589e923a284a"
+    },
+    {
+      "path": "tests/test_controls.py",
+      "bytes": 4149,
+      "sha256": "a71732d9cfbcc41f31236e75263ccb0bd4b6703a05a26deb7ba1eb4e53f042a9"
+    }
+  ],
+  "run_kind": "synthetic local reference; not S5",
+  "cases": [
+    {
+      "id": "F01",
+      "name": "post-signature effect substitution",
+      "required_access": "receipt bytes",
+      "predicted_outcome": "refused",
+      "baseline_valid": true,
+      "outcome": "refused",
+      "attempt": {
+        "attempt_id": "6e3f41317cc39cd1291eea175237716c08e4f6c7f85a2ea205d72cfcfbbef757",
+        "request_sha256": "533d66304b3020f5fbf8c9af0efbd93ebcced03bbd4e23802ae98ba67a24e2ee",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F01/state",
+          "--attempt-id",
+          "6e3f41317cc39cd1291eea175237716c08e4f6c7f85a2ea205d72cfcfbbef757"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": true,
+        "effect_observed": false,
+        "authorized_response": false,
+        "process_exit": 1,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "3a32039f4bc22f5a5ecfcaf1d9a8231db3d6907a289f883ad9cb7ff7bbb24424",
+            "nonce": "87c89c8f7a03943bf4776ea39e346acb54032a05c0c9847d9b84706a40d60f7f",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "a48c6114e100d1243cd458a1791c6712e0cc3d4c5df4b8b4a5678975bb7bfd3d",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "3a32039f4bc22f5a5ecfcaf1d9a8231db3d6907a289f883ad9cb7ff7bbb24424",
+            "nonce": "87c89c8f7a03943bf4776ea39e346acb54032a05c0c9847d9b84706a40d60f7f",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "a48c6114e100d1243cd458a1791c6712e0cc3d4c5df4b8b4a5678975bb7bfd3d",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "6e3f41317cc39cd1291eea175237716c08e4f6c7f85a2ea205d72cfcfbbef757",
+            "authorized": false,
+            "effect_id": null,
+            "reason": "signature-invalid",
+            "request_sha256": "533d66304b3020f5fbf8c9af0efbd93ebcced03bbd4e23802ae98ba67a24e2ee",
+            "version": 1
+          },
+          "signature": "2d243537a6af460d9133624b9edbdc7f253fe521fb640b47078f4da7480f0214f4a74c2d8cb97f1140ef0b92162782facdf035aa899d659f4fd46cdcec664e08"
+        },
+        "witness_public_key": "ef7e690132bec5b7136d7f9ee7c777e4f9fba443053446493a2116233907d313",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "3a32039f4bc22f5a5ecfcaf1d9a8231db3d6907a289f883ad9cb7ff7bbb24424",
+        "request_sha256": "a48c6114e100d1243cd458a1791c6712e0cc3d4c5df4b8b4a5678975bb7bfd3d",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F01/state",
+          "--attempt-id",
+          "3a32039f4bc22f5a5ecfcaf1d9a8231db3d6907a289f883ad9cb7ff7bbb24424"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "3a32039f4bc22f5a5ecfcaf1d9a8231db3d6907a289f883ad9cb7ff7bbb24424",
+            "nonce": "87c89c8f7a03943bf4776ea39e346acb54032a05c0c9847d9b84706a40d60f7f",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "a48c6114e100d1243cd458a1791c6712e0cc3d4c5df4b8b4a5678975bb7bfd3d",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "3a32039f4bc22f5a5ecfcaf1d9a8231db3d6907a289f883ad9cb7ff7bbb24424",
+            "nonce": "87c89c8f7a03943bf4776ea39e346acb54032a05c0c9847d9b84706a40d60f7f",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "a48c6114e100d1243cd458a1791c6712e0cc3d4c5df4b8b4a5678975bb7bfd3d",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "3a32039f4bc22f5a5ecfcaf1d9a8231db3d6907a289f883ad9cb7ff7bbb24424",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "a48c6114e100d1243cd458a1791c6712e0cc3d4c5df4b8b4a5678975bb7bfd3d",
+            "version": 1
+          },
+          "signature": "5dd397ec9856b921216b3dc9740ca88b07cb2c715f130adb2e71e77ab03fbb75bab0e0d5e1ab0700821df40fc994495c539a845123b9514f7dd5d80e7a830f0d"
+        },
+        "witness_public_key": "ef7e690132bec5b7136d7f9ee7c777e4f9fba443053446493a2116233907d313",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [],
+        "seed_observations": []
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F02",
+      "name": "signature bit flip",
+      "required_access": "receipt bytes",
+      "predicted_outcome": "refused",
+      "baseline_valid": true,
+      "outcome": "refused",
+      "attempt": {
+        "attempt_id": "a786cb75a21344e4bffd427200af84da3da3675e688cbabb92ff942c95f3b757",
+        "request_sha256": "5c0ea5668c3b960d40523c3dee4862ef8bb4cf4a3dbedf53936c2dce5bb7c8a7",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F02/state",
+          "--attempt-id",
+          "a786cb75a21344e4bffd427200af84da3da3675e688cbabb92ff942c95f3b757"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": true,
+        "effect_observed": false,
+        "authorized_response": false,
+        "process_exit": 1,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "d64f4d0a4385d323cf37da56419e82105cb1bef6fbc01f83eab4b6fa85cf5c45",
+            "nonce": "ba2d3ad7124886bd5446e3890653b5c75f89d14d6aaaea0edce01857df13dfe8",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "79e0afb018861fac69215900ce47b1c89ed41777bd05856b5ae873e60279be31",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "d64f4d0a4385d323cf37da56419e82105cb1bef6fbc01f83eab4b6fa85cf5c45",
+            "nonce": "ba2d3ad7124886bd5446e3890653b5c75f89d14d6aaaea0edce01857df13dfe8",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "79e0afb018861fac69215900ce47b1c89ed41777bd05856b5ae873e60279be31",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "a786cb75a21344e4bffd427200af84da3da3675e688cbabb92ff942c95f3b757",
+            "authorized": false,
+            "effect_id": null,
+            "reason": "signature-invalid",
+            "request_sha256": "5c0ea5668c3b960d40523c3dee4862ef8bb4cf4a3dbedf53936c2dce5bb7c8a7",
+            "version": 1
+          },
+          "signature": "267edbecd9a2e3f1767b126eab79327ab24612081f5db0dabdacfedf5f3aa8425efa1b225cc1d6394ef2a0fa7ae469df0e8bc06707eda8a838661518375ef900"
+        },
+        "witness_public_key": "b50b717a17d7cac32a2251ff83c956aa9c5d905fc8bf871eff96373521bbfe6a",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "d64f4d0a4385d323cf37da56419e82105cb1bef6fbc01f83eab4b6fa85cf5c45",
+        "request_sha256": "79e0afb018861fac69215900ce47b1c89ed41777bd05856b5ae873e60279be31",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F02/state",
+          "--attempt-id",
+          "d64f4d0a4385d323cf37da56419e82105cb1bef6fbc01f83eab4b6fa85cf5c45"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "d64f4d0a4385d323cf37da56419e82105cb1bef6fbc01f83eab4b6fa85cf5c45",
+            "nonce": "ba2d3ad7124886bd5446e3890653b5c75f89d14d6aaaea0edce01857df13dfe8",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "79e0afb018861fac69215900ce47b1c89ed41777bd05856b5ae873e60279be31",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "d64f4d0a4385d323cf37da56419e82105cb1bef6fbc01f83eab4b6fa85cf5c45",
+            "nonce": "ba2d3ad7124886bd5446e3890653b5c75f89d14d6aaaea0edce01857df13dfe8",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "79e0afb018861fac69215900ce47b1c89ed41777bd05856b5ae873e60279be31",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "d64f4d0a4385d323cf37da56419e82105cb1bef6fbc01f83eab4b6fa85cf5c45",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "79e0afb018861fac69215900ce47b1c89ed41777bd05856b5ae873e60279be31",
+            "version": 1
+          },
+          "signature": "638b23cf24a8d9b47661c15ec4cc40da263c6ef6e0c9083372d3a222db501dc44d073f103754298dafb3a3911f884fdfb232f9c99a938e510dd753a917eb6609"
+        },
+        "witness_public_key": "b50b717a17d7cac32a2251ff83c956aa9c5d905fc8bf871eff96373521bbfe6a",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [],
+        "seed_observations": []
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F03",
+      "name": "substitute signer",
+      "required_access": "attacker signing key",
+      "predicted_outcome": "refused",
+      "baseline_valid": true,
+      "outcome": "refused",
+      "attempt": {
+        "attempt_id": "a13027fbe8366a8e80a9d9109d3ddbf80205b8de934e772ccc8a9ee6680bc29d",
+        "request_sha256": "2e4da7668a85174c89a97ffea6cd51383dd68d60568ea25da440ec9d0de524ab",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F03/state",
+          "--attempt-id",
+          "a13027fbe8366a8e80a9d9109d3ddbf80205b8de934e772ccc8a9ee6680bc29d"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": true,
+        "effect_observed": false,
+        "authorized_response": false,
+        "process_exit": 1,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "5b7f7fd2720d72de64755946904eecbad039850b1f8378977805a60b59d06943",
+            "nonce": "f96952caa143babc36e8ffa4e71232224b5804d03460c038ae96e046b7078c0d",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "d35f68a00e45890ee531711bc4ec7596c681d7d1fc6f5b87087cc16ac5f317c6",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "5b7f7fd2720d72de64755946904eecbad039850b1f8378977805a60b59d06943",
+            "nonce": "f96952caa143babc36e8ffa4e71232224b5804d03460c038ae96e046b7078c0d",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "d35f68a00e45890ee531711bc4ec7596c681d7d1fc6f5b87087cc16ac5f317c6",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "a13027fbe8366a8e80a9d9109d3ddbf80205b8de934e772ccc8a9ee6680bc29d",
+            "authorized": false,
+            "effect_id": null,
+            "reason": "signature-invalid",
+            "request_sha256": "2e4da7668a85174c89a97ffea6cd51383dd68d60568ea25da440ec9d0de524ab",
+            "version": 1
+          },
+          "signature": "1dc161769b8de76bf63eb85c179a9098fab296a0a63d8d94b663ab810cb4bc75e633add5b98cfcfbed7014e3f7400595114708e9ede29b0e2ae6c7e82428250a"
+        },
+        "witness_public_key": "2b2d4d03f7765336ba78d12fdd3bf357c5ba0d84cdd85ebb1b9f5bf3c3c38b8f",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "5b7f7fd2720d72de64755946904eecbad039850b1f8378977805a60b59d06943",
+        "request_sha256": "d35f68a00e45890ee531711bc4ec7596c681d7d1fc6f5b87087cc16ac5f317c6",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F03/state",
+          "--attempt-id",
+          "5b7f7fd2720d72de64755946904eecbad039850b1f8378977805a60b59d06943"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "5b7f7fd2720d72de64755946904eecbad039850b1f8378977805a60b59d06943",
+            "nonce": "f96952caa143babc36e8ffa4e71232224b5804d03460c038ae96e046b7078c0d",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "d35f68a00e45890ee531711bc4ec7596c681d7d1fc6f5b87087cc16ac5f317c6",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "5b7f7fd2720d72de64755946904eecbad039850b1f8378977805a60b59d06943",
+            "nonce": "f96952caa143babc36e8ffa4e71232224b5804d03460c038ae96e046b7078c0d",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "d35f68a00e45890ee531711bc4ec7596c681d7d1fc6f5b87087cc16ac5f317c6",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "5b7f7fd2720d72de64755946904eecbad039850b1f8378977805a60b59d06943",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "d35f68a00e45890ee531711bc4ec7596c681d7d1fc6f5b87087cc16ac5f317c6",
+            "version": 1
+          },
+          "signature": "a98d0f921d472d06cf311abf768ffaf6ee12b852f34eab778bd925c72f188ecef1608f44ea86a22be296dd5ea5bdccd4b945040ec579ee87d3e52a03be9c930d"
+        },
+        "witness_public_key": "2b2d4d03f7765336ba78d12fdd3bf357c5ba0d84cdd85ebb1b9f5bf3c3c38b8f",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [],
+        "seed_observations": []
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F04",
+      "name": "duplicate effect key",
+      "required_access": "receipt bytes",
+      "predicted_outcome": "refused",
+      "baseline_valid": true,
+      "outcome": "refused",
+      "attempt": {
+        "attempt_id": "c226c33474b1f0e6635954752400e996ec6b2ca10831dc5029c063ecec6dff6e",
+        "request_sha256": "6da5bf20dba8c4a60d680450290ee18847aba230ad09561c436c199d0643ca61",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F04/state",
+          "--attempt-id",
+          "c226c33474b1f0e6635954752400e996ec6b2ca10831dc5029c063ecec6dff6e"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": true,
+        "effect_observed": false,
+        "authorized_response": false,
+        "process_exit": 1,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "33611248c0b588dc6de4632b709c9b36151358104f5489c996cb8aab80cdec90",
+            "nonce": "32d2c5609c22625b1528edd329deb3d8ec6b680178272fb80ed2a267fd1b4841",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "a9e3df18a1b2c7edceabc3d03672de6aafcd021f7c8000b023ff2b9cb256fd93",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "33611248c0b588dc6de4632b709c9b36151358104f5489c996cb8aab80cdec90",
+            "nonce": "32d2c5609c22625b1528edd329deb3d8ec6b680178272fb80ed2a267fd1b4841",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "a9e3df18a1b2c7edceabc3d03672de6aafcd021f7c8000b023ff2b9cb256fd93",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "c226c33474b1f0e6635954752400e996ec6b2ca10831dc5029c063ecec6dff6e",
+            "authorized": false,
+            "effect_id": null,
+            "reason": "duplicate-json-key",
+            "request_sha256": "6da5bf20dba8c4a60d680450290ee18847aba230ad09561c436c199d0643ca61",
+            "version": 1
+          },
+          "signature": "4b459073b885cdb06268cdbfcf3693992c7a18282f8235e22ed969a50e7c5746a304f1edc417005a80bd5f418f4bb04fe175ffd70dcbeb3a61da9fddba54ea02"
+        },
+        "witness_public_key": "e04592dd08e2c3a12c780cf77ef2fbd71f31b6c00ef707f7ea2dad96344a646a",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "33611248c0b588dc6de4632b709c9b36151358104f5489c996cb8aab80cdec90",
+        "request_sha256": "a9e3df18a1b2c7edceabc3d03672de6aafcd021f7c8000b023ff2b9cb256fd93",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F04/state",
+          "--attempt-id",
+          "33611248c0b588dc6de4632b709c9b36151358104f5489c996cb8aab80cdec90"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "33611248c0b588dc6de4632b709c9b36151358104f5489c996cb8aab80cdec90",
+            "nonce": "32d2c5609c22625b1528edd329deb3d8ec6b680178272fb80ed2a267fd1b4841",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "a9e3df18a1b2c7edceabc3d03672de6aafcd021f7c8000b023ff2b9cb256fd93",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "33611248c0b588dc6de4632b709c9b36151358104f5489c996cb8aab80cdec90",
+            "nonce": "32d2c5609c22625b1528edd329deb3d8ec6b680178272fb80ed2a267fd1b4841",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "a9e3df18a1b2c7edceabc3d03672de6aafcd021f7c8000b023ff2b9cb256fd93",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "33611248c0b588dc6de4632b709c9b36151358104f5489c996cb8aab80cdec90",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "a9e3df18a1b2c7edceabc3d03672de6aafcd021f7c8000b023ff2b9cb256fd93",
+            "version": 1
+          },
+          "signature": "1b517740f482ee526dbb08c5f7bcb8cf130e259084add42b815a3fd129f4307f20d28f1e44396705e9d5a16ec519a9a8a12f22dcbce55bae69a672b4b65a4a08"
+        },
+        "witness_public_key": "e04592dd08e2c3a12c780cf77ef2fbd71f31b6c00ef707f7ea2dad96344a646a",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [],
+        "seed_observations": []
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F05",
+      "name": "cross-audience receipt",
+      "required_access": "trusted-key fixture receipt for another audience",
+      "predicted_outcome": "refused",
+      "baseline_valid": true,
+      "outcome": "refused",
+      "attempt": {
+        "attempt_id": "15229a6be74b43eed963fbb12042cb90efc474be6f62b1a1b0bab8438efa2575",
+        "request_sha256": "bf121aad4b37a9af5695eafe22b6bdf05846ef800ba5db9dad67a152420dc8d4",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F05/state",
+          "--attempt-id",
+          "15229a6be74b43eed963fbb12042cb90efc474be6f62b1a1b0bab8438efa2575"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": true,
+        "effect_observed": false,
+        "authorized_response": false,
+        "process_exit": 1,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "4dda8834353a9f312fcbcbb5e8d1032433662932345ca8fcd14e5bbaff7dd330",
+            "nonce": "c70a2d83946e1621537a0800033190dbbb01fd259210af3bcc7377d02037dda0",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "2046d007d2ddaf820dadfd3af982f8d938680e4008f68580a2cf156448ba01e4",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "4dda8834353a9f312fcbcbb5e8d1032433662932345ca8fcd14e5bbaff7dd330",
+            "nonce": "c70a2d83946e1621537a0800033190dbbb01fd259210af3bcc7377d02037dda0",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "2046d007d2ddaf820dadfd3af982f8d938680e4008f68580a2cf156448ba01e4",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "15229a6be74b43eed963fbb12042cb90efc474be6f62b1a1b0bab8438efa2575",
+            "authorized": false,
+            "effect_id": null,
+            "reason": "context-audience",
+            "request_sha256": "bf121aad4b37a9af5695eafe22b6bdf05846ef800ba5db9dad67a152420dc8d4",
+            "version": 1
+          },
+          "signature": "70b8ed6013b99a81c8215b1a5fb45ba1e6cde75b84d77fea4b8b88af518ba2b469d935698daa1225ffa4350cdf490ee634840ef803b024ef73e9ba7404f94604"
+        },
+        "witness_public_key": "d4524864738f39d3979907341939961f1bfda5dd855c336a55f24e9eaaf202cf",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "4dda8834353a9f312fcbcbb5e8d1032433662932345ca8fcd14e5bbaff7dd330",
+        "request_sha256": "2046d007d2ddaf820dadfd3af982f8d938680e4008f68580a2cf156448ba01e4",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F05/state",
+          "--attempt-id",
+          "4dda8834353a9f312fcbcbb5e8d1032433662932345ca8fcd14e5bbaff7dd330"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "4dda8834353a9f312fcbcbb5e8d1032433662932345ca8fcd14e5bbaff7dd330",
+            "nonce": "c70a2d83946e1621537a0800033190dbbb01fd259210af3bcc7377d02037dda0",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "2046d007d2ddaf820dadfd3af982f8d938680e4008f68580a2cf156448ba01e4",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "4dda8834353a9f312fcbcbb5e8d1032433662932345ca8fcd14e5bbaff7dd330",
+            "nonce": "c70a2d83946e1621537a0800033190dbbb01fd259210af3bcc7377d02037dda0",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "2046d007d2ddaf820dadfd3af982f8d938680e4008f68580a2cf156448ba01e4",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "4dda8834353a9f312fcbcbb5e8d1032433662932345ca8fcd14e5bbaff7dd330",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "2046d007d2ddaf820dadfd3af982f8d938680e4008f68580a2cf156448ba01e4",
+            "version": 1
+          },
+          "signature": "64ca930bf27ae40fb2e6b0ef196cda71463466e0e7d9aa541105fc41a523564b2eba1aee5a1aa87ab9de85e8278dad75beed07b2871507853b6040febd816707"
+        },
+        "witness_public_key": "d4524864738f39d3979907341939961f1bfda5dd855c336a55f24e9eaaf202cf",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [],
+        "seed_observations": []
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F06",
+      "name": "expired receipt",
+      "required_access": "expired trusted-key fixture receipt",
+      "predicted_outcome": "refused",
+      "baseline_valid": true,
+      "outcome": "refused",
+      "attempt": {
+        "attempt_id": "c9237dcdb992f5166a28d34f2f97806de53822d80cbf9660e59b065cc675c212",
+        "request_sha256": "d38320ad105db2d9d0d2d0704b5995677c089cbae1d862f7d4937219f54c29ea",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F06/state",
+          "--attempt-id",
+          "c9237dcdb992f5166a28d34f2f97806de53822d80cbf9660e59b065cc675c212"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": true,
+        "effect_observed": false,
+        "authorized_response": false,
+        "process_exit": 1,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "615f1dcd16baace3a53665ab8102a4bb0651cf8cbacb4b67b71e890907ce56ac",
+            "nonce": "4b8e683be7b98daf4689080c67bc124c9445dd3c1f0da790455603dc1045431c",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "27deb3a635c8fbe5341e2ab1035783db45159cc6d8a5283f678af5772ea48f83",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "615f1dcd16baace3a53665ab8102a4bb0651cf8cbacb4b67b71e890907ce56ac",
+            "nonce": "4b8e683be7b98daf4689080c67bc124c9445dd3c1f0da790455603dc1045431c",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "27deb3a635c8fbe5341e2ab1035783db45159cc6d8a5283f678af5772ea48f83",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "c9237dcdb992f5166a28d34f2f97806de53822d80cbf9660e59b065cc675c212",
+            "authorized": false,
+            "effect_id": null,
+            "reason": "expired",
+            "request_sha256": "d38320ad105db2d9d0d2d0704b5995677c089cbae1d862f7d4937219f54c29ea",
+            "version": 1
+          },
+          "signature": "2e7caf240fb853d2c2f6344cc38591f813588894dff538f90cd6c520b3a0609e9c4050063d8d9d9689381947413f8f58d22d2f92060012a8ce02953be12c7c02"
+        },
+        "witness_public_key": "a1b64445398a2432443c0fbdd832d88f6ab632ea97b19f7b136be0e3651849b0",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "615f1dcd16baace3a53665ab8102a4bb0651cf8cbacb4b67b71e890907ce56ac",
+        "request_sha256": "27deb3a635c8fbe5341e2ab1035783db45159cc6d8a5283f678af5772ea48f83",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F06/state",
+          "--attempt-id",
+          "615f1dcd16baace3a53665ab8102a4bb0651cf8cbacb4b67b71e890907ce56ac"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "615f1dcd16baace3a53665ab8102a4bb0651cf8cbacb4b67b71e890907ce56ac",
+            "nonce": "4b8e683be7b98daf4689080c67bc124c9445dd3c1f0da790455603dc1045431c",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "27deb3a635c8fbe5341e2ab1035783db45159cc6d8a5283f678af5772ea48f83",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "615f1dcd16baace3a53665ab8102a4bb0651cf8cbacb4b67b71e890907ce56ac",
+            "nonce": "4b8e683be7b98daf4689080c67bc124c9445dd3c1f0da790455603dc1045431c",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "27deb3a635c8fbe5341e2ab1035783db45159cc6d8a5283f678af5772ea48f83",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "615f1dcd16baace3a53665ab8102a4bb0651cf8cbacb4b67b71e890907ce56ac",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "27deb3a635c8fbe5341e2ab1035783db45159cc6d8a5283f678af5772ea48f83",
+            "version": 1
+          },
+          "signature": "60a9104c00ea7f8d36c77cf1f01deb47e8854a2cec8dfcbf33c17298a7760531e8d30fb86907037a65781f524f8a0acdb86a1b9e8114d68a478ea2718a93b00d"
+        },
+        "witness_public_key": "a1b64445398a2432443c0fbdd832d88f6ab632ea97b19f7b136be0e3651849b0",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [],
+        "seed_observations": []
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F07",
+      "name": "spent nonce replay",
+      "required_access": "previously admitted receipt",
+      "predicted_outcome": "refused",
+      "baseline_valid": true,
+      "outcome": "refused",
+      "attempt": {
+        "attempt_id": "5eae7f45689e13fdc19cbc5137ca10b6c501b220a3eca10f7bdda5ff2dd8b3e5",
+        "request_sha256": "89563f0f35f694e0088eb8496a9c97a96acfff4d9ac4fb81fc30f9f8b85e8477",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F07/state",
+          "--attempt-id",
+          "5eae7f45689e13fdc19cbc5137ca10b6c501b220a3eca10f7bdda5ff2dd8b3e5"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": true,
+        "effect_observed": false,
+        "authorized_response": false,
+        "process_exit": 1,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d",
+            "nonce": "b3f9934273e7b9893fdba65ca5c24e22fa4ede6d75f50d7b8669beebf3739eff",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "4f78d7c047e081da16645fe3ba6215f34a5888b0c154a298c06821954d2986f1",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          },
+          {
+            "id": 2,
+            "attempt_id": "df91c7f7a40b98a9ad3ab723454cc57d124581bc801357669e3cc18983e37565",
+            "nonce": "5ecdef5c585b0eb7582c1fb4aa790d953bc4ba76fc24565d389d9c5bd9dbfdbc",
+            "value": "forgery-F07",
+            "receipt_sha256": "89563f0f35f694e0088eb8496a9c97a96acfff4d9ac4fb81fc30f9f8b85e8477",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d",
+            "nonce": "b3f9934273e7b9893fdba65ca5c24e22fa4ede6d75f50d7b8669beebf3739eff",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "4f78d7c047e081da16645fe3ba6215f34a5888b0c154a298c06821954d2986f1",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          },
+          {
+            "id": 2,
+            "attempt_id": "df91c7f7a40b98a9ad3ab723454cc57d124581bc801357669e3cc18983e37565",
+            "nonce": "5ecdef5c585b0eb7582c1fb4aa790d953bc4ba76fc24565d389d9c5bd9dbfdbc",
+            "value": "forgery-F07",
+            "receipt_sha256": "89563f0f35f694e0088eb8496a9c97a96acfff4d9ac4fb81fc30f9f8b85e8477",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "5eae7f45689e13fdc19cbc5137ca10b6c501b220a3eca10f7bdda5ff2dd8b3e5",
+            "authorized": false,
+            "effect_id": null,
+            "reason": "nonce-spent",
+            "request_sha256": "89563f0f35f694e0088eb8496a9c97a96acfff4d9ac4fb81fc30f9f8b85e8477",
+            "version": 1
+          },
+          "signature": "a84734d2fdc57866f27d4614002c95be4e2018bb91acd53a724dc98b93065a8b39066cd03a3604caed390bfbb9d18a3b91727b5d8eed8ccf2f3d88878c67e707"
+        },
+        "witness_public_key": "02ba806fff23e52b773df8f1f721c25baef9377ec2642a4cdb4f6c6b78784c58",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d",
+        "request_sha256": "4f78d7c047e081da16645fe3ba6215f34a5888b0c154a298c06821954d2986f1",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F07/state",
+          "--attempt-id",
+          "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d",
+            "nonce": "b3f9934273e7b9893fdba65ca5c24e22fa4ede6d75f50d7b8669beebf3739eff",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "4f78d7c047e081da16645fe3ba6215f34a5888b0c154a298c06821954d2986f1",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d",
+            "nonce": "b3f9934273e7b9893fdba65ca5c24e22fa4ede6d75f50d7b8669beebf3739eff",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "4f78d7c047e081da16645fe3ba6215f34a5888b0c154a298c06821954d2986f1",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "4f78d7c047e081da16645fe3ba6215f34a5888b0c154a298c06821954d2986f1",
+            "version": 1
+          },
+          "signature": "0ca110f1e77dd329f491594addb8daa5b4709eec068b1cb37a59893957d624127ac20c53c1e3a5dc5baa6f6f26539ed21d8d534529dae407312cb04c69753a03"
+        },
+        "witness_public_key": "02ba806fff23e52b773df8f1f721c25baef9377ec2642a4cdb4f6c6b78784c58",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [
+          true
+        ],
+        "seed_observations": [
+          {
+            "attempt_id": "df91c7f7a40b98a9ad3ab723454cc57d124581bc801357669e3cc18983e37565",
+            "request_sha256": "89563f0f35f694e0088eb8496a9c97a96acfff4d9ac4fb81fc30f9f8b85e8477",
+            "command": [
+              "/workspace/portable-witness-venv/bin/python",
+              "-m",
+              "portable_witness",
+              "submit",
+              "--state",
+              "/workspace/portable-witness-author-run-001/private/F07/state",
+              "--attempt-id",
+              "df91c7f7a40b98a9ad3ab723454cc57d124581bc801357669e3cc18983e37565"
+            ],
+            "attempted": true,
+            "coverage_complete": true,
+            "ingress_observed": true,
+            "refusal_observed": false,
+            "effect_observed": true,
+            "authorized_response": true,
+            "process_exit": 0,
+            "before": [
+              {
+                "id": 1,
+                "attempt_id": "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d",
+                "nonce": "b3f9934273e7b9893fdba65ca5c24e22fa4ede6d75f50d7b8669beebf3739eff",
+                "value": "legitimate-baseline",
+                "receipt_sha256": "4f78d7c047e081da16645fe3ba6215f34a5888b0c154a298c06821954d2986f1",
+                "origin_claim": "Fixture issuer assertion; not independently witnessed"
+              }
+            ],
+            "after": [
+              {
+                "id": 1,
+                "attempt_id": "4bcbe2d9233618752aa9fa23e96cda058cc7931ff56d2d65ae371e7b6fb30c2d",
+                "nonce": "b3f9934273e7b9893fdba65ca5c24e22fa4ede6d75f50d7b8669beebf3739eff",
+                "value": "legitimate-baseline",
+                "receipt_sha256": "4f78d7c047e081da16645fe3ba6215f34a5888b0c154a298c06821954d2986f1",
+                "origin_claim": "Fixture issuer assertion; not independently witnessed"
+              },
+              {
+                "id": 2,
+                "attempt_id": "df91c7f7a40b98a9ad3ab723454cc57d124581bc801357669e3cc18983e37565",
+                "nonce": "5ecdef5c585b0eb7582c1fb4aa790d953bc4ba76fc24565d389d9c5bd9dbfdbc",
+                "value": "forgery-F07",
+                "receipt_sha256": "89563f0f35f694e0088eb8496a9c97a96acfff4d9ac4fb81fc30f9f8b85e8477",
+                "origin_claim": "Fixture issuer assertion; not independently witnessed"
+              }
+            ],
+            "effect_rows": [
+              {
+                "id": 2,
+                "attempt_id": "df91c7f7a40b98a9ad3ab723454cc57d124581bc801357669e3cc18983e37565",
+                "nonce": "5ecdef5c585b0eb7582c1fb4aa790d953bc4ba76fc24565d389d9c5bd9dbfdbc",
+                "value": "forgery-F07",
+                "receipt_sha256": "89563f0f35f694e0088eb8496a9c97a96acfff4d9ac4fb81fc30f9f8b85e8477",
+                "origin_claim": "Fixture issuer assertion; not independently witnessed"
+              }
+            ],
+            "signed_response": {
+              "kind": "response",
+              "payload": {
+                "attempt_id": "df91c7f7a40b98a9ad3ab723454cc57d124581bc801357669e3cc18983e37565",
+                "authorized": true,
+                "effect_id": 2,
+                "reason": "effect-committed",
+                "request_sha256": "89563f0f35f694e0088eb8496a9c97a96acfff4d9ac4fb81fc30f9f8b85e8477",
+                "version": 1
+              },
+              "signature": "581001fefcea42109f7b9822eab66a96a413d9eca7f4886d3b86015d28b17c2416d87111086d34ad39eee9185c16e1eccd4b0a12415ba757548437249255dc0e"
+            },
+            "witness_public_key": "02ba806fff23e52b773df8f1f721c25baef9377ec2642a4cdb4f6c6b78784c58",
+            "errors": [],
+            "observer_independence": "same controlling principal"
+          }
+        ]
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F08",
+      "name": "allowed effect carrying extra effects",
+      "required_access": "trusted issuer fixture key",
+      "predicted_outcome": "refused",
+      "baseline_valid": true,
+      "outcome": "refused",
+      "attempt": {
+        "attempt_id": "a2f35460ab44eea2a0d77e97dd630da6f2f9bae15cd1d093c240ba203e10472d",
+        "request_sha256": "759f5bc12a8f79f9e2eb7438e47b13820c727b4429b17b6f8bd4f1e3af729020",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F08/state",
+          "--attempt-id",
+          "a2f35460ab44eea2a0d77e97dd630da6f2f9bae15cd1d093c240ba203e10472d"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": true,
+        "effect_observed": false,
+        "authorized_response": false,
+        "process_exit": 1,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "179b3b186545ef2b8e9aa8f7842ddb22311d61ce2a13a0f7b54d237f443ddbeb",
+            "nonce": "0944d5acbae46f6ade6f670f7f712d11f2a0386ebad0ace2314cc9d706e912ee",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "118a03d91fc886be651f1af902ec5f206e3affee3f0b19971bd160979da0f527",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "179b3b186545ef2b8e9aa8f7842ddb22311d61ce2a13a0f7b54d237f443ddbeb",
+            "nonce": "0944d5acbae46f6ade6f670f7f712d11f2a0386ebad0ace2314cc9d706e912ee",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "118a03d91fc886be651f1af902ec5f206e3affee3f0b19971bd160979da0f527",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "a2f35460ab44eea2a0d77e97dd630da6f2f9bae15cd1d093c240ba203e10472d",
+            "authorized": false,
+            "effect_id": null,
+            "reason": "payload-schema",
+            "request_sha256": "759f5bc12a8f79f9e2eb7438e47b13820c727b4429b17b6f8bd4f1e3af729020",
+            "version": 1
+          },
+          "signature": "65f7c3dce6a945f41a4906938ba6cc45e036f5ad8c577b26f015cc7aa9add0219447253455649644c109721a392e649814888e08fd3674e3f67780962122dd0d"
+        },
+        "witness_public_key": "a57fad8a7f492fb790b09de4b1ddd7ad7888c6d7c3fb065410d7c0e2f8b276c6",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "179b3b186545ef2b8e9aa8f7842ddb22311d61ce2a13a0f7b54d237f443ddbeb",
+        "request_sha256": "118a03d91fc886be651f1af902ec5f206e3affee3f0b19971bd160979da0f527",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F08/state",
+          "--attempt-id",
+          "179b3b186545ef2b8e9aa8f7842ddb22311d61ce2a13a0f7b54d237f443ddbeb"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "179b3b186545ef2b8e9aa8f7842ddb22311d61ce2a13a0f7b54d237f443ddbeb",
+            "nonce": "0944d5acbae46f6ade6f670f7f712d11f2a0386ebad0ace2314cc9d706e912ee",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "118a03d91fc886be651f1af902ec5f206e3affee3f0b19971bd160979da0f527",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "179b3b186545ef2b8e9aa8f7842ddb22311d61ce2a13a0f7b54d237f443ddbeb",
+            "nonce": "0944d5acbae46f6ade6f670f7f712d11f2a0386ebad0ace2314cc9d706e912ee",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "118a03d91fc886be651f1af902ec5f206e3affee3f0b19971bd160979da0f527",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "179b3b186545ef2b8e9aa8f7842ddb22311d61ce2a13a0f7b54d237f443ddbeb",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "118a03d91fc886be651f1af902ec5f206e3affee3f0b19971bd160979da0f527",
+            "version": 1
+          },
+          "signature": "4c2ed52160dc93a8473cffe9545ff1f672eeee213ac537e447e10211d1ee84c8f3d8061089c82c8074a52e861c24bbc87d729cd78de4458cdc1f552cf9af5706"
+        },
+        "witness_public_key": "a57fad8a7f492fb790b09de4b1ddd7ad7888c6d7c3fb065410d7c0e2f8b276c6",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [],
+        "seed_observations": []
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F09",
+      "name": "authentic ledger rollback",
+      "required_access": "privileged rollback of witness database",
+      "predicted_outcome": "effect-without-refusal",
+      "baseline_valid": true,
+      "outcome": "effect-without-refusal",
+      "attempt": {
+        "attempt_id": "2af7a5ac77725ad567318628b8ebe560fc9ed5307842d33aea1eb03530479fe7",
+        "request_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F09/state",
+          "--attempt-id",
+          "2af7a5ac77725ad567318628b8ebe560fc9ed5307842d33aea1eb03530479fe7"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+            "nonce": "1c13a201472db47a455402db332993f7dcb24f51a3157a0876ddd2185328f37a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+            "nonce": "1c13a201472db47a455402db332993f7dcb24f51a3157a0876ddd2185328f37a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          },
+          {
+            "id": 2,
+            "attempt_id": "2af7a5ac77725ad567318628b8ebe560fc9ed5307842d33aea1eb03530479fe7",
+            "nonce": "2394a16956587dae4108fa8d598a74e58c7579a8d4d578d4b7eec04a13d21c07",
+            "value": "forgery-F09",
+            "receipt_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 2,
+            "attempt_id": "2af7a5ac77725ad567318628b8ebe560fc9ed5307842d33aea1eb03530479fe7",
+            "nonce": "2394a16956587dae4108fa8d598a74e58c7579a8d4d578d4b7eec04a13d21c07",
+            "value": "forgery-F09",
+            "receipt_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "2af7a5ac77725ad567318628b8ebe560fc9ed5307842d33aea1eb03530479fe7",
+            "authorized": true,
+            "effect_id": 2,
+            "reason": "effect-committed",
+            "request_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+            "version": 1
+          },
+          "signature": "4a2151b3a1657031d57cdd0696613afa793c9d1128bd8178f01c0e9d19a7491b6559937fb65f6f442bbcfa1cc0465021d48a6dda389da7d2cad398da7eab3d0d"
+        },
+        "witness_public_key": "fd9be9f18900c44c07c2984a8e257d6b8f4b0d64dd0075e0887220c85681e810",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+        "request_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F09/state",
+          "--attempt-id",
+          "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+            "nonce": "1c13a201472db47a455402db332993f7dcb24f51a3157a0876ddd2185328f37a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+            "nonce": "1c13a201472db47a455402db332993f7dcb24f51a3157a0876ddd2185328f37a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+            "version": 1
+          },
+          "signature": "bb62cfb74b83527c1f072ed4502084c2d45bf5636865dce49543300ce867e2dbd1a3d3f42db0c62d05749fd72f40401aabf4bf3dc3b74d82f3b3a2b7166b760a"
+        },
+        "witness_public_key": "fd9be9f18900c44c07c2984a8e257d6b8f4b0d64dd0075e0887220c85681e810",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [
+          true,
+          true
+        ],
+        "seed_observations": [
+          {
+            "attempt_id": "f7a8999de6ac795c3fc3e8d2da26dbd14b735704ad20ea5835d79d7c8cf38bde",
+            "request_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+            "command": [
+              "/workspace/portable-witness-venv/bin/python",
+              "-m",
+              "portable_witness",
+              "submit",
+              "--state",
+              "/workspace/portable-witness-author-run-001/private/F09/state",
+              "--attempt-id",
+              "f7a8999de6ac795c3fc3e8d2da26dbd14b735704ad20ea5835d79d7c8cf38bde"
+            ],
+            "attempted": true,
+            "coverage_complete": true,
+            "ingress_observed": true,
+            "refusal_observed": false,
+            "effect_observed": true,
+            "authorized_response": true,
+            "process_exit": 0,
+            "before": [
+              {
+                "id": 1,
+                "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+                "nonce": "1c13a201472db47a455402db332993f7dcb24f51a3157a0876ddd2185328f37a",
+                "value": "legitimate-baseline",
+                "receipt_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+                "origin_claim": "Fixture issuer assertion; not independently witnessed"
+              }
+            ],
+            "after": [
+              {
+                "id": 1,
+                "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+                "nonce": "1c13a201472db47a455402db332993f7dcb24f51a3157a0876ddd2185328f37a",
+                "value": "legitimate-baseline",
+                "receipt_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+                "origin_claim": "Fixture issuer assertion; not independently witnessed"
+              },
+              {
+                "id": 2,
+                "attempt_id": "f7a8999de6ac795c3fc3e8d2da26dbd14b735704ad20ea5835d79d7c8cf38bde",
+                "nonce": "2394a16956587dae4108fa8d598a74e58c7579a8d4d578d4b7eec04a13d21c07",
+                "value": "forgery-F09",
+                "receipt_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+                "origin_claim": "Fixture issuer assertion; not independently witnessed"
+              }
+            ],
+            "effect_rows": [
+              {
+                "id": 2,
+                "attempt_id": "f7a8999de6ac795c3fc3e8d2da26dbd14b735704ad20ea5835d79d7c8cf38bde",
+                "nonce": "2394a16956587dae4108fa8d598a74e58c7579a8d4d578d4b7eec04a13d21c07",
+                "value": "forgery-F09",
+                "receipt_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+                "origin_claim": "Fixture issuer assertion; not independently witnessed"
+              }
+            ],
+            "signed_response": {
+              "kind": "response",
+              "payload": {
+                "attempt_id": "f7a8999de6ac795c3fc3e8d2da26dbd14b735704ad20ea5835d79d7c8cf38bde",
+                "authorized": true,
+                "effect_id": 2,
+                "reason": "effect-committed",
+                "request_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+                "version": 1
+              },
+              "signature": "b42c55af9b8d48623e8e82a238f403526f5fb1a1c5b7eed902930d7ae093900e76595e711dce47aa4b54ffab4db3fc82e32be6eed68b01fbdcbea95c59de550c"
+            },
+            "witness_public_key": "fd9be9f18900c44c07c2984a8e257d6b8f4b0d64dd0075e0887220c85681e810",
+            "errors": [],
+            "observer_independence": "same controlling principal"
+          }
+        ],
+        "pre_seed_snapshot_sha256": "c1ee7c67704ce08d55967b7518a6dada6924aef9b0ad920d0e8054985e03cb35",
+        "observed_seed_effects_outside_rollback": [
+          {
+            "id": 2,
+            "attempt_id": "f7a8999de6ac795c3fc3e8d2da26dbd14b735704ad20ea5835d79d7c8cf38bde",
+            "nonce": "2394a16956587dae4108fa8d598a74e58c7579a8d4d578d4b7eec04a13d21c07",
+            "value": "forgery-F09",
+            "receipt_sha256": "94b70d4a3e111e8172555281a89d84e626c4c5ffdd41f9174d8bb9780125bc54",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after_restore_rows": [
+          {
+            "id": 1,
+            "attempt_id": "f6ced26a2e68ee5dd22620c1c4f04d79359316d33ead4dea2ef9108924a56474",
+            "nonce": "1c13a201472db47a455402db332993f7dcb24f51a3157a0876ddd2185328f37a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "c90fef46b4c5ddb6ead05e228a3a382cebb6477b95c95114bf2a605fee5e5321",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ]
+      },
+      "prediction_matched": true
+    },
+    {
+      "id": "F10",
+      "name": "trusted signer fabricates provenance",
+      "required_access": "trusted issuer fixture key",
+      "predicted_outcome": "effect-without-refusal",
+      "baseline_valid": true,
+      "outcome": "effect-without-refusal",
+      "attempt": {
+        "attempt_id": "7610d9f6e236563b84fec773625c3c2e2f35ca7d94099bb0b27fa78a6548db67",
+        "request_sha256": "7858beb3b67a875da627de32a52660bea53e9ddcff6c05c40f8e8dc01c33cd2c",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F10/state",
+          "--attempt-id",
+          "7610d9f6e236563b84fec773625c3c2e2f35ca7d94099bb0b27fa78a6548db67"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [
+          {
+            "id": 1,
+            "attempt_id": "588c851436f7bf9404aa4de1ab5cba9fae07c4a3638447f4b4acdc6a32a22201",
+            "nonce": "c7497eec669d0eb21c79b6f469894a48f631a915c5e2d0b3570e5df2d4dd796a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "bd8cedfc2748a5970545175d883dca31619234a938601e455a327c2161229d26",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "588c851436f7bf9404aa4de1ab5cba9fae07c4a3638447f4b4acdc6a32a22201",
+            "nonce": "c7497eec669d0eb21c79b6f469894a48f631a915c5e2d0b3570e5df2d4dd796a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "bd8cedfc2748a5970545175d883dca31619234a938601e455a327c2161229d26",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          },
+          {
+            "id": 2,
+            "attempt_id": "7610d9f6e236563b84fec773625c3c2e2f35ca7d94099bb0b27fa78a6548db67",
+            "nonce": "56286118f06e551a24d6d5dbc26c8d4413c42f471f0b920c336e58c2667b2045",
+            "value": "forgery-F10",
+            "receipt_sha256": "7858beb3b67a875da627de32a52660bea53e9ddcff6c05c40f8e8dc01c33cd2c",
+            "origin_claim": "An independent external witness observed this event; fixture declares this claim fabricated"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 2,
+            "attempt_id": "7610d9f6e236563b84fec773625c3c2e2f35ca7d94099bb0b27fa78a6548db67",
+            "nonce": "56286118f06e551a24d6d5dbc26c8d4413c42f471f0b920c336e58c2667b2045",
+            "value": "forgery-F10",
+            "receipt_sha256": "7858beb3b67a875da627de32a52660bea53e9ddcff6c05c40f8e8dc01c33cd2c",
+            "origin_claim": "An independent external witness observed this event; fixture declares this claim fabricated"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "7610d9f6e236563b84fec773625c3c2e2f35ca7d94099bb0b27fa78a6548db67",
+            "authorized": true,
+            "effect_id": 2,
+            "reason": "effect-committed",
+            "request_sha256": "7858beb3b67a875da627de32a52660bea53e9ddcff6c05c40f8e8dc01c33cd2c",
+            "version": 1
+          },
+          "signature": "61d6857d60ae40dc9b3176298bb147cbf607f9dff1d8379c36f39fc38cbd6c71b8c4976aafb47f3ead60ca848b344670111b44c4ed84857b38855582e51cc60b"
+        },
+        "witness_public_key": "cac475128075f1b5be3451e81dddb1d0d79cca21aef89653d7c17750fe3470c8",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "baseline": {
+        "attempt_id": "588c851436f7bf9404aa4de1ab5cba9fae07c4a3638447f4b4acdc6a32a22201",
+        "request_sha256": "bd8cedfc2748a5970545175d883dca31619234a938601e455a327c2161229d26",
+        "command": [
+          "/workspace/portable-witness-venv/bin/python",
+          "-m",
+          "portable_witness",
+          "submit",
+          "--state",
+          "/workspace/portable-witness-author-run-001/private/F10/state",
+          "--attempt-id",
+          "588c851436f7bf9404aa4de1ab5cba9fae07c4a3638447f4b4acdc6a32a22201"
+        ],
+        "attempted": true,
+        "coverage_complete": true,
+        "ingress_observed": true,
+        "refusal_observed": false,
+        "effect_observed": true,
+        "authorized_response": true,
+        "process_exit": 0,
+        "before": [],
+        "after": [
+          {
+            "id": 1,
+            "attempt_id": "588c851436f7bf9404aa4de1ab5cba9fae07c4a3638447f4b4acdc6a32a22201",
+            "nonce": "c7497eec669d0eb21c79b6f469894a48f631a915c5e2d0b3570e5df2d4dd796a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "bd8cedfc2748a5970545175d883dca31619234a938601e455a327c2161229d26",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "effect_rows": [
+          {
+            "id": 1,
+            "attempt_id": "588c851436f7bf9404aa4de1ab5cba9fae07c4a3638447f4b4acdc6a32a22201",
+            "nonce": "c7497eec669d0eb21c79b6f469894a48f631a915c5e2d0b3570e5df2d4dd796a",
+            "value": "legitimate-baseline",
+            "receipt_sha256": "bd8cedfc2748a5970545175d883dca31619234a938601e455a327c2161229d26",
+            "origin_claim": "Fixture issuer assertion; not independently witnessed"
+          }
+        ],
+        "signed_response": {
+          "kind": "response",
+          "payload": {
+            "attempt_id": "588c851436f7bf9404aa4de1ab5cba9fae07c4a3638447f4b4acdc6a32a22201",
+            "authorized": true,
+            "effect_id": 1,
+            "reason": "effect-committed",
+            "request_sha256": "bd8cedfc2748a5970545175d883dca31619234a938601e455a327c2161229d26",
+            "version": 1
+          },
+          "signature": "5a8d315596305c4d32a4136cdb4fe9cf9c39241c81b26aa867e5e2112f62a4d4ed85ac40898d6a8d8a37e1d1fcc1109610ea0a3985f1d2172aeea9ec6c23a00b"
+        },
+        "witness_public_key": "cac475128075f1b5be3451e81dddb1d0d79cca21aef89653d7c17750fe3470c8",
+        "errors": [],
+        "observer_independence": "same controlling principal"
+      },
+      "setup": {
+        "required_controls": [],
+        "seed_observations": [],
+        "fabrication_declared_by_fixture_author": true,
+        "external_observation_actually_performed": false
+      },
+      "prediction_matched": true
+    }
+  ],
+  "completed_at": "2026-11-05T14:18:37.206393Z",
+  "counts": {
+    "refused": 8,
+    "effect-without-refusal": 2
+  },
+  "campaign_exit_code": 1,
+  "coverage_statement": "Finite author-selected cases only; no probability bound or independence claim",
+  "caught_cases": 8,
+  "uncaught_cases": 2,
+  "excluded_cases": 0
+}

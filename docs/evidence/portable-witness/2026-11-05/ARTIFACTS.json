@@ -1,0 +1,86 @@
+{
+  "schema": "portable-witness-release-artifacts/1",
+  "computed_by": "Codex using Python hashlib in Ryan-controlled workspace",
+  "files": [
+    {
+      "path": "author-public-evidence.zip",
+      "bytes": 72306,
+      "sha256": "3efeded6e1406de483e5487c870b7ef298708eb35fbd0a47eb5ea1aeed9fc486"
+    },
+    {
+      "path": "author-report.json",
+      "bytes": 69736,
+      "sha256": "41dec953ec617ad3aa708a31c8de8ce397e66447660fc9e621dfbc7d27cc4656"
+    },
+    {
+      "path": "author-report.md",
+      "bytes": 1081,
+      "sha256": "de0e292eec21b258199cb734a5c018b539d5af476c5fe22bf3946eece147a650"
+    },
+    {
+      "path": "campaign.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "campaign.log",
+      "bytes": 399,
+      "sha256": "d059060e0bc39ab8a079d699b6c62cad603c19f5d61b7d40a844edba10568187"
+    },
+    {
+      "path": "controls.log",
+      "bytes": 698,
+      "sha256": "6c8d42ee98978efd56a957a8f93cc1ef0d64f4d550881c89125e58d981e63864"
+    },
+    {
+      "path": "export-verifier-controls.json",
+      "bytes": 328,
+      "sha256": "64c82678bd942b5999c2f0a30ac61e730a2b1a6fd832025faeb3be0ea8ce9270"
+    },
+    {
+      "path": "implementation-before-run.json",
+      "bytes": 2756,
+      "sha256": "4fe1e8cbd7e061cb86da3ab1942bb35e7850907eb9781f8d4f815b4b5d779bb2"
+    },
+    {
+      "path": "portable-witness-source.zip",
+      "bytes": 27621,
+      "sha256": "e9fc043d518d2e54b1073e9cf4f60278075bc4550e689a4b7e282974b0489706"
+    },
+    {
+      "path": "source-zip-campaign.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "source-zip-campaign.log",
+      "bytes": 405,
+      "sha256": "48135007db9e2066d07e23cddb5cf9be05e2cdfbb3841a0a3df5138754e40717"
+    },
+    {
+      "path": "source-zip-controls.log",
+      "bytes": 698,
+      "sha256": "9145a6d07eb3069239f0df8d27a30a5dd3e2acc1ab5f45450ed7b08122ec4376"
+    },
+    {
+      "path": "source-zip-installation.log",
+      "bytes": 919,
+      "sha256": "ec3fb306d39643a9f3d90828b0d0d73e7959cc97e0d3b9620973806815edf633"
+    },
+    {
+      "path": "source-zip-reproduction-evidence.zip",
+      "bytes": 72673,
+      "sha256": "524aa6152b18071034a40a4c927ca8c422ef23469b1ac0c1e70a177012547347"
+    },
+    {
+      "path": "source-zip-reproduction-report.json",
+      "bytes": 70455,
+      "sha256": "cae29016ea3f41ac8207a1eb1af4e71bffb0afe9ade0079bec91058a701413f8"
+    },
+    {
+      "path": "source-zip-verification.log",
+      "bytes": 176,
+      "sha256": "86e482bf1832ca8f3eb9cbeac9e049f2c0cb78dc4988813c5ca6edd3d04e8c1d"
+    }
+  ]
+}

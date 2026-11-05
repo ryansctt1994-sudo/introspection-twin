@@ -1,0 +1,10 @@
+test_concurrent_same_nonce_commits_once (test_controls.BoundaryControls.test_concurrent_same_nonce_commits_once) ... ok
+test_legitimate_effect_is_observed_separately (test_controls.BoundaryControls.test_legitimate_effect_is_observed_separately) ... ok
+test_missing_state_is_not_recreated (test_controls.BoundaryControls.test_missing_state_is_not_recreated) ... ok
+test_zero_byte_state_refuses (test_controls.BoundaryControls.test_zero_byte_state_refuses) ... ok
+test_fixed_categories_and_ambiguous_observations (test_controls.TaxonomyControls.test_fixed_categories_and_ambiguous_observations) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.257s
+
+OK

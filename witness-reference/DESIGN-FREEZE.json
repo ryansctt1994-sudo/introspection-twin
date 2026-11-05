@@ -1,0 +1,25 @@
+{
+  "actor": "Codex in Ryan shared workspace",
+  "files": [
+    {
+      "bytes": 3319,
+      "path": "TAXONOMY.md",
+      "sha256": "422f6e691d395be0276cc09dec3df0801bb49d876557aa14df3a6871e9efe9a7"
+    },
+    {
+      "bytes": 3115,
+      "path": "cases.json",
+      "sha256": "b694a8fc985f9417a859a1a4a52736a36df750dd37cc88e23fcb3292d2f19a46"
+    },
+    {
+      "bytes": 5581,
+      "path": "SPEC.md",
+      "sha256": "ab20af16505cdbe891fccd23af8008c418031dedc6bb45de9240c1c41e3b2ce9"
+    }
+  ],
+  "independent_witness": false,
+  "recorded_at_utc": "2026-11-05T14:01:14Z",
+  "s5_execution": false,
+  "schema": "portable-witness-design-freeze/1",
+  "scope": "taxonomy, cases and reference contract before any witness control or forgery execution"
+}
