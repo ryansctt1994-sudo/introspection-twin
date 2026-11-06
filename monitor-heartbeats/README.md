@@ -57,3 +57,10 @@ true. A stall becomes an externally checkable publication gap under this cadence
 This same-principal publication mechanism is not independent witnessing, guaranteed
 availability, or protection against all log split views. A deleted/unavailable
 public payload is missing coverage, never a healthy heartbeat.
+
+The bootstrap heartbeat was additionally checked against Rekor's own signed live
+checkpoint, fetched directly at 23:45:15 UTC. Its consistency proof connects tree
+size 3604542209 to 3604572416. Raw responses are in the run's publication/live-log
+folder. To make a fresh independent data-route check, use the included
+`python -m publisher.live_log --manifest PATH/heartbeat.json --entry PATH/rekor-entry.json --checkpoint-sha256 EXPECTED_HEARTBEAT_DIGEST --output NEW_DIRECTORY`.
+This is the same-principal verifier/data route, not another human witness.
