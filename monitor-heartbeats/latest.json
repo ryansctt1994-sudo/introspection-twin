@@ -1,0 +1,11 @@
+{
+  "schema": "replay-monitor-heartbeat-pointer/1",
+  "execution_id": "20261106T232224Z",
+  "slot_date": "2026-11-06",
+  "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/heartbeat.json",
+  "publication_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/publication/publication.json",
+  "heartbeat_sha256": "a75219fc5213e8dbbf232adb9247e07264827c410c1b57e72e8b3745b2bcadfc",
+  "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a383079d2e9c69de9cf72668924747dac6d94459e16509e0b626a1d0ad4a08483",
+  "rekor_integrated_at": "2026-11-06T23:42:22+00:00",
+  "retrospective_bootstrap": true
+}

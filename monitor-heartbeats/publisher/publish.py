@@ -28,13 +28,18 @@ def validate(raw, expected_cadence, expected_key):
     require(digest(canonical(payload['cadence'])) == expected_cadence
             == payload['cadence_sha256'], 'unapproved cadence change')
     require(payload['cadence']['publisher_public_key_sha256'] == expected_key, 'unapproved publisher')
-    times = []
-    for field in ('intended_fire_time', 'actual_arrival_time'):
-        value = datetime.fromisoformat(payload[field].replace('Z', '+00:00'))
+    def timestamp(value):
+        value = datetime.fromisoformat(value.replace('Z', '+00:00'))
         require(value.utcoffset().total_seconds() == 0, 'timestamps must be explicit UTC')
-        times.append(value)
-    require((times[1] - times[0]).total_seconds() == payload['lateness_seconds'],
-            'lateness inconsistent with raw timestamps')
+        return value
+    actual = timestamp(payload['actual_arrival_time'])
+    if payload['intended_fire_time'] is None:
+        require(payload['lateness_seconds'] is None and payload.get('intended_slot_candidates'),
+                'unknown intended time needs explicit uncertainty and candidate slots')
+    else:
+        intended = timestamp(payload['intended_fire_time'])
+        require((actual - intended).total_seconds() == payload['lateness_seconds'],
+                'lateness inconsistent with raw timestamps')
     require(payload['same_owner_principal'] is True and payload['independent_witnessing'] is False,
             'independence misrepresented')
     return payload
