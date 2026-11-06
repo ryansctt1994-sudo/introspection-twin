@@ -1,0 +1,261 @@
+{
+  "schema": "replay-schedule-audit/2",
+  "repository": "ryansctt1994-sudo/introspection-twin",
+  "audit_id": "20261106T232224Z",
+  "audit_started_at": "2026-11-06T23:22:24Z",
+  "recorded_at": "2026-11-06T23:26:46Z",
+  "slot_date": "2026-11-06",
+  "audit_kind": "NEW_ELAPSED_SLOT",
+  "audited_date_range": {
+    "from": "2026-11-04",
+    "through": "2026-11-06"
+  },
+  "remote_operations": "READ_ONLY",
+  "source_commit": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+  "source_tree": "ece8673025a12f141b346f70505e4ee31088fce2",
+  "deployment": {
+    "pr": 12,
+    "merged": true,
+    "merge_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+    "merged_at": "2026-11-04T15:36:35Z"
+  },
+  "policy_sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70",
+  "checker_source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+  "checker_sha256": "26f7f01b03a90694835d5d9d0b127f1bad35a6bba1c23813a723ab12995a491a",
+  "source_files": [
+    {
+      "path": "scripts/check_schedule_liveness.py",
+      "source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "git_blob_sha": "a0e684bced989b353d5f33c8a95dd940fe5c310c",
+      "sha256": "26f7f01b03a90694835d5d9d0b127f1bad35a6bba1c23813a723ab12995a491a",
+      "bytes": 7109
+    },
+    {
+      "path": ".github/replay-schedule.json",
+      "source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "git_blob_sha": "75923dfefcedb94353bb797499c46d1bad527ee4",
+      "sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70",
+      "bytes": 299
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_MISS_2026-11-04.json",
+      "source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "git_blob_sha": "3e4208ea102e831108d05d78415933f0eb488fc4",
+      "sha256": "0c16469dde9cceee781f5def8020089a2ba39df8ba9177a8518c4d5b494d4fbc",
+      "bytes": 1895
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_LIVENESS_2026-11-04.md",
+      "source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "git_blob_sha": "2d40d209553c4190efde40cb4b5e69d8b7dd9670",
+      "sha256": "4504fcc1a33301fa29cd85dbc47b88ebef599ec1fadf3d404a8b20ee6a155f08",
+      "bytes": 6299
+    },
+    {
+      "path": ".github/workflows/schedule-liveness.yml",
+      "source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "git_blob_sha": "5484e1adc8d5ff9bc702af3ffae1467f59f81fd0",
+      "sha256": "61e241b2b4a8f557dc3622ad81d6b85d772252cd18ce032b8a36a4e1a7686e27",
+      "bytes": 1323
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "git_blob_sha": "e435ca891b12e05253c62ac4c6301a3529982826",
+      "sha256": "5108f420e14b33eaf9dfdc771b300d5bc48dd5357c5d26d81984f35d7cc37666",
+      "bytes": 3989
+    }
+  ],
+  "fresh_replay_qualification": {
+    "run_id": 42293895353,
+    "url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/42293895353",
+    "qualification": "QUALIFIED_SCHEDULED_FRESH",
+    "checks": {
+      "event_schedule": true,
+      "cron_matches_committed_policy": true,
+      "main_branch": true,
+      "first_attempt": true,
+      "same_run_id": true,
+      "source_sha_matches": true,
+      "tree_matches_git_commit": true,
+      "actual_fresh_environment": true,
+      "fresh_requested": true,
+      "fresh_verified": true,
+      "fresh_checker_zero": true,
+      "fresh_log_tee_zero": true,
+      "outer_replay_zero": true,
+      "outer_tee_zero": true,
+      "real_type_mismatch_diagnostic": true,
+      "real_native_diagnostic": true,
+      "fresh_completion_marker": true,
+      "replay_final_line": true,
+      "observed_receipt_pass": true,
+      "observed_receipt_in_hosted_log": true,
+      "trigger_record_in_hosted_log": true,
+      "job_and_run_success": true,
+      "artifact_digest_verified": true
+    },
+    "failed_checks": [],
+    "source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+    "tree_sha": "ece8673025a12f141b346f70505e4ee31088fce2",
+    "trigger_record": {
+      "TRIGGER_EVENT": "schedule",
+      "TRIGGER_CRON": "47 15 * * *",
+      "GITHUB_RUN_ID": "42293895353",
+      "GITHUB_RUN_ATTEMPT": "1",
+      "GITHUB_SHA": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "GITHUB_REF": "refs/heads/main"
+    },
+    "replay_receipt": {
+      "schema": "ci-replay-observed-v1",
+      "commit": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "tree": "ece8673025a12f141b346f70505e4ee31088fce2",
+      "toolchain": "leanprover/lean4:v4.22.0",
+      "fresh_requested": "true",
+      "fresh_verified": "true",
+      "replay_exit_status": "0",
+      "tee_exit_status": "0",
+      "observed_status": "PASS",
+      "last_replay_log_line": "KERNEL REPLAY: PASS"
+    },
+    "fresh_output_bytes": 0,
+    "diagnostic_scope": "Only actual replay step/record inspected; mock negative-control steps excluded. Empty successful fresh output does not substitute for real diagnostics, which are present in replay.log and hosted step.",
+    "intended_occurrence_attribution": "Repeated cron and creation-time window cannot prove original intended date.",
+    "independence": "SAME_PRINCIPAL"
+  },
+  "qualification_scope": "Actual scheduled execution; intended calendar occurrence not independently attributable.",
+  "qualification_missing": false,
+  "liveness_compliant": false,
+  "prior_receipt_preserved": {
+    "path": "slots/2026-11-05/20261105T232643Z.json",
+    "sha256": "b5970b4ed30d21b9b341d61194fd39326552d3829072405d1f7280f818d198ad"
+  },
+  "historical_findings_preserved": {
+    "original_1445_miss": {
+      "status": "MISSED_SCHEDULE",
+      "threshold_basis": "RETROSPECTIVE; 20-minute window adopted after the historical trigger",
+      "source_file": "sources/64b89a5dc73a42fd062370178ffb62bb4f028187/docs/evidence/SCHEDULE_MISS_2026-11-04.json"
+    },
+    "first_qualified_scheduled_fresh": {
+      "run_id": 41857790032,
+      "url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/41857790032",
+      "created_at": "2026-11-04T15:26:37Z",
+      "source_sha": "3b811cd008495b51c75f9d942b04a440580c1d88",
+      "basis": "Previously verified baseline and retained committed evidence; not rerun in this audit",
+      "exact_cron": "NOT_RECORDED_BY_OLD_WORKFLOW",
+      "counted_for_new_daily_slot": false
+    }
+  },
+  "coverage": {
+    "scheduled_runs_pagination_complete": true,
+    "schedule_runs_total": 37,
+    "connected_pages": [
+      1,
+      2
+    ],
+    "per_slot_API_listing_complete": true,
+    "prior_evidence_files_verified": 43,
+    "unchecked_elapsed_dates": [],
+    "connector_limitation": "Workflow-definition URLs rejected by connector; public read-only GETs and committed checker recovered complete workflow state/slot coverage.",
+    "unresolved_api_or_evidence_errors": []
+  },
+  "attribution_uncertainty": "Repeated cron and creation windows do not prove original intended date. Delayed trigger versus queue/delivery cause is unexplained.",
+  "independence": "External scheduling relative to GitHub Actions; SAME_PRINCIPAL. No independent witnessing or guaranteed availability.",
+  "replay": {
+    "status": "LATE_RUN",
+    "workflow_state": "active",
+    "workflow_id": 374465172,
+    "run_id": 42293895353,
+    "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/42293895353",
+    "event": "schedule",
+    "run_attempt": 1,
+    "observed_at": "2026-11-06T23:24:19Z",
+    "expected_at": "2026-11-06T15:47:00Z",
+    "arrival_deadline": "2026-11-06T16:07:00Z",
+    "completion_deadline": "2026-11-06T16:27:00Z",
+    "created_at": "2026-11-06T21:06:02Z",
+    "run_started_at": "2026-11-06T21:06:02Z",
+    "jobs_completed_at": "2026-11-06T21:09:50Z",
+    "completion_time_basis": "Actual latest job completion; prior verified job timestamp retained on recheck.",
+    "run_updated_at_upper_bound": "2026-11-06T21:09:51Z",
+    "run_status": "completed",
+    "run_conclusion": "success",
+    "arrival_delay_from_trigger_seconds": 19142,
+    "arrival_deadline_missed_by_seconds": 17942,
+    "completion_deadline_missed_by_seconds": 16970,
+    "deadline_findings": [
+      "ARRIVAL_DEADLINE_MISSED",
+      "COMPLETION_DEADLINE_MISSED"
+    ],
+    "observation_receipt": "observations/20261106T232224Z/2026-11-06-replay-liveness.json"
+  },
+  "watchdog": {
+    "status": "LATE_RUN",
+    "workflow_state": "active",
+    "workflow_id": 407086434,
+    "run_id": 42298843732,
+    "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/42298843732",
+    "event": "schedule",
+    "run_attempt": 1,
+    "observed_at": "2026-11-06T23:24:20Z",
+    "expected_at": "2026-11-06T16:29:00Z",
+    "arrival_deadline": "2026-11-06T16:49:00Z",
+    "completion_deadline": "2026-11-06T16:54:00Z",
+    "created_at": "2026-11-06T21:41:51Z",
+    "run_started_at": "2026-11-06T21:41:51Z",
+    "jobs_completed_at": "2026-11-06T21:41:59Z",
+    "completion_time_basis": "Actual latest job completion; prior verified job timestamp retained on recheck.",
+    "run_updated_at_upper_bound": "2026-11-06T21:42:00Z",
+    "run_status": "completed",
+    "run_conclusion": "failure",
+    "arrival_delay_from_trigger_seconds": 18771,
+    "arrival_deadline_missed_by_seconds": 17571,
+    "completion_deadline_missed_by_seconds": 17279,
+    "deadline_findings": [
+      "ARRIVAL_DEADLINE_MISSED",
+      "COMPLETION_DEADLINE_MISSED",
+      "RUN_FAILED"
+    ],
+    "observation_receipt": "observations/20261106T232224Z/2026-11-06-watchdog-liveness.json"
+  },
+  "watchdog_execution_assessment": {
+    "checker_result": "LATE_RUN",
+    "checker_exit": 1,
+    "failure_expected_for_finding": true,
+    "receipt_published": true,
+    "artifact_digest_verified": true,
+    "run_conclusion_failure_is_observed": true,
+    "description": "Correctly reported late replay and published receipt, but its own arrival/completion missed deadlines."
+  },
+  "external_monitor": {
+    "planned_check_at": "2026-11-06T16:57:00Z",
+    "current_audit_first_observed_at": "2026-11-06T23:22:24Z",
+    "current_audit_delay_seconds": 23124,
+    "finding": "CURRENT_AUDIT_AFTER_PLANNED_CHECK",
+    "earlier_on_time_execution_or_delivery": "UNVERIFIED; no earlier November 6 receipt in retained cursor.",
+    "cause": "UNEXPLAINED",
+    "prior_monitor_gap_retained": {
+      "planned_check_at": "2026-11-05T16:57:00Z",
+      "current_audit_first_observed_at": "2026-11-05T23:26:43Z",
+      "current_audit_delay_seconds": 23383,
+      "finding": "CURRENT_AUDIT_AFTER_PLANNED_CHECK",
+      "earlier_on_time_execution_or_delivery": "UNVERIFIED; retained cursor has no earlier November 5 audit.",
+      "cause": "UNEXPLAINED",
+      "prior_monitor_gap_retained": {
+        "planned_check_at": "2026-11-04T16:57:00Z",
+        "current_audit_first_observed_at": "2026-11-04T22:42:14Z",
+        "current_audit_delay_seconds": 20714,
+        "automation_reported_last_run_time": "2026-11-04T22:42:06.525372+00:00",
+        "reported_run_delay_seconds": 20706.525372,
+        "run_details": {
+          "last_run": null,
+          "latest_result": null,
+          "delivery_status": "unknown"
+        },
+        "delivery_status": "unknown",
+        "finding": "CURRENT_AUDIT_AFTER_PLANNED_CHECK; EARLIER_ON_TIME_EXECUTION_OR_DELIVERY_UNVERIFIED",
+        "caveat": "Null run history and absent local cursor do not prove that no earlier attempt occurred."
+      }
+    }
+  }
+}
