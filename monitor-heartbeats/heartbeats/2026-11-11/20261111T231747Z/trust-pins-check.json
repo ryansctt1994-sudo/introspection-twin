@@ -1,0 +1,38 @@
+{
+  "cadence_sha256": "6f9932dab0e6e165f40c9109ea8d0304b8443702ff8a5c17281b37262aef517f",
+  "author_public_key_der_sha256": "584ac012126b547a436d2fe27aff86a67ead99f56f66384d2498cd09c7b63c7f",
+  "existing_key_matches": true,
+  "committed_blob_checks": true,
+  "source_files": [
+    {
+      "path": ".github/replay-schedule.json",
+      "blob_sha": "75923dfefcedb94353bb797499c46d1bad527ee4",
+      "sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "blob_sha": "e435ca891b12e05253c62ac4c6301a3529982826",
+      "sha256": "5108f420e14b33eaf9dfdc771b300d5bc48dd5357c5d26d81984f35d7cc37666"
+    },
+    {
+      "path": ".github/workflows/schedule-liveness.yml",
+      "blob_sha": "5484e1adc8d5ff9bc702af3ffae1467f59f81fd0",
+      "sha256": "61e241b2b4a8f557dc3622ad81d6b85d772252cd18ce032b8a36a4e1a7686e27"
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_LIVENESS_2026-11-04.md",
+      "blob_sha": "2d40d209553c4190efde40cb4b5e69d8b7dd9670",
+      "sha256": "4504fcc1a33301fa29cd85dbc47b88ebef599ec1fadf3d404a8b20ee6a155f08"
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_MISS_2026-11-04.json",
+      "blob_sha": "3e4208ea102e831108d05d78415933f0eb488fc4",
+      "sha256": "0c16469dde9cceee781f5def8020089a2ba39df8ba9177a8518c4d5b494d4fbc"
+    },
+    {
+      "path": "scripts/check_schedule_liveness.py",
+      "blob_sha": "a0e684bced989b353d5f33c8a95dd940fe5c310c",
+      "sha256": "26f7f01b03a90694835d5d9d0b127f1bad35a6bba1c23813a723ab12995a491a"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "schema": "replay-monitor-audit-receipt/1",
+  "audit_id": "20261111T231747Z",
+  "observed_at": "2026-11-11T23:22:50Z",
+  "repository": "ryansctt1994-sudo/introspection-twin",
+  "status": "FINDINGS",
+  "newly_audited_date_range": {
+    "from": "2026-11-07",
+    "through": "2026-11-11"
+  },
+  "closed_window_rechecks": [
+    "2026-11-06"
+  ],
+  "audited_date_range": {
+    "from": "2026-11-04",
+    "through": "2026-11-11"
+  },
+  "source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+  "source_tree": "ece8673025a12f141b346f70505e4ee31088fce2",
+  "policy_sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70",
+  "checker_source_sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+  "checker_sha256": "26f7f01b03a90694835d5d9d0b127f1bad35a6bba1c23813a723ab12995a491a",
+  "source_files": [
+    {
+      "path": ".github/replay-schedule.json",
+      "blob_sha": "75923dfefcedb94353bb797499c46d1bad527ee4",
+      "sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "blob_sha": "e435ca891b12e05253c62ac4c6301a3529982826",
+      "sha256": "5108f420e14b33eaf9dfdc771b300d5bc48dd5357c5d26d81984f35d7cc37666"
+    },
+    {
+      "path": ".github/workflows/schedule-liveness.yml",
+      "blob_sha": "5484e1adc8d5ff9bc702af3ffae1467f59f81fd0",
+      "sha256": "61e241b2b4a8f557dc3622ad81d6b85d772252cd18ce032b8a36a4e1a7686e27"
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_LIVENESS_2026-11-04.md",
+      "blob_sha": "2d40d209553c4190efde40cb4b5e69d8b7dd9670",
+      "sha256": "4504fcc1a33301fa29cd85dbc47b88ebef599ec1fadf3d404a8b20ee6a155f08"
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_MISS_2026-11-04.json",
+      "blob_sha": "3e4208ea102e831108d05d78415933f0eb488fc4",
+      "sha256": "0c16469dde9cceee781f5def8020089a2ba39df8ba9177a8518c4d5b494d4fbc"
+    },
+    {
+      "path": "scripts/check_schedule_liveness.py",
+      "blob_sha": "a0e684bced989b353d5f33c8a95dd940fe5c310c",
+      "sha256": "26f7f01b03a90694835d5d9d0b127f1bad35a6bba1c23813a723ab12995a491a"
+    }
+  ],
+  "slots": [
+    {
+      "date": "2026-11-06",
+      "path": "slots/2026-11-06/20261111T231747Z.json",
+      "sha256": "aad50fe1df7f57076629f9088f26d62b60817dfa8a7e8cd63eefca053a99d65c",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-07",
+      "path": "slots/2026-11-07/20261111T231747Z.json",
+      "sha256": "c9878230afc3a74ac0e986479b2ba384360a2da391884e64d45b09ebfa139e9f",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-08",
+      "path": "slots/2026-11-08/20261111T231747Z.json",
+      "sha256": "ed72b204a93f20d22734693cf4d6e0aea1e8b2bb73fcc114668c36c154e380b3",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-09",
+      "path": "slots/2026-11-09/20261111T231747Z.json",
+      "sha256": "2f65c1f3c204edef42b55f4e528973377895d13ca8790a8c2ff76460bab6751a",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-10",
+      "path": "slots/2026-11-10/20261111T231747Z.json",
+      "sha256": "037883ba100e751bb91ce33e32e38ff8265c6a6f8d935b7bb4566f928e385410",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-11",
+      "path": "slots/2026-11-11/20261111T231747Z.json",
+      "sha256": "1b5f62e983c1b0bd72528a3a6ef3d29a632d13480aca9c2ca5f4ce5383dc5fcb",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    }
+  ],
+  "summary": [
+    {
+      "date": "2026-11-06",
+      "replay_run_id": 42293895353,
+      "replay_created": "2026-11-06T21:06:02Z",
+      "replay_completed": "2026-11-06T21:09:50Z",
+      "watchdog_run_id": 42298843732,
+      "watchdog_created": "2026-11-06T21:41:51Z",
+      "watchdog_completed": "2026-11-06T21:41:59Z",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-07",
+      "replay_run_id": 42407299480,
+      "replay_created": "2026-11-07T19:39:47Z",
+      "replay_completed": "2026-11-07T19:43:23Z",
+      "watchdog_run_id": 42410854262,
+      "watchdog_created": "2026-11-07T20:23:48Z",
+      "watchdog_completed": "2026-11-07T20:23:56Z",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-08",
+      "replay_run_id": 42517731564,
+      "replay_created": "2026-11-08T19:58:56Z",
+      "replay_completed": "2026-11-08T20:03:33Z",
+      "watchdog_run_id": 42521310476,
+      "watchdog_created": "2026-11-08T20:40:22Z",
+      "watchdog_completed": "2026-11-08T20:40:33Z",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-09",
+      "replay_run_id": 42723822113,
+      "replay_created": "2026-11-09T23:51:39Z",
+      "replay_completed": "2026-11-09T23:56:02Z",
+      "watchdog_run_id": 42727670642,
+      "watchdog_created": "2026-11-10T00:21:28Z",
+      "watchdog_completed": "2026-11-10T00:21:37Z",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-10",
+      "replay_run_id": 42905100906,
+      "replay_created": "2026-11-10T21:26:41Z",
+      "replay_completed": "2026-11-10T21:31:06Z",
+      "watchdog_run_id": 42909194568,
+      "watchdog_created": "2026-11-10T21:52:17Z",
+      "watchdog_completed": "2026-11-10T21:52:25Z",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-11",
+      "replay_run_id": 43110695731,
+      "replay_created": "2026-11-11T22:18:48Z",
+      "replay_completed": "2026-11-11T22:22:10Z",
+      "watchdog_run_id": 43115597567,
+      "watchdog_created": "2026-11-11T22:54:20Z",
+      "watchdog_completed": "2026-11-11T22:54:30Z",
+      "fresh_qualified": true
+    }
+  ],
+  "findings": [
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-07",
+      "intended_fire_time": "2026-11-07T16:57:00Z",
+      "publication_deadline": "2026-11-07T17:17:00Z",
+      "observed_at": "2026-11-11T23:22:50Z",
+      "coverage": "No heartbeat found after bootstrap in complete dedicated-branch tree",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-08",
+      "intended_fire_time": "2026-11-08T16:57:00Z",
+      "publication_deadline": "2026-11-08T17:17:00Z",
+      "observed_at": "2026-11-11T23:22:50Z",
+      "coverage": "No heartbeat found after bootstrap in complete dedicated-branch tree",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-09",
+      "intended_fire_time": "2026-11-09T16:57:00Z",
+      "publication_deadline": "2026-11-09T17:17:00Z",
+      "observed_at": "2026-11-11T23:22:50Z",
+      "coverage": "No heartbeat found after bootstrap in complete dedicated-branch tree",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-10",
+      "intended_fire_time": "2026-11-10T16:57:00Z",
+      "publication_deadline": "2026-11-10T17:17:00Z",
+      "observed_at": "2026-11-11T23:22:50Z",
+      "coverage": "No heartbeat found after bootstrap in complete dedicated-branch tree",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-11",
+      "intended_fire_time": "2026-11-11T16:57:00Z",
+      "publication_deadline": "2026-11-11T17:17:00Z",
+      "observed_at": "2026-11-11T23:22:50Z",
+      "coverage": "No heartbeat found after bootstrap in complete dedicated-branch tree",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "MONITOR_OBSERVATION_GAP",
+      "from": "2026-11-06T23:26:46Z",
+      "through": "2026-11-11T23:17:47Z",
+      "no_intermediate_receipt_in_local_or_public_history": true,
+      "scheduler_history": "UNKNOWN",
+      "latest_cadence_slot": "2026-11-11T16:57:00Z",
+      "delay_from_latest_cadence_seconds": 22847,
+      "original_intended_slot": "UNKNOWN"
+    }
+  ],
+  "schedule_pagination_complete": true,
+  "total_schedule_main_runs": 47,
+  "workflow_states": {
+    "374465172": "active",
+    "407086434": "active"
+  },
+  "qualification_missing": false,
+  "historical_first_qualified": {
+    "run_id": 41857790032,
+    "created_at": "2026-11-04T15:26:37Z",
+    "source_sha": "3b811cd008495b51c75f9d942b04a440580c1d88",
+    "qualification": "PRESERVED_HISTORICALLY_VERIFIED",
+    "cron": "NOT_RECORDED",
+    "counts_for_later_slot": false
+  },
+  "historical_1445_miss": {
+    "status": "PRESERVED",
+    "retrospective_arrival_deadline": "2026-11-04T15:05:00Z"
+  },
+  "timestamps": {
+    "intended_fire_time": null,
+    "actual_arrival_time": "2026-11-11T23:17:47Z",
+    "actual_arrival_time_provenance": "FIRST_OBSERVED_ASSISTANT_AUDIT_CLOCK: clock.curr_time",
+    "scheduler_scheduled_for": null,
+    "scheduler_started_at": null,
+    "scheduler_reported_last_run_time": "2026-11-11T23:15:22.639517+00:00",
+    "intended_slot_attribution": "UNKNOWN; detailed run/delivery history unavailable",
+    "candidate_intended_fire_times": [
+      "2026-11-07T16:57:00Z",
+      "2026-11-08T16:57:00Z",
+      "2026-11-09T16:57:00Z",
+      "2026-11-10T16:57:00Z",
+      "2026-11-11T16:57:00Z"
+    ],
+    "nominal_latest_cadence_slot": "2026-11-11T16:57:00Z",
+    "delay_from_latest_cadence_seconds": 22847,
+    "not_proof_of_original_intended_date": true
+  },
+  "previous_publication": {
+    "schema": "replay-monitor-heartbeat-pointer/1",
+    "execution_id": "20261106T232224Z",
+    "slot_date": "2026-11-06",
+    "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/heartbeat.json",
+    "publication_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/publication/publication.json",
+    "heartbeat_sha256": "a75219fc5213e8dbbf232adb9247e07264827c410c1b57e72e8b3745b2bcadfc",
+    "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a383079d2e9c69de9cf72668924747dac6d94459e16509e0b626a1d0ad4a08483",
+    "rekor_integrated_at": "2026-11-06T23:42:22+00:00",
+    "retrospective_bootstrap": true
+  },
+  "same_owner_principal": true,
+  "independent_witnessing": false,
+  "guaranteed_availability": false,
+  "attribution_uncertainty": "Original intended calendar date cannot be proved by repeated cron or creation window; cause of delay unexplained."
+}

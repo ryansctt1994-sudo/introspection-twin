@@ -1,0 +1,20 @@
+{
+  "intended_fire_time": null,
+  "actual_arrival_time": "2026-11-11T23:17:47Z",
+  "actual_arrival_time_provenance": "FIRST_OBSERVED_ASSISTANT_AUDIT_CLOCK: clock.curr_time",
+  "scheduler_scheduled_for": null,
+  "scheduler_started_at": null,
+  "scheduler_reported_last_run_time": "2026-11-11T23:15:22.639517+00:00",
+  "intended_slot_attribution": "UNKNOWN; detailed run/delivery history unavailable",
+  "candidate_intended_fire_times": [
+    "2026-11-07T16:57:00Z",
+    "2026-11-08T16:57:00Z",
+    "2026-11-09T16:57:00Z",
+    "2026-11-10T16:57:00Z",
+    "2026-11-11T16:57:00Z"
+  ],
+  "nominal_latest_cadence_slot": "2026-11-11T16:57:00Z",
+  "delay_from_latest_cadence_seconds": 22847,
+  "not_proof_of_original_intended_date": true
+}
+
