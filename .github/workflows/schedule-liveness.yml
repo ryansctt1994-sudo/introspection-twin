@@ -2,7 +2,7 @@ name: replay schedule liveness
 
 on:
   schedule:
-    - cron: "29 16 * * *" # after the 16:27 UTC completion deadline
+    - cron: "53 4 * * *" # after the 04:47 UTC (next-day) completion deadline; see replay-schedule.json
   workflow_dispatch:
     inputs:
       expected_at:

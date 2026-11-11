@@ -13,6 +13,10 @@ import check_schedule_liveness as checker
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = json.loads((ROOT / ".github/replay-schedule.json").read_text())
 DUE = checker.timestamp(POLICY["first_expected_at"])
+# Deadlines come from the policy so a reviewed window change cannot silently desync fixtures.
+ARRIVAL = timedelta(seconds=POLICY["arrival_grace_seconds"])
+COMPLETION = timedelta(seconds=POLICY["completion_grace_seconds"])
+AFTER_DEADLINE = COMPLETION + timedelta(minutes=2)
 
 
 class ScheduleLiveness(unittest.TestCase):
@@ -31,12 +35,12 @@ class ScheduleLiveness(unittest.TestCase):
         self.observation["runs"].append(run)
         return run
 
-    def verdict(self, minutes=42):
-        return checker.evaluate(POLICY, DUE, DUE + timedelta(minutes=minutes), self.observation)
+    def verdict(self, offset=AFTER_DEADLINE):
+        return checker.evaluate(POLICY, DUE, DUE + offset, self.observation)
 
     def test_deadline_turns_absence_into_finding(self):
-        self.assertEqual(self.verdict(19)["status"], "AWAITING_RUN")
-        result = self.verdict(21)
+        self.assertEqual(self.verdict(ARRIVAL - timedelta(minutes=1))["status"], "AWAITING_RUN")
+        result = self.verdict(ARRIVAL + timedelta(minutes=1))
         self.assertEqual((result["status"], result["exit_code"]), ("MISSED_SCHEDULE", 1))
 
     def test_success_metadata_never_qualifies_replay(self):
@@ -60,13 +64,13 @@ class ScheduleLiveness(unittest.TestCase):
             self.assertEqual(self.verdict()["status"], "MISSED_SCHEDULE")
 
     def test_late_success_retains_finding(self):
-        self.run_fixture(created_at=checker.iso(DUE + timedelta(minutes=21)))
+        self.run_fixture(created_at=checker.iso(DUE + ARRIVAL + timedelta(minutes=1)))
         self.assertEqual(self.verdict()["status"], "LATE_RUN")
 
     def test_stuck_run_has_deadline(self):
         self.run_fixture(status="queued", conclusion=None)
-        self.assertEqual(self.verdict(21)["status"], "RUNNING")
-        self.assertEqual(self.verdict(41)["status"], "COMPLETION_OVERDUE")
+        self.assertEqual(self.verdict(ARRIVAL + timedelta(minutes=1))["status"], "RUNNING")
+        self.assertEqual(self.verdict(COMPLETION + timedelta(minutes=1))["status"], "COMPLETION_OVERDUE")
 
     def test_failed_or_cancelled_run_is_not_success(self):
         for conclusion in ("failure", "cancelled", "timed_out", "skipped", None):
@@ -75,7 +79,7 @@ class ScheduleLiveness(unittest.TestCase):
             self.assertEqual(self.verdict()["status"], "RUN_FAILED")
 
     def test_late_completion_bound_not_certified(self):
-        self.run_fixture(updated_at=checker.iso(DUE + timedelta(minutes=41)))
+        self.run_fixture(updated_at=checker.iso(DUE + COMPLETION + timedelta(minutes=1)))
         self.assertEqual(self.verdict()["status"], "COMPLETION_NOT_VERIFIED_IN_WINDOW")
 
     def test_disabled_state_is_finding(self):
@@ -95,11 +99,11 @@ class ScheduleLiveness(unittest.TestCase):
         self.assertEqual(self.verdict()["status"], "INCONCLUSIVE")
 
     def test_future_api_timestamp_is_inconclusive(self):
-        self.run_fixture(created_at=checker.iso(DUE + timedelta(minutes=60)))
+        self.run_fixture(created_at=checker.iso(DUE + AFTER_DEADLINE + timedelta(minutes=18)))
         self.assertEqual(self.verdict()["status"], "INCONCLUSIVE")
 
     def test_not_due_does_not_create_a_miss(self):
-        self.assertEqual(self.verdict(-1)["status"], "NOT_DUE")
+        self.assertEqual(self.verdict(timedelta(minutes=-1))["status"], "NOT_DUE")
 
     def test_next_day_before_trigger_still_audits_previous_slot(self):
         self.assertEqual(checker.expected_slot(POLICY, DUE + timedelta(hours=23)), DUE)
@@ -110,6 +114,25 @@ class ScheduleLiveness(unittest.TestCase):
         lines = [line.strip() for line in workflow.splitlines() if "- cron:" in line]
         self.assertEqual(len(lines), 1)
         self.assertIn('"' + POLICY["cron_utc"] + '"', lines[0])
+
+    def test_github_scheduler_delay_inside_window_is_on_time(self):
+        # Observed 2026-11-04..10: scheduled ci starts 3h52m-8h04m after its cron slot.
+        self.run_fixture(created_at=checker.iso(DUE + timedelta(hours=8, minutes=4)),
+                         updated_at=checker.iso(DUE + timedelta(hours=8, minutes=9)))
+        self.assertEqual(self.verdict()["status"], "COMPLETED_ON_TIME")
+
+    def test_liveness_cron_runs_after_completion_deadline(self):
+        workflow = (ROOT / ".github/workflows/schedule-liveness.yml").read_text()
+        lines = [line.strip() for line in workflow.splitlines() if "- cron:" in line]
+        self.assertEqual(len(lines), 1)
+        minute, hour = lines[0].split('"')[1].split()[:2]
+        audit = DUE.replace(hour=int(hour), minute=int(minute))
+        if audit <= DUE:
+            audit += timedelta(days=1)
+        # The audit must fire after this slot's deadline and before the next slot,
+        # otherwise it audits a slot that cannot have finished yet.
+        self.assertGreater(audit, DUE + COMPLETION)
+        self.assertLess(audit, DUE + timedelta(days=1))
 
     def test_truncated_pagination_is_inconclusive_not_absence(self):
         def get(url):
