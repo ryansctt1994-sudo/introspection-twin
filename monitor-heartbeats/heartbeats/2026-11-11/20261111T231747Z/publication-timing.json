@@ -1,0 +1,24 @@
+{
+  "schema": "replay-monitor-publication-timing/1",
+  "observed_at": "2026-11-11T23:25:19.273796+00:00",
+  "intended_fire_time": null,
+  "actual_arrival_time": "2026-11-11T23:17:47Z",
+  "rekor_integrated_at": "2026-11-11T23:23:45+00:00",
+  "latest_cadence_slot": "2026-11-11T16:57:00Z",
+  "latest_publication_deadline": "2026-11-11T17:17:00Z",
+  "late_publication_seconds": 22005,
+  "finding": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+  "previous_misses_preserved": [
+    "2026-11-07",
+    "2026-11-08",
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+  ],
+  "publication_does_not_fill_prior_missing_slots": true,
+  "original_event_date_attribution": "UNKNOWN",
+  "all_required_cryptographic_checks_verified": true,
+  "public_payload_exact_readback_verified": true,
+  "same_owner_principal": true,
+  "independent_witnessing": false
+}
