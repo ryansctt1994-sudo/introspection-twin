@@ -34,6 +34,24 @@ class ScheduleLiveness(unittest.TestCase):
     def verdict(self, minutes=42):
         return checker.evaluate(POLICY, DUE, DUE + timedelta(minutes=minutes), self.observation)
 
+    def test_late_dispatch_preserves_separate_execution_timing(self):
+        self.run_fixture(
+            created_at=checker.iso(DUE + timedelta(minutes=21)),
+            run_started_at=checker.iso(DUE + timedelta(minutes=23)),
+            completed_at=checker.iso(DUE + timedelta(minutes=25)),
+        )
+        result = self.verdict()
+        self.assertEqual(result["status"], "LATE_RUN")
+        self.assertEqual(result["dispatch_lag_seconds"], 1260)
+        self.assertEqual(result["queue_delay_seconds"], 120)
+        self.assertEqual(result["execution_duration_seconds"], 120)
+
+    def test_metadata_update_is_only_an_execution_upper_bound(self):
+        self.run_fixture(run_started_at=checker.iso(DUE + timedelta(minutes=3)))
+        result = self.verdict()
+        self.assertIsNone(result["execution_duration_seconds"])
+        self.assertEqual(result["execution_duration_upper_bound_seconds"], 300)
+
     def test_deadline_turns_absence_into_finding(self):
         self.assertEqual(self.verdict(19)["status"], "AWAITING_RUN")
         result = self.verdict(21)

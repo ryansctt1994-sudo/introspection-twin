@@ -116,6 +116,23 @@ def evaluate(policy, due, now, observation):
     run = runs[0]
     result["run"] = {k: run[k] for k in (
         "id", "html_url", "head_sha", "event", "run_attempt", "created_at", "status", "conclusion")}
+    created = timestamp(run["created_at"])
+    result["dispatch_lag_seconds"] = (created - due).total_seconds()
+    result["execution_duration_seconds"] = None
+    result["execution_duration_upper_bound_seconds"] = None
+    if run.get("run_started_at"):
+        started = timestamp(run["run_started_at"])
+        if created <= started <= now:
+            result["queue_delay_seconds"] = (started - created).total_seconds()
+            if run["status"] == "completed":
+                if run.get("completed_at"):
+                    ended = timestamp(run["completed_at"])
+                    if started <= ended <= now:
+                        result["execution_duration_seconds"] = (ended - started).total_seconds()
+                elif run.get("updated_at"):
+                    updated = timestamp(run["updated_at"])
+                    if started <= updated <= now:
+                        result["execution_duration_upper_bound_seconds"] = (updated - started).total_seconds()
     if timestamp(run["created_at"]) > arrival:
         return finish("LATE_RUN", 1)
     if run["status"] != "completed":
