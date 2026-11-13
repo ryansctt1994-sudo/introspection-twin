@@ -1,0 +1,80 @@
+{
+  "cadence_sha256": "6f9932dab0e6e165f40c9109ea8d0304b8443702ff8a5c17281b37262aef517f",
+  "publisher_key_der_sha256": "584ac012126b547a436d2fe27aff86a67ead99f56f66384d2498cd09c7b63c7f",
+  "existing_private_key_matches": true,
+  "committed_blob_checks": true,
+  "main_source_files": [
+    {
+      "path": ".github/replay-schedule.json",
+      "blob_sha": "75923dfefcedb94353bb797499c46d1bad527ee4",
+      "sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "blob_sha": "e435ca891b12e05253c62ac4c6301a3529982826",
+      "sha256": "5108f420e14b33eaf9dfdc771b300d5bc48dd5357c5d26d81984f35d7cc37666"
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_LIVENESS_2026-11-04.md",
+      "blob_sha": "2d40d209553c4190efde40cb4b5e69d8b7dd9670",
+      "sha256": "4504fcc1a33301fa29cd85dbc47b88ebef599ec1fadf3d404a8b20ee6a155f08"
+    },
+    {
+      "path": "scripts/check_schedule_liveness.py",
+      "blob_sha": "d01bd255b9c04645050247c0178ae7118fa6ce17",
+      "sha256": "99a7c3c4e2613b4db1309e73b6179d83bb506bad9c4b9494dd5e8cf00941029b"
+    },
+    {
+      "path": ".github/workflows/schedule-liveness.yml",
+      "blob_sha": "5484e1adc8d5ff9bc702af3ffae1467f59f81fd0",
+      "sha256": "61e241b2b4a8f557dc3622ad81d6b85d772252cd18ce032b8a36a4e1a7686e27"
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_MISS_2026-11-04.json",
+      "blob_sha": "3e4208ea102e831108d05d78415933f0eb488fc4",
+      "sha256": "0c16469dde9cceee781f5def8020089a2ba39df8ba9177a8518c4d5b494d4fbc"
+    }
+  ],
+  "public_reference_files": [
+    {
+      "path": "monitor-heartbeats/heartbeat-author.pub",
+      "blob_sha": "c929aadd119b2f70c359f4906b261a78b6ae1799",
+      "sha256": "5d8a07055ef25c4bdac5551080b470b4f1944989baf05cfc4dc7988b9e3703d4"
+    },
+    {
+      "path": "monitor-heartbeats/cadence.json",
+      "blob_sha": "559686955bbdab5bd84317498298f08a534c9f1d",
+      "sha256": "6f9932dab0e6e165f40c9109ea8d0304b8443702ff8a5c17281b37262aef517f"
+    },
+    {
+      "path": "monitor-heartbeats/README.md",
+      "blob_sha": "6a19ca2c170796e588dd8142e9b1e6becf4bdc56",
+      "sha256": "96ab652ea8be2477fc947da6b9bfc415f797042e5d3837c7f21784fe5d0295a0"
+    },
+    {
+      "path": "monitor-heartbeats/latest.json",
+      "blob_sha": "c6716e4090a0006d680cf293c572fc3e6e45bc3a",
+      "sha256": "77837922f68eb1c08cd016d13c1bb5071e49264917e551409ae9d942c686c444"
+    },
+    {
+      "path": "monitor-heartbeats/publisher/external_anchor.py",
+      "blob_sha": "307e69ea768c9eacf666ef107b173b4b862206b2",
+      "sha256": "d8a2f2eae6b85cd781b5aaec33d3d60abf7cb72c9b99f68777875b600ca6b995"
+    },
+    {
+      "path": "monitor-heartbeats/publisher/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "monitor-heartbeats/publisher/publish.py",
+      "blob_sha": "0003146adae57f2e51ad52f491f0593dfe681f01",
+      "sha256": "9d38f6a6fa435a4ca2feaf7f3bf7141b101075e8d3603b48f92b2d555a090a69"
+    },
+    {
+      "path": "monitor-heartbeats/publisher/live_log.py",
+      "blob_sha": "5ed8eb5f55bb7a76869c6ad81c06b48f282998f5",
+      "sha256": "4d99f086c6a82f2620128c031f549d69505e73efaeafc8e769398bce96db76ef"
+    }
+  ]
+}

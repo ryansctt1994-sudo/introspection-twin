@@ -1,0 +1,28 @@
+{
+  "schema": "replay-monitor-publication-timing/2",
+  "execution_id": "20261113T225307Z",
+  "intended_fire_time": null,
+  "actual_arrival_time": "2026-11-13T22:53:07Z",
+  "actual_arrival_time_provenance": "FIRST_OBSERVED_ASSISTANT_AUDIT_CLOCK: clock.curr_time",
+  "scheduler_reported_last_run_time": "2026-11-13T22:53:00.101682+00:00",
+  "rekor_integrated_at": "2026-11-13T23:01:23+00:00",
+  "publication_date": "2026-11-13",
+  "original_intended_slot_attribution": "UNKNOWN",
+  "comparison_deadline": "2026-11-13T17:17:00Z",
+  "late_from_comparison_deadline_seconds": 20663,
+  "all_daily_misses_preserved": [
+    "2026-11-07",
+    "2026-11-08",
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12",
+    "2026-11-13"
+  ],
+  "initial_publication_failure_preserved": "publication/publication.json",
+  "successful_attempt": "publication-attempt-2/publication.json",
+  "live_checkpoint_proof": "publication-attempt-2/live-log/report.json",
+  "rekor_proves_publication_only": true,
+  "same_owner_principal": true,
+  "independent_witnessing": false
+}

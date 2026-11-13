@@ -1,0 +1,15 @@
+info: downloading https://releases.lean-lang.org/lean4/v4.22.0/lean-4.22.0-linux.tar.zst
+info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.22.0
+✔ [2/15] Built IntrospectionTwin.Twin.Observation
+✔ [3/15] Built IntrospectionTwin.Witness
+✔ [4/15] Built IntrospectionTwin.Twin.Bounds
+✔ [5/15] Built IntrospectionTwin.Receipt
+✔ [6/15] Built IntrospectionTwin.Gate
+✔ [7/15] Built IntrospectionTwin.Admit
+✔ [8/15] Built IntrospectionTwin.Twin.State
+✔ [9/15] Built IntrospectionTwin
+✔ [11/15] Built Test.FreshReplayRoot
+✔ [12/15] Built Test.Harness
+✔ [13/15] Built Test.NativeDecide
+✔ [14/15] Built Test.Hostile
+Build completed successfully.

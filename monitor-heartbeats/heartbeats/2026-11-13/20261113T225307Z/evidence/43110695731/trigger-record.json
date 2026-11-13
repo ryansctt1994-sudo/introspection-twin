@@ -1,0 +1,8 @@
+{
+  "TRIGGER_EVENT": "schedule",
+  "TRIGGER_CRON": "47 15 * * *",
+  "GITHUB_RUN_ID": "43110695731",
+  "GITHUB_RUN_ATTEMPT": "1",
+  "GITHUB_SHA": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+  "GITHUB_REF": "refs/heads/main"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "replay-monitor-heartbeat-publication/1",
+  "status": "INCONCLUSIVE",
+  "reason_code": "HEARTBEAT_PUBLICATION_FAILED",
+  "detail": "URLError: <urlopen error [Errno 111] Connection refused>",
+  "observations": [],
+  "recorded_at_utc": "2026-11-13T23:00:28.305713+00:00",
+  "publication_proves_reported_arrival_time": false,
+  "same_owner_principal": true,
+  "independent_witnessing": false
+}

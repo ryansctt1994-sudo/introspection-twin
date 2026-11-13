@@ -1,0 +1,36 @@
+{
+  "actual_arrival_time": "2026-11-13T22:53:07Z",
+  "actual_arrival_time_provenance": "FIRST_OBSERVED_ASSISTANT_AUDIT_CLOCK: clock.curr_time",
+  "intended_fire_time": null,
+  "intended_attribution": "UNKNOWN; scheduler last_run and latest_result are null",
+  "candidate_intended_fire_times": [
+    "2026-11-07T16:57:00Z",
+    "2026-11-08T16:57:00Z",
+    "2026-11-09T16:57:00Z",
+    "2026-11-10T16:57:00Z",
+    "2026-11-11T16:57:00Z",
+    "2026-11-12T16:57:00Z",
+    "2026-11-13T16:57:00Z"
+  ],
+  "unobserved_cadence_slots_since_last_observed_execution": [
+    "2026-11-12T16:57:00Z",
+    "2026-11-13T16:57:00Z"
+  ],
+  "scheduler_scheduled_for": null,
+  "scheduler_started_at": null,
+  "scheduler_reported_last_run_time": "2026-11-13T22:53:00.101682+00:00",
+  "scheduler_next_run_time": "2026-11-14T16:57:00-06:00",
+  "scheduler_schedule": "BEGIN:VEVENT\nDTSTART:20261104T165700Z\nRRULE:FREQ=DAILY;BYHOUR=16;BYMINUTE=57;BYSECOND=0\nEND:VEVENT",
+  "scheduler_default_timezone": "America/Chicago",
+  "scheduler_run_details": {
+    "last_run": null,
+    "latest_result": null,
+    "delivery_status": "unknown"
+  },
+  "lateness_seconds": null,
+  "latest_cadence_comparison": {
+    "slot": "2026-11-13T16:57:00Z",
+    "delay_seconds": 21367,
+    "does_not_establish_original_intended_date": true
+  }
+}

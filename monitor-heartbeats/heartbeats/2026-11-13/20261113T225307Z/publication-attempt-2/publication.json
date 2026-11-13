@@ -1,0 +1,32 @@
+{
+  "schema": "replay-monitor-heartbeat-publication/1",
+  "status": "VERIFIED_PUBLICATION",
+  "heartbeat_sha256": "93ed38f7afe0ca12c13ffa3933ce720b28e4615731dd22760059cc18fc3674f3",
+  "rekor_index": 3864288760,
+  "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677aebfaa61a896e4c8167429802037b7bafe94ff971dc87787387e87b4f11bd337d",
+  "rekor_integrated_time": 1794610883,
+  "rekor_integrated_at": "2026-11-13T23:01:23+00:00",
+  "readback_verified": true,
+  "publisher_public_key_sha256": "584ac012126b547a436d2fe27aff86a67ead99f56f66384d2498cd09c7b63c7f",
+  "observations": [
+    {
+      "url": "https://rekor.sigstore.dev/api/v1/log/publicKey",
+      "status": 200,
+      "observed_at": "2026-11-13T23:01:22.932587+00:00"
+    },
+    {
+      "url": "https://rekor.sigstore.dev/api/v1/log/entries",
+      "status": 201,
+      "observed_at": "2026-11-13T23:01:23.324361+00:00"
+    },
+    {
+      "url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677aebfaa61a896e4c8167429802037b7bafe94ff971dc87787387e87b4f11bd337d",
+      "status": 200,
+      "observed_at": "2026-11-13T23:01:23.739141+00:00"
+    }
+  ],
+  "recorded_at_utc": "2026-11-13T23:01:23.740271+00:00",
+  "publication_proves_reported_arrival_time": false,
+  "same_owner_principal": true,
+  "independent_witnessing": false
+}

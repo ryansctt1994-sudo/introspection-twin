@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-11-13T22:59:41Z",
+  "repo_schedule_main_runs": 51,
+  "pages": [
+    1,
+    2
+  ],
+  "complete": true,
+  "per_run_jobs_and_artifacts_pages": [
+    1,
+    2
+  ],
+  "connected_workflow_endpoint_limitation": "Workflow state and workflow-specific list routes rejected by connector allowlist. State recovered with public read-only HTTPS; actual schedule listings/jobs/artifacts/logs use connected tools.",
+  "state_api_coverage": "COMPLETE_PUBLIC_READ_ONLY_FALLBACK"
+}

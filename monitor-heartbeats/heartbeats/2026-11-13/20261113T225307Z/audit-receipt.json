@@ -1,0 +1,433 @@
+{
+  "schema": "replay-monitor-audit-receipt/1",
+  "audit_id": "20261113T225307Z",
+  "observed_at": "2026-11-13T22:59:41Z",
+  "repository": "ryansctt1994-sudo/introspection-twin",
+  "status": "FINDINGS",
+  "newly_audited_date_range": {
+    "from": "2026-11-12",
+    "through": "2026-11-13"
+  },
+  "closed_window_rechecks": [
+    "2026-11-11"
+  ],
+  "audited_date_range": {
+    "from": "2026-11-04",
+    "through": "2026-11-13"
+  },
+  "source_sha": "74fb628459a98db44364b05d92539afd1efc8364",
+  "source_tree": "90a446a16066d34554ce0d4f3c38eefde8e69e7f",
+  "policy_sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70",
+  "checker_source_sha": "74fb628459a98db44364b05d92539afd1efc8364",
+  "checker_sha256": "99a7c3c4e2613b4db1309e73b6179d83bb506bad9c4b9494dd5e8cf00941029b",
+  "source_files": [
+    {
+      "path": ".github/replay-schedule.json",
+      "blob_sha": "75923dfefcedb94353bb797499c46d1bad527ee4",
+      "sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "blob_sha": "e435ca891b12e05253c62ac4c6301a3529982826",
+      "sha256": "5108f420e14b33eaf9dfdc771b300d5bc48dd5357c5d26d81984f35d7cc37666"
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_LIVENESS_2026-11-04.md",
+      "blob_sha": "2d40d209553c4190efde40cb4b5e69d8b7dd9670",
+      "sha256": "4504fcc1a33301fa29cd85dbc47b88ebef599ec1fadf3d404a8b20ee6a155f08"
+    },
+    {
+      "path": "scripts/check_schedule_liveness.py",
+      "blob_sha": "d01bd255b9c04645050247c0178ae7118fa6ce17",
+      "sha256": "99a7c3c4e2613b4db1309e73b6179d83bb506bad9c4b9494dd5e8cf00941029b"
+    },
+    {
+      "path": ".github/workflows/schedule-liveness.yml",
+      "blob_sha": "5484e1adc8d5ff9bc702af3ffae1467f59f81fd0",
+      "sha256": "61e241b2b4a8f557dc3622ad81d6b85d772252cd18ce032b8a36a4e1a7686e27"
+    },
+    {
+      "path": "docs/evidence/SCHEDULE_MISS_2026-11-04.json",
+      "blob_sha": "3e4208ea102e831108d05d78415933f0eb488fc4",
+      "sha256": "0c16469dde9cceee781f5def8020089a2ba39df8ba9177a8518c4d5b494d4fbc"
+    }
+  ],
+  "slots": [
+    {
+      "date": "2026-11-11",
+      "path": "slots/2026-11-11/20261113T225307Z.json",
+      "sha256": "3fcccf7d52b7d1391d97251ceb5bc8f089470c49bf43040198a3ed51cfb9d0d3",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-12",
+      "path": "slots/2026-11-12/20261113T225307Z.json",
+      "sha256": "000ab9210faf3b754632eb86186cdda7568b973cfc96a9d8d22ad25f63584da4",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    },
+    {
+      "date": "2026-11-13",
+      "path": "slots/2026-11-13/20261113T225307Z.json",
+      "sha256": "11d95672ebb5ab63cb76d19c9777f64310d962ce63847d848e1b084715dfa37f",
+      "replay_status": "LATE_RUN",
+      "watchdog_status": "LATE_RUN",
+      "fresh_qualified": true
+    }
+  ],
+  "summary": [
+    {
+      "date": "2026-11-11",
+      "replay_run_id": 43110695731,
+      "replay_created": "2026-11-11T22:18:48Z",
+      "replay_completed": "2026-11-11T22:22:10Z",
+      "watchdog_run_id": 43115597567,
+      "watchdog_created": "2026-11-11T22:54:20Z",
+      "watchdog_completed": "2026-11-11T22:54:30Z",
+      "fresh_qualified": true,
+      "watchdog_correctly_refused": true
+    },
+    {
+      "date": "2026-11-12",
+      "replay_run_id": 43314981776,
+      "replay_created": "2026-11-12T21:55:25Z",
+      "replay_completed": "2026-11-12T21:59:04Z",
+      "watchdog_run_id": 43319304223,
+      "watchdog_created": "2026-11-12T22:22:36Z",
+      "watchdog_completed": "2026-11-12T22:22:47Z",
+      "fresh_qualified": true,
+      "watchdog_correctly_refused": true
+    },
+    {
+      "date": "2026-11-13",
+      "replay_run_id": 43512733146,
+      "replay_created": "2026-11-13T21:40:09Z",
+      "replay_completed": "2026-11-13T21:44:18Z",
+      "watchdog_run_id": 43516188219,
+      "watchdog_created": "2026-11-13T22:04:23Z",
+      "watchdog_completed": "2026-11-13T22:04:33Z",
+      "fresh_qualified": true,
+      "watchdog_correctly_refused": true
+    }
+  ],
+  "findings": [
+    {
+      "code": "ARRIVAL_DEADLINE_MISSED",
+      "slot_date": "2026-11-11",
+      "workflow": "replay",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43110695731",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "COMPLETION_DEADLINE_MISSED",
+      "slot_date": "2026-11-11",
+      "workflow": "replay",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43110695731",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "ARRIVAL_DEADLINE_MISSED",
+      "slot_date": "2026-11-11",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43115597567",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "COMPLETION_DEADLINE_MISSED",
+      "slot_date": "2026-11-11",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43115597567",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "RUN_FAILED",
+      "slot_date": "2026-11-11",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43115597567",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "ARRIVAL_DEADLINE_MISSED",
+      "slot_date": "2026-11-12",
+      "workflow": "replay",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43314981776",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "COMPLETION_DEADLINE_MISSED",
+      "slot_date": "2026-11-12",
+      "workflow": "replay",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43314981776",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "ARRIVAL_DEADLINE_MISSED",
+      "slot_date": "2026-11-12",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43319304223",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "COMPLETION_DEADLINE_MISSED",
+      "slot_date": "2026-11-12",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43319304223",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "RUN_FAILED",
+      "slot_date": "2026-11-12",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43319304223",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "ARRIVAL_DEADLINE_MISSED",
+      "slot_date": "2026-11-13",
+      "workflow": "replay",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43512733146",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "COMPLETION_DEADLINE_MISSED",
+      "slot_date": "2026-11-13",
+      "workflow": "replay",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43512733146",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "ARRIVAL_DEADLINE_MISSED",
+      "slot_date": "2026-11-13",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43516188219",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "COMPLETION_DEADLINE_MISSED",
+      "slot_date": "2026-11-13",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43516188219",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "RUN_FAILED",
+      "slot_date": "2026-11-13",
+      "workflow": "watchdog",
+      "run_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43516188219",
+      "observed_at": "2026-11-13T22:59:41Z"
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-07",
+      "intended_fire_time": "2026-11-07T16:57:00Z",
+      "publication_deadline": "2026-11-07T17:17:00Z",
+      "observed_at": "2026-11-13T22:59:41Z",
+      "coverage": "Complete current dedicated-branch tree; Nov 11 heartbeat was late, other prospective slots had no timely heartbeat.",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-08",
+      "intended_fire_time": "2026-11-08T16:57:00Z",
+      "publication_deadline": "2026-11-08T17:17:00Z",
+      "observed_at": "2026-11-13T22:59:41Z",
+      "coverage": "Complete current dedicated-branch tree; Nov 11 heartbeat was late, other prospective slots had no timely heartbeat.",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-09",
+      "intended_fire_time": "2026-11-09T16:57:00Z",
+      "publication_deadline": "2026-11-09T17:17:00Z",
+      "observed_at": "2026-11-13T22:59:41Z",
+      "coverage": "Complete current dedicated-branch tree; Nov 11 heartbeat was late, other prospective slots had no timely heartbeat.",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-10",
+      "intended_fire_time": "2026-11-10T16:57:00Z",
+      "publication_deadline": "2026-11-10T17:17:00Z",
+      "observed_at": "2026-11-13T22:59:41Z",
+      "coverage": "Complete current dedicated-branch tree; Nov 11 heartbeat was late, other prospective slots had no timely heartbeat.",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-11",
+      "intended_fire_time": "2026-11-11T16:57:00Z",
+      "publication_deadline": "2026-11-11T17:17:00Z",
+      "observed_at": "2026-11-13T22:59:41Z",
+      "coverage": "Complete current dedicated-branch tree; Nov 11 heartbeat was late, other prospective slots had no timely heartbeat.",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-12",
+      "intended_fire_time": "2026-11-12T16:57:00Z",
+      "publication_deadline": "2026-11-12T17:17:00Z",
+      "observed_at": "2026-11-13T22:59:41Z",
+      "coverage": "Complete current dedicated-branch tree; Nov 11 heartbeat was late, other prospective slots had no timely heartbeat.",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "HEARTBEAT_PUBLICATION_DEADLINE_MISSED",
+      "slot_date": "2026-11-13",
+      "intended_fire_time": "2026-11-13T16:57:00Z",
+      "publication_deadline": "2026-11-13T17:17:00Z",
+      "observed_at": "2026-11-13T22:59:41Z",
+      "coverage": "Complete current dedicated-branch tree; Nov 11 heartbeat was late, other prospective slots had no timely heartbeat.",
+      "later_success_does_not_erase": true
+    },
+    {
+      "code": "MONITOR_OBSERVATION_GAP",
+      "from": "2026-11-11T23:17:47Z",
+      "through": "2026-11-13T22:53:07Z",
+      "seconds": 171320,
+      "intermediate_local_or_public_receipt_observed": false,
+      "scheduler_execution_delivery_history": "UNKNOWN",
+      "latest_cadence_slot_comparison": {
+        "slot": "2026-11-13T16:57:00Z",
+        "delay_seconds": 21367,
+        "does_not_establish_original_intended_date": true
+      },
+      "original_intended_slot": "UNKNOWN"
+    },
+    {
+      "code": "SCHEDULER_TIMEZONE_METADATA_INCONSISTENCY",
+      "schedule": "BEGIN:VEVENT\nDTSTART:20261104T165700Z\nRRULE:FREQ=DAILY;BYHOUR=16;BYMINUTE=57;BYSECOND=0\nEND:VEVENT",
+      "reported_next_run_time": "2026-11-14T16:57:00-06:00",
+      "note": "Reported next time is 16:57 at -06:00 despite the UTC cadence/DTSTART; no schedule was changed and delivery cause is not proved."
+    }
+  ],
+  "schedule_pagination_complete": true,
+  "total_schedule_main_runs": 51,
+  "workflow_states": {
+    "374465172": "active",
+    "407086434": "active"
+  },
+  "qualification_missing": false,
+  "historical_first_qualified": {
+    "run_id": 41857790032,
+    "url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/41857790032",
+    "created_at": "2026-11-04T15:26:37Z",
+    "source_sha": "3b811cd008495b51c75f9d942b04a440580c1d88",
+    "qualification": "PRESERVED_HISTORICALLY_VERIFIED",
+    "cron": "NOT_RECORDED",
+    "counts_for_later_slot": false
+  },
+  "historical_1445_miss": {
+    "schema": "schedule-liveness-v1",
+    "repository": "ryansctt1994-sudo/introspection-twin",
+    "workflow_id": 374465172,
+    "expected_at": "2026-11-04T14:45:00Z",
+    "arrival_deadline": "2026-11-04T15:05:00Z",
+    "completion_deadline": "2026-11-04T15:25:00Z",
+    "observed_at": "2026-11-04T15:21:12Z",
+    "qualification": "NOT_ASSESSED",
+    "independence": "SAME_PRINCIPAL; no independent witness claimed",
+    "slot_attribution": "API creation-time window; verify trigger-record.json for exact cron",
+    "observation": {
+      "workflow": {
+        "id": 374465172,
+        "node_id": "W_kwDOU7F7ms4WUeKU",
+        "name": "ci",
+        "path": ".github/workflows/ci.yml",
+        "state": "active",
+        "created_at": "2026-10-04T03:30:38.000-05:00",
+        "updated_at": "2026-10-04T03:30:38.000-05:00",
+        "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172",
+        "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin/blob/main/.github/workflows/ci.yml",
+        "badge_url": "https://github.com/ryansctt1994-sudo/introspection-twin/workflows/ci/badge.svg"
+      },
+      "runs": [],
+      "complete": true,
+      "queries": [
+        "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172",
+        "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172/runs?event=schedule&branch=main&created=2026-11-04T14%3A45%3A00Z..2026-11-04T15%3A21%3A12Z&per_page=100&page=1"
+      ]
+    },
+    "workflow_state": "active",
+    "status": "MISSED_SCHEDULE",
+    "exit_code": 1,
+    "policy_sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70",
+    "historical_trigger_cron": "45 14 4 11 *",
+    "historical_source_sha": "3b811cd008495b51c75f9d942b04a440580c1d88",
+    "deadline_basis": "RETROSPECTIVE: 20-minute policy adopted after this trigger; no prior precommitment claimed"
+  },
+  "timestamps": {
+    "actual_arrival_time": "2026-11-13T22:53:07Z",
+    "actual_arrival_time_provenance": "FIRST_OBSERVED_ASSISTANT_AUDIT_CLOCK: clock.curr_time",
+    "intended_fire_time": null,
+    "intended_attribution": "UNKNOWN; scheduler last_run and latest_result are null",
+    "candidate_intended_fire_times": [
+      "2026-11-07T16:57:00Z",
+      "2026-11-08T16:57:00Z",
+      "2026-11-09T16:57:00Z",
+      "2026-11-10T16:57:00Z",
+      "2026-11-11T16:57:00Z",
+      "2026-11-12T16:57:00Z",
+      "2026-11-13T16:57:00Z"
+    ],
+    "unobserved_cadence_slots_since_last_observed_execution": [
+      "2026-11-12T16:57:00Z",
+      "2026-11-13T16:57:00Z"
+    ],
+    "scheduler_scheduled_for": null,
+    "scheduler_started_at": null,
+    "scheduler_reported_last_run_time": "2026-11-13T22:53:00.101682+00:00",
+    "scheduler_next_run_time": "2026-11-14T16:57:00-06:00",
+    "scheduler_schedule": "BEGIN:VEVENT\nDTSTART:20261104T165700Z\nRRULE:FREQ=DAILY;BYHOUR=16;BYMINUTE=57;BYSECOND=0\nEND:VEVENT",
+    "scheduler_default_timezone": "America/Chicago",
+    "scheduler_run_details": {
+      "last_run": null,
+      "latest_result": null,
+      "delivery_status": "unknown"
+    },
+    "lateness_seconds": null,
+    "latest_cadence_comparison": {
+      "slot": "2026-11-13T16:57:00Z",
+      "delay_seconds": 21367,
+      "does_not_establish_original_intended_date": true
+    }
+  },
+  "previous_publication": {
+    "schema": "replay-monitor-heartbeat-pointer/1",
+    "execution_id": "20261111T231747Z",
+    "slot_date": null,
+    "publication_date": "2026-11-11",
+    "intended_fire_time": null,
+    "actual_arrival_time": "2026-11-11T23:17:47Z",
+    "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/heartbeat.json",
+    "publication_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/publication/publication.json",
+    "heartbeat_sha256": "295dcab21a2e2d0f3e47a7bd2f8068e20486d37e08fef03cac883acb9adb6db7",
+    "audit_receipt_sha256": "95af437a58d971c618c88280d808998a9b66f90f7d480df00b1ffa6e49702e13",
+    "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a5e08a12c7e5d5eebb479537209be5a7844abb34b4c2283d7609e996f92bd05eb",
+    "rekor_integrated_at": "2026-11-11T23:23:45+00:00",
+    "live_checkpoint_and_consistency_verified": true,
+    "audited_date_range": {
+      "from": "2026-11-04",
+      "through": "2026-11-11"
+    },
+    "previous_heartbeat": {
+      "execution_id": "20261106T232224Z",
+      "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/heartbeat.json",
+      "heartbeat_sha256": "a75219fc5213e8dbbf232adb9247e07264827c410c1b57e72e8b3745b2bcadfc",
+      "publication_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/publication/publication.json",
+      "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a383079d2e9c69de9cf72668924747dac6d94459e16509e0b626a1d0ad4a08483",
+      "rekor_integrated_at": "2026-11-06T23:42:22+00:00",
+      "retrospective_bootstrap": true,
+      "schema": "replay-monitor-heartbeat-pointer/1",
+      "slot_date": "2026-11-06"
+    },
+    "publication_timing_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/publication-timing.json",
+    "late_publication_misses_preserved": true
+  },
+  "same_owner_principal": true,
+  "independent_witnessing": false,
+  "guaranteed_availability": false,
+  "attribution_uncertainty": "Creation-time windows and repeated daily cron cannot prove original intended calendar date; timing remains unexplained."
+}

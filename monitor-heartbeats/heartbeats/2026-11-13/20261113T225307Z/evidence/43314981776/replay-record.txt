@@ -1,0 +1,10 @@
+schema: ci-replay-observed-v1
+commit: 64b89a5dc73a42fd062370178ffb62bb4f028187
+tree: ece8673025a12f141b346f70505e4ee31088fce2
+toolchain: leanprover/lean4:v4.22.0
+fresh_requested: true
+fresh_verified: true
+replay_exit_status: 0
+tee_exit_status: 0
+observed_status: PASS
+last_replay_log_line: KERNEL REPLAY: PASS

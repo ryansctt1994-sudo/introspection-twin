@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-11-13T23:01:22.553256+00:00",
+  "code": "HEARTBEAT_PUBLICATION_FAILED",
+  "attempt": 1,
+  "status": "INCONCLUSIVE",
+  "failure": {
+    "schema": "replay-monitor-heartbeat-publication/1",
+    "status": "INCONCLUSIVE",
+    "reason_code": "HEARTBEAT_PUBLICATION_FAILED",
+    "detail": "URLError: <urlopen error [Errno 111] Connection refused>",
+    "observations": [],
+    "recorded_at_utc": "2026-11-13T23:00:28.305713+00:00",
+    "publication_proves_reported_arrival_time": false,
+    "same_owner_principal": true,
+    "independent_witnessing": false
+  },
+  "diagnosis": "Sanitized process environment omitted managed HTTPS proxy settings. No successful HTTP observation and no Rekor entry returned. Retrying identical canonical heartbeat; initial failure retained."
+}
