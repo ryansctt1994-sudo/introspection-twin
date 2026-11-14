@@ -1,0 +1,98 @@
+{
+  "observed_at": "2026-11-14T22:35:05.717840+00:00",
+  "main": "74fb628459a98db44364b05d92539afd1efc8364",
+  "heartbeat_branch": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+  "files": [
+    {
+      "ref": "74fb628459a98db44364b05d92539afd1efc8364",
+      "path": ".github/replay-schedule.json",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/74fb628459a98db44364b05d92539afd1efc8364/.github/replay-schedule.json",
+      "sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70",
+      "git_blob_sha1": "75923dfefcedb94353bb797499c46d1bad527ee4"
+    },
+    {
+      "ref": "74fb628459a98db44364b05d92539afd1efc8364",
+      "path": ".github/workflows/ci.yml",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/74fb628459a98db44364b05d92539afd1efc8364/.github/workflows/ci.yml",
+      "sha256": "5108f420e14b33eaf9dfdc771b300d5bc48dd5357c5d26d81984f35d7cc37666",
+      "git_blob_sha1": "e435ca891b12e05253c62ac4c6301a3529982826"
+    },
+    {
+      "ref": "74fb628459a98db44364b05d92539afd1efc8364",
+      "path": ".github/workflows/schedule-liveness.yml",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/74fb628459a98db44364b05d92539afd1efc8364/.github/workflows/schedule-liveness.yml",
+      "sha256": "61e241b2b4a8f557dc3622ad81d6b85d772252cd18ce032b8a36a4e1a7686e27",
+      "git_blob_sha1": "5484e1adc8d5ff9bc702af3ffae1467f59f81fd0"
+    },
+    {
+      "ref": "74fb628459a98db44364b05d92539afd1efc8364",
+      "path": "docs/evidence/SCHEDULE_LIVENESS_2026-11-04.md",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/74fb628459a98db44364b05d92539afd1efc8364/docs/evidence/SCHEDULE_LIVENESS_2026-11-04.md",
+      "sha256": "4504fcc1a33301fa29cd85dbc47b88ebef599ec1fadf3d404a8b20ee6a155f08",
+      "git_blob_sha1": "2d40d209553c4190efde40cb4b5e69d8b7dd9670"
+    },
+    {
+      "ref": "74fb628459a98db44364b05d92539afd1efc8364",
+      "path": "scripts/check_schedule_liveness.py",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/74fb628459a98db44364b05d92539afd1efc8364/scripts/check_schedule_liveness.py",
+      "sha256": "99a7c3c4e2613b4db1309e73b6179d83bb506bad9c4b9494dd5e8cf00941029b",
+      "git_blob_sha1": "d01bd255b9c04645050247c0178ae7118fa6ce17"
+    },
+    {
+      "ref": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+      "path": "monitor-heartbeats/cadence.json",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/95aaa621ce51b6bdc9797d564bfba6e50258079d/monitor-heartbeats/cadence.json",
+      "sha256": "6f9932dab0e6e165f40c9109ea8d0304b8443702ff8a5c17281b37262aef517f",
+      "git_blob_sha1": "559686955bbdab5bd84317498298f08a534c9f1d"
+    },
+    {
+      "ref": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+      "path": "monitor-heartbeats/latest.json",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/95aaa621ce51b6bdc9797d564bfba6e50258079d/monitor-heartbeats/latest.json",
+      "sha256": "65bb5b3446352a837b8e3ef4b54b801c99dee9808ee883c53b61353300647191",
+      "git_blob_sha1": "20608a02d1718eb835ba5f27926d0430177d117d"
+    },
+    {
+      "ref": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+      "path": "monitor-heartbeats/heartbeat-author.pub",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/95aaa621ce51b6bdc9797d564bfba6e50258079d/monitor-heartbeats/heartbeat-author.pub",
+      "sha256": "5d8a07055ef25c4bdac5551080b470b4f1944989baf05cfc4dc7988b9e3703d4",
+      "git_blob_sha1": "c929aadd119b2f70c359f4906b261a78b6ae1799"
+    },
+    {
+      "ref": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+      "path": "monitor-heartbeats/README.md",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/95aaa621ce51b6bdc9797d564bfba6e50258079d/monitor-heartbeats/README.md",
+      "sha256": "96ab652ea8be2477fc947da6b9bfc415f797042e5d3837c7f21784fe5d0295a0",
+      "git_blob_sha1": "6a19ca2c170796e588dd8142e9b1e6becf4bdc56"
+    },
+    {
+      "ref": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+      "path": "monitor-heartbeats/publisher/__init__.py",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/95aaa621ce51b6bdc9797d564bfba6e50258079d/monitor-heartbeats/publisher/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ref": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+      "path": "monitor-heartbeats/publisher/external_anchor.py",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/95aaa621ce51b6bdc9797d564bfba6e50258079d/monitor-heartbeats/publisher/external_anchor.py",
+      "sha256": "d8a2f2eae6b85cd781b5aaec33d3d60abf7cb72c9b99f68777875b600ca6b995",
+      "git_blob_sha1": "307e69ea768c9eacf666ef107b173b4b862206b2"
+    },
+    {
+      "ref": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+      "path": "monitor-heartbeats/publisher/publish.py",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/95aaa621ce51b6bdc9797d564bfba6e50258079d/monitor-heartbeats/publisher/publish.py",
+      "sha256": "9d38f6a6fa435a4ca2feaf7f3bf7141b101075e8d3603b48f92b2d555a090a69",
+      "git_blob_sha1": "0003146adae57f2e51ad52f491f0593dfe681f01"
+    },
+    {
+      "ref": "95aaa621ce51b6bdc9797d564bfba6e50258079d",
+      "path": "monitor-heartbeats/publisher/live_log.py",
+      "url": "https://raw.githubusercontent.com/ryansctt1994-sudo/introspection-twin/95aaa621ce51b6bdc9797d564bfba6e50258079d/monitor-heartbeats/publisher/live_log.py",
+      "sha256": "4d99f086c6a82f2620128c031f549d69505e73efaeafc8e769398bce96db76ef",
+      "git_blob_sha1": "5ed8eb5f55bb7a76869c6ad81c06b48f282998f5"
+    }
+  ]
+}

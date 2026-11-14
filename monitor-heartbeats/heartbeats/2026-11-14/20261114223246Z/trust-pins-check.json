@@ -1,0 +1,7 @@
+{
+  "cadence_pin_matches": true,
+  "publisher_public_key_pin_matches": true,
+  "committed_source_blob_hashes_match": true,
+  "source_files": 13,
+  "private_key_printed_or_published": false
+}

@@ -1,0 +1,35 @@
+{
+  "sha": "74fb628459a98db44364b05d92539afd1efc8364",
+  "node_id": "C_kwDOU7F7mtoAKDc0ZmI2Mjg0NTlhOThkYjQ0MzY0YjA1ZDkyNTM5YWZkMWVmYzgzNjQ",
+  "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/commits/74fb628459a98db44364b05d92539afd1efc8364",
+  "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin/commit/74fb628459a98db44364b05d92539afd1efc8364",
+  "author": {
+    "name": "ryansctt1994-sudo",
+    "email": "ryan.sctt1994@gmail.com",
+    "date": "2026-11-13T14:38:19Z"
+  },
+  "committer": {
+    "name": "GitHub",
+    "email": "noreply@github.com",
+    "date": "2026-11-13T14:38:19Z"
+  },
+  "tree": {
+    "sha": "90a446a16066d34554ce0d4f3c38eefde8e69e7f",
+    "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/trees/90a446a16066d34554ce0d4f3c38eefde8e69e7f"
+  },
+  "message": "Report schedule and execution timing separately (#16)",
+  "parents": [
+    {
+      "sha": "64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/commits/64b89a5dc73a42fd062370178ffb62bb4f028187",
+      "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin/commit/64b89a5dc73a42fd062370178ffb62bb4f028187"
+    }
+  ],
+  "verification": {
+    "verified": true,
+    "reason": "valid",
+    "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq9yDbCRC1aQ7uu5UhlAAA6IkQALEaxmZV+Xoloj7q0/T0PgH0\n7WDXXef/1xKpk3At4K/8THRFuEf3b8gp4J+LeVU/UfL5LTuz2+Y4hFOfqatsPcZm\naHuv8VlKyoZhI+xHSslLtiP5pBUtP3l6/1Qt2z6gKbjjnz5jpDSzN1xgjupSPdZ3\n74TbRYcUwTRTiiFXlgMYV15jvLyFaQeiKDCVDzzP674DA+XRn8G1lmXcDiGw8TVE\nmSpVCXfD+T+WXzX2DWAgv/+MfMNyBRRI2APAitOW4HqdEDzc3LhXcmrrj2HRjEkh\nlsRBDdNFesmVukmup3oq6/+q10XVLGGPTKiiwlZNF8NxBtM6mFRL+AOI6wugd1ds\nn/Vm9Tf2uK6cZsN4RBK5rDMkawaC5V0+6cco8Xy6vmzIKEPf3m0sf6XvyiLaZkXp\nw1AhnL6rUyUKRmKLcq79cbHpPrddszathEswzoJGmv3i2JG8DdnKGfvGaWgWHdaB\nk/7XLamheaDchhCPDjgb5dZObrwORziQcEl8xxNXBSPraFr7o2H91cxFXzSkXPUQ\nVqwv4W2r/kI9YKrbrAwDhDgRoAYLWvCwBLAZM7775J0B0R1vgUcoJCSMCVkAJpFz\n+RfZzgK7f7AF+5OkQkXc56mHrnl/fbDyYZllpWU6qkfXvajZdwnyxaISVgrlsvh6\nAfqjbS36XkMU4hELMke4\n=yEFB\n-----END PGP SIGNATURE-----\n",
+    "payload": "tree 90a446a16066d34554ce0d4f3c38eefde8e69e7f\nparent 64b89a5dc73a42fd062370178ffb62bb4f028187\nauthor ryansctt1994-sudo <ryan.sctt1994@gmail.com> 1794580699 -0600\ncommitter GitHub <noreply@github.com> 1794580699 -0600\n\nReport schedule and execution timing separately (#16)",
+    "verified_at": "2026-11-13T14:38:19Z"
+  }
+}

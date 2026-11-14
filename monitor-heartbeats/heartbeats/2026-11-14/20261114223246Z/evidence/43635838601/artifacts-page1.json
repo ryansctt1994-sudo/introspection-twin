@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 14130342236,
+      "node_id": "MDg6QXJ0aWZhY3QxNDEzMDM0MjIzNg==",
+      "name": "replay-record",
+      "size_in_bytes": 1787,
+      "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/artifacts/14130342236",
+      "archive_download_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/artifacts/14130342236/zip",
+      "expired": false,
+      "digest": "sha256:0e17456edc02b23c2d50b03741f57e5e4dcd7b77e2e60c443de4b904d87c4bc5",
+      "created_at": "2026-11-14T20:12:34Z",
+      "updated_at": "2026-11-14T20:12:34Z",
+      "expires_at": "2027-02-12T20:08:00Z",
+      "workflow_run": {
+        "id": 43635838601,
+        "repository_id": 1404140442,
+        "head_repository_id": 1404140442,
+        "head_branch": "main",
+        "head_sha": "74fb628459a98db44364b05d92539afd1efc8364"
+      }
+    }
+  ]
+}
