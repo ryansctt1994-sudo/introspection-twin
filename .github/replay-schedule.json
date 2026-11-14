@@ -5,6 +5,6 @@
   "branch": "main",
   "cron_utc": "47 15 * * *",
   "first_expected_at": "2026-11-04T15:47:00Z",
-  "arrival_grace_seconds": 1200,
-  "completion_grace_seconds": 2400
+  "arrival_grace_seconds": 43200,
+  "completion_grace_seconds": 46800
 }
