@@ -1,58 +1,84 @@
 {
   "schema": "replay-monitor-heartbeat-pointer/1",
-  "execution_id": "20261113T225307Z",
+  "execution_id": "20261114T033614Z",
   "slot_date": null,
-  "publication_date": "2026-11-13",
+  "publication_date": "2026-11-14",
+  "invocation_kind": "USER_REQUESTED_CONTINUATION",
+  "counts_for_future_slot": false,
   "intended_fire_time": null,
-  "actual_arrival_time": "2026-11-13T22:53:07Z",
-  "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-13/20261113T225307Z/heartbeat.json",
-  "publication_path": "monitor-heartbeats/heartbeats/2026-11-13/20261113T225307Z/publication-attempt-2/publication.json",
-  "heartbeat_sha256": "93ed38f7afe0ca12c13ffa3933ce720b28e4615731dd22760059cc18fc3674f3",
-  "audit_receipt_sha256": "03892480c52e56dcd72d7d3327938e5b18484c5244ded805db648dbdcc6384a3",
-  "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677aebfaa61a896e4c8167429802037b7bafe94ff971dc87787387e87b4f11bd337d",
-  "rekor_integrated_at": "2026-11-13T23:01:23+00:00",
+  "actual_arrival_time": "2026-11-14T03:36:14Z",
+  "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-14/20261114T033614Z/heartbeat.json",
+  "publication_path": "monitor-heartbeats/heartbeats/2026-11-14/20261114T033614Z/publication/publication.json",
+  "heartbeat_sha256": "1ccc9a8e7c0274b19a72c2399fab1384ca4f8382b0599b6c9197829938c544ae",
+  "audit_receipt_sha256": "d93363d8117156d6bc5ccbceb5e62d63b997901780bb67173447336e425befe2",
+  "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677ade8636ebf1ed5de4a910d9e3717f168d85b220fe0f646f4a49226ad51b660ce1",
+  "rekor_integrated_at": "2026-11-14T03:56:16+00:00",
   "live_checkpoint_and_consistency_verified": true,
   "audited_date_range": {
     "from": "2026-11-04",
     "through": "2026-11-13"
   },
-  "newly_audited_date_range": {
-    "from": "2026-11-12",
-    "through": "2026-11-13"
-  },
+  "rechecked_dates": [
+    "2026-11-13"
+  ],
   "previous_heartbeat": {
     "schema": "replay-monitor-heartbeat-pointer/1",
-    "execution_id": "20261111T231747Z",
+    "execution_id": "20261113T225307Z",
     "slot_date": null,
-    "publication_date": "2026-11-11",
+    "publication_date": "2026-11-13",
     "intended_fire_time": null,
-    "actual_arrival_time": "2026-11-11T23:17:47Z",
-    "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/heartbeat.json",
-    "publication_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/publication/publication.json",
-    "heartbeat_sha256": "295dcab21a2e2d0f3e47a7bd2f8068e20486d37e08fef03cac883acb9adb6db7",
-    "audit_receipt_sha256": "95af437a58d971c618c88280d808998a9b66f90f7d480df00b1ffa6e49702e13",
-    "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a5e08a12c7e5d5eebb479537209be5a7844abb34b4c2283d7609e996f92bd05eb",
-    "rekor_integrated_at": "2026-11-11T23:23:45+00:00",
+    "actual_arrival_time": "2026-11-13T22:53:07Z",
+    "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-13/20261113T225307Z/heartbeat.json",
+    "publication_path": "monitor-heartbeats/heartbeats/2026-11-13/20261113T225307Z/publication-attempt-2/publication.json",
+    "heartbeat_sha256": "93ed38f7afe0ca12c13ffa3933ce720b28e4615731dd22760059cc18fc3674f3",
+    "audit_receipt_sha256": "03892480c52e56dcd72d7d3327938e5b18484c5244ded805db648dbdcc6384a3",
+    "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677aebfaa61a896e4c8167429802037b7bafe94ff971dc87787387e87b4f11bd337d",
+    "rekor_integrated_at": "2026-11-13T23:01:23+00:00",
     "live_checkpoint_and_consistency_verified": true,
     "audited_date_range": {
       "from": "2026-11-04",
-      "through": "2026-11-11"
+      "through": "2026-11-13"
+    },
+    "newly_audited_date_range": {
+      "from": "2026-11-12",
+      "through": "2026-11-13"
     },
     "previous_heartbeat": {
-      "execution_id": "20261106T232224Z",
-      "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/heartbeat.json",
-      "heartbeat_sha256": "a75219fc5213e8dbbf232adb9247e07264827c410c1b57e72e8b3745b2bcadfc",
-      "publication_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/publication/publication.json",
-      "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a383079d2e9c69de9cf72668924747dac6d94459e16509e0b626a1d0ad4a08483",
-      "rekor_integrated_at": "2026-11-06T23:42:22+00:00",
-      "retrospective_bootstrap": true,
       "schema": "replay-monitor-heartbeat-pointer/1",
-      "slot_date": "2026-11-06"
+      "execution_id": "20261111T231747Z",
+      "slot_date": null,
+      "publication_date": "2026-11-11",
+      "intended_fire_time": null,
+      "actual_arrival_time": "2026-11-11T23:17:47Z",
+      "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/heartbeat.json",
+      "publication_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/publication/publication.json",
+      "heartbeat_sha256": "295dcab21a2e2d0f3e47a7bd2f8068e20486d37e08fef03cac883acb9adb6db7",
+      "audit_receipt_sha256": "95af437a58d971c618c88280d808998a9b66f90f7d480df00b1ffa6e49702e13",
+      "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a5e08a12c7e5d5eebb479537209be5a7844abb34b4c2283d7609e996f92bd05eb",
+      "rekor_integrated_at": "2026-11-11T23:23:45+00:00",
+      "live_checkpoint_and_consistency_verified": true,
+      "audited_date_range": {
+        "from": "2026-11-04",
+        "through": "2026-11-11"
+      },
+      "previous_heartbeat": {
+        "execution_id": "20261106T232224Z",
+        "heartbeat_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/heartbeat.json",
+        "heartbeat_sha256": "a75219fc5213e8dbbf232adb9247e07264827c410c1b57e72e8b3745b2bcadfc",
+        "publication_path": "monitor-heartbeats/heartbeats/2026-11-06/20261106T232224Z/publication/publication.json",
+        "rekor_entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a383079d2e9c69de9cf72668924747dac6d94459e16509e0b626a1d0ad4a08483",
+        "rekor_integrated_at": "2026-11-06T23:42:22+00:00",
+        "retrospective_bootstrap": true,
+        "schema": "replay-monitor-heartbeat-pointer/1",
+        "slot_date": "2026-11-06"
+      },
+      "publication_timing_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/publication-timing.json",
+      "late_publication_misses_preserved": true
     },
-    "publication_timing_path": "monitor-heartbeats/heartbeats/2026-11-11/20261111T231747Z/publication-timing.json",
-    "late_publication_misses_preserved": true
+    "publication_timing_path": "monitor-heartbeats/heartbeats/2026-11-13/20261113T225307Z/publication-timing.json",
+    "late_publication_misses_preserved": true,
+    "initial_publication_failure_preserved": true
   },
-  "publication_timing_path": "monitor-heartbeats/heartbeats/2026-11-13/20261113T225307Z/publication-timing.json",
   "late_publication_misses_preserved": true,
-  "initial_publication_failure_preserved": true
+  "november_14_daily_slots": "NOT_DUE"
 }
