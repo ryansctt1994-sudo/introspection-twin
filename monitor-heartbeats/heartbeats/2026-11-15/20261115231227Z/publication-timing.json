@@ -1,0 +1,13 @@
+{
+  "schema": "replay-monitor-publication-timing/1",
+  "execution_id": "20261115231227Z",
+  "slot_date_attribution": null,
+  "latest_nominal_slot": "2026-11-15T16:57:00Z",
+  "publication_deadline": "2026-11-15T17:17:00Z",
+  "rekor_integrated_at": "2026-11-15T23:18:21+00:00",
+  "on_time_for_latest_nominal_slot": false,
+  "prior_missed_windows_preserved": true,
+  "original_invocation_intended_date": "UNKNOWN",
+  "public_payload_first_verified_at": null,
+  "rekor_proves_publication_only": true
+}

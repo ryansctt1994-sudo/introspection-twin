@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 14181096327,
+      "node_id": "MDg6QXJ0aWZhY3QxNDE4MTA5NjMyNw==",
+      "name": "schedule-liveness",
+      "size_in_bytes": 2505,
+      "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/artifacts/14181096327",
+      "archive_download_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/artifacts/14181096327/zip",
+      "expired": false,
+      "digest": "sha256:2ed567ea3041aae6ed2e27fbba372e4a8ae7788cf55aac8f1db2c711b7e37848",
+      "created_at": "2026-11-15T21:09:14Z",
+      "updated_at": "2026-11-15T21:09:14Z",
+      "expires_at": "2027-02-13T21:09:07Z",
+      "workflow_run": {
+        "id": 43762059121,
+        "repository_id": 1404140442,
+        "head_repository_id": 1404140442,
+        "head_branch": "main",
+        "head_sha": "74fb628459a98db44364b05d92539afd1efc8364"
+      }
+    }
+  ]
+}
