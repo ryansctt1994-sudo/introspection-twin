@@ -1,0 +1,441 @@
+﻿2026-11-17T00:22:12.4101056Z Current runner version: '2.338.2'
+2026-11-17T00:22:12.4120486Z ##[group]Runner Image Provisioner
+2026-11-17T00:22:12.4121214Z Hosted Compute Agent
+2026-11-17T00:22:12.4121585Z Version: 20261103.629
+2026-11-17T00:22:12.4122003Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-17T00:22:12.4122438Z Build Date: 2026-11-03T17:26:59Z
+2026-11-17T00:22:12.4122833Z Worker ID: {57d4e20f-5bf9-40f4-bf3b-a81d8dd62ecc}
+2026-11-17T00:22:12.4123327Z Region: westus3
+2026-11-17T00:22:12.4123658Z Cloud: Azure
+2026-11-17T00:22:12.4124007Z ##[endgroup]
+2026-11-17T00:22:12.4124830Z ##[group]Operating System
+2026-11-17T00:22:12.4125192Z Ubuntu
+2026-11-17T00:22:12.4125607Z 26.04.1
+2026-11-17T00:22:12.4125918Z LTS
+2026-11-17T00:22:12.4126255Z ##[endgroup]
+2026-11-17T00:22:12.4126808Z ##[group]Runner Image
+2026-11-17T00:22:12.4127226Z Image: ubuntu-26.04
+2026-11-17T00:22:12.4127634Z Version: 20261111.196.1
+2026-11-17T00:22:12.4128457Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-17T00:22:12.4129366Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+2026-11-17T00:22:12.4129921Z ##[endgroup]
+2026-11-17T00:22:12.4130707Z ##[group]GITHUB_TOKEN Permissions
+2026-11-17T00:22:12.4131948Z Actions: read
+2026-11-17T00:22:12.4132343Z Contents: read
+2026-11-17T00:22:12.4132683Z Metadata: read
+2026-11-17T00:22:12.4133040Z ##[endgroup]
+2026-11-17T00:22:12.4134486Z Secret source: Actions
+2026-11-17T00:22:12.4135345Z Cache mode: write
+2026-11-17T00:22:12.4135818Z Prepare workflow directory
+2026-11-17T00:22:12.4341982Z Prepare all required actions
+2026-11-17T00:22:12.4372929Z Getting action download info
+2026-11-17T00:22:12.7542960Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-17T00:22:12.8524960Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-17T00:22:13.1118938Z Complete job name: observe
+2026-11-17T00:22:13.1632189Z ##[group]Run actions/checkout@v4
+2026-11-17T00:22:13.1632594Z with:
+2026-11-17T00:22:13.1632871Z   repository: ryansctt1994-sudo/introspection-twin
+2026-11-17T00:22:13.1635066Z   token: ***
+2026-11-17T00:22:13.1635306Z   ssh-strict: true
+2026-11-17T00:22:13.1635547Z   ssh-user: git
+2026-11-17T00:22:13.1635796Z   persist-credentials: true
+2026-11-17T00:22:13.1636062Z   clean: true
+2026-11-17T00:22:13.1636306Z   sparse-checkout-cone-mode: true
+2026-11-17T00:22:13.1636725Z   fetch-depth: 1
+2026-11-17T00:22:13.1636960Z   fetch-tags: false
+2026-11-17T00:22:13.1637203Z   show-progress: true
+2026-11-17T00:22:13.1637447Z   lfs: false
+2026-11-17T00:22:13.1637672Z   submodules: false
+2026-11-17T00:22:13.1637916Z   set-safe-directory: true
+2026-11-17T00:22:13.1638191Z   allow-unsafe-pr-checkout: false
+2026-11-17T00:22:13.1638544Z ##[endgroup]
+2026-11-17T00:22:13.3433809Z Syncing repository: ryansctt1994-sudo/introspection-twin
+2026-11-17T00:22:13.3435633Z ##[group]Getting Git version info
+2026-11-17T00:22:13.3436188Z Working directory is '/home/runner/work/introspection-twin/introspection-twin'
+2026-11-17T00:22:13.3436977Z [command]/usr/bin/git version
+2026-11-17T00:22:13.3457223Z git version 2.56.1
+2026-11-17T00:22:13.3476154Z ##[endgroup]
+2026-11-17T00:22:13.3483042Z Temporarily overriding HOME='/home/runner/work/_temp/9dab0173-62f2-4bbd-b7e5-364a00385ca8' before making global git config changes
+2026-11-17T00:22:13.3484216Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-17T00:22:13.3487059Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/introspection-twin/introspection-twin
+2026-11-17T00:22:13.3541989Z Deleting the contents of '/home/runner/work/introspection-twin/introspection-twin'
+2026-11-17T00:22:13.3547254Z ##[group]Initializing the repository
+2026-11-17T00:22:13.3552309Z [command]/usr/bin/git init /home/runner/work/introspection-twin/introspection-twin
+2026-11-17T00:22:13.3630686Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-17T00:22:13.3633251Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-17T00:22:13.3634189Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-17T00:22:13.3634960Z hint: call:
+2026-11-17T00:22:13.3635836Z hint:
+2026-11-17T00:22:13.3636401Z hint: 	git config --global init.defaultBranch <name>
+2026-11-17T00:22:13.3637204Z hint:
+2026-11-17T00:22:13.3637799Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-17T00:22:13.3638713Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-17T00:22:13.3639452Z hint:
+2026-11-17T00:22:13.3639907Z hint: 	git branch -m <name>
+2026-11-17T00:22:13.3640423Z hint:
+2026-11-17T00:22:13.3642223Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-17T00:22:13.3643416Z Initialized empty Git repository in /home/runner/work/introspection-twin/introspection-twin/.git/
+2026-11-17T00:22:13.3647926Z [command]/usr/bin/git remote add origin https://github.com/ryansctt1994-sudo/introspection-twin
+2026-11-17T00:22:13.3704127Z ##[endgroup]
+2026-11-17T00:22:13.3704845Z ##[group]Disabling automatic garbage collection
+2026-11-17T00:22:13.3705246Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-17T00:22:13.3737688Z ##[endgroup]
+2026-11-17T00:22:13.3738355Z ##[group]Setting up auth
+2026-11-17T00:22:13.3748407Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-17T00:22:13.3783057Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-17T00:22:13.4191792Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-17T00:22:13.4222886Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-17T00:22:13.4456726Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-17T00:22:13.4487614Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-17T00:22:13.4732749Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-17T00:22:13.5346877Z ##[endgroup]
+2026-11-17T00:22:13.5347569Z ##[group]Fetching the repository
+2026-11-17T00:22:13.5355090Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +74fb628459a98db44364b05d92539afd1efc8364:refs/remotes/origin/main
+2026-11-17T00:22:14.0179621Z From https://github.com/ryansctt1994-sudo/introspection-twin
+2026-11-17T00:22:14.0180248Z  * [new ref]         74fb628459a98db44364b05d92539afd1efc8364 -> origin/main
+2026-11-17T00:22:14.0182798Z ##[endgroup]
+2026-11-17T00:22:14.0183310Z ##[group]Determining the checkout info
+2026-11-17T00:22:14.0184749Z ##[endgroup]
+2026-11-17T00:22:14.0189316Z [command]/usr/bin/git sparse-checkout disable
+2026-11-17T00:22:14.0230561Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-17T00:22:14.0257434Z ##[group]Checking out the ref
+2026-11-17T00:22:14.0258163Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-17T00:22:14.0321445Z Switched to a new branch 'main'
+2026-11-17T00:22:14.0325366Z branch 'main' set up to track 'origin/main'.
+2026-11-17T00:22:14.0330190Z ##[endgroup]
+2026-11-17T00:22:14.0362879Z [command]/usr/bin/git log -1 --format=%H
+2026-11-17T00:22:14.0382337Z 74fb628459a98db44364b05d92539afd1efc8364
+2026-11-17T00:22:14.0557963Z ##[group]Run args=()
+2026-11-17T00:22:14.0558268Z [36;1margs=()[0m
+2026-11-17T00:22:14.0558638Z [36;1mif [[ -n "$EXPECTED_AT" ]]; then args+=(--expected-at "$EXPECTED_AT"); fi[0m
+2026-11-17T00:22:14.0559272Z [36;1mpython3 scripts/check_schedule_liveness.py "${args[@]}"[0m
+2026-11-17T00:22:14.0602340Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-17T00:22:14.0602694Z env:
+2026-11-17T00:22:14.0604792Z   GITHUB_TOKEN: ***
+2026-11-17T00:22:14.0605036Z   EXPECTED_AT: 
+2026-11-17T00:22:14.0605269Z ##[endgroup]
+2026-11-17T00:22:14.9370074Z {
+2026-11-17T00:22:14.9370652Z   "schema": "schedule-liveness-v1",
+2026-11-17T00:22:14.9371367Z   "repository": "ryansctt1994-sudo/introspection-twin",
+2026-11-17T00:22:14.9372068Z   "workflow_id": 374465172,
+2026-11-17T00:22:14.9372572Z   "expected_at": "2026-11-16T15:47:00Z",
+2026-11-17T00:22:14.9373191Z   "arrival_deadline": "2026-11-16T16:07:00Z",
+2026-11-17T00:22:14.9373961Z   "completion_deadline": "2026-11-16T16:27:00Z",
+2026-11-17T00:22:14.9374606Z   "observed_at": "2026-11-17T00:22:14Z",
+2026-11-17T00:22:14.9375207Z   "qualification": "NOT_ASSESSED",
+2026-11-17T00:22:14.9375948Z   "independence": "SAME_PRINCIPAL; no independent witness claimed",
+2026-11-17T00:22:14.9377303Z   "slot_attribution": "API creation-time window; verify trigger-record.json for exact cron",
+2026-11-17T00:22:14.9378327Z   "observation": {
+2026-11-17T00:22:14.9378806Z     "workflow": {
+2026-11-17T00:22:14.9379283Z       "id": 374465172,
+2026-11-17T00:22:14.9379839Z       "node_id": "W_kwDOU7F7ms4WUeKU",
+2026-11-17T00:22:14.9380452Z       "name": "ci",
+2026-11-17T00:22:14.9380937Z       "path": ".github/workflows/ci.yml",
+2026-11-17T00:22:14.9381546Z       "state": "active",
+2026-11-17T00:22:14.9382086Z       "created_at": "2026-10-04T08:30:38.000Z",
+2026-11-17T00:22:14.9382736Z       "updated_at": "2026-10-04T08:30:38.000Z",
+2026-11-17T00:22:14.9383921Z       "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172",
+2026-11-17T00:22:14.9385667Z       "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin/blob/main/.github/workflows/ci.yml",
+2026-11-17T00:22:14.9387487Z       "badge_url": "https://github.com/ryansctt1994-sudo/introspection-twin/workflows/ci/badge.svg"
+2026-11-17T00:22:14.9388660Z     },
+2026-11-17T00:22:14.9389214Z     "runs": [
+2026-11-17T00:22:14.9389769Z       {
+2026-11-17T00:22:14.9390349Z         "id": 43982815855,
+2026-11-17T00:22:14.9390975Z         "name": "ci",
+2026-11-17T00:22:14.9391631Z         "node_id": "WFR_kwLOU7F7ms8AAAAKPZSCbw",
+2026-11-17T00:22:14.9392494Z         "head_branch": "main",
+2026-11-17T00:22:14.9393473Z         "head_sha": "74fb628459a98db44364b05d92539afd1efc8364",
+2026-11-17T00:22:14.9394437Z         "path": ".github/workflows/ci.yml",
+2026-11-17T00:22:14.9395244Z         "display_title": "ci",
+2026-11-17T00:22:14.9395946Z         "run_number": 142,
+2026-11-17T00:22:14.9396681Z         "event": "schedule",
+2026-11-17T00:22:14.9397381Z         "status": "completed",
+2026-11-17T00:22:14.9398085Z         "conclusion": "success",
+2026-11-17T00:22:14.9398805Z         "workflow_id": 374465172,
+2026-11-17T00:22:14.9399529Z         "check_suite_id": 119067761388,
+2026-11-17T00:22:14.9400419Z         "check_suite_node_id": "CS_kwDOU7F7ms8AAAAbuP3a7A",
+2026-11-17T00:22:14.9401883Z         "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/runs/43982815855",
+2026-11-17T00:22:14.9403705Z         "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43982815855",
+2026-11-17T00:22:14.9404973Z         "pull_requests": [],
+2026-11-17T00:22:14.9405648Z         "created_at": "2026-11-16T23:51:15Z",
+2026-11-17T00:22:14.9406421Z         "updated_at": "2026-11-16T23:54:52Z",
+2026-11-17T00:22:14.9407203Z         "actor": {
+2026-11-17T00:22:14.9407777Z           "login": "ryansctt1994-sudo",
+2026-11-17T00:22:14.9408480Z           "id": 249354480,
+2026-11-17T00:22:14.9409082Z           "node_id": "U_kgDODtzY8A",
+2026-11-17T00:22:14.9410275Z           "avatar_url": "https://avatars.githubusercontent.com/u/249354480?v=4",
+2026-11-17T00:22:14.9411258Z           "gravatar_id": "",
+2026-11-17T00:22:14.9412005Z           "url": "https://api.github.com/users/ryansctt1994-sudo",
+2026-11-17T00:22:14.9413429Z           "html_url": "https://github.com/ryansctt1994-sudo",
+2026-11-17T00:22:14.9414533Z           "followers_url": "https://api.github.com/users/ryansctt1994-sudo/followers",
+2026-11-17T00:22:14.9415966Z           "following_url": "https://api.github.com/users/ryansctt1994-sudo/following{/other_user}",
+2026-11-17T00:22:14.9418101Z           "gists_url": "https://api.github.com/users/ryansctt1994-sudo/gists{/gist_id}",
+2026-11-17T00:22:14.9419843Z           "starred_url": "https://api.github.com/users/ryansctt1994-sudo/starred{/owner}{/repo}",
+2026-11-17T00:22:14.9421299Z           "subscriptions_url": "https://api.github.com/users/ryansctt1994-sudo/subscriptions",
+2026-11-17T00:22:14.9422662Z           "organizations_url": "https://api.github.com/users/ryansctt1994-sudo/orgs",
+2026-11-17T00:22:14.9423880Z           "repos_url": "https://api.github.com/users/ryansctt1994-sudo/repos",
+2026-11-17T00:22:14.9425100Z           "events_url": "https://api.github.com/users/ryansctt1994-sudo/events{/privacy}",
+2026-11-17T00:22:14.9426519Z           "received_events_url": "https://api.github.com/users/ryansctt1994-sudo/received_events",
+2026-11-17T00:22:14.9427767Z           "type": "User",
+2026-11-17T00:22:14.9428359Z           "user_view_type": "public",
+2026-11-17T00:22:14.9429024Z           "site_admin": false
+2026-11-17T00:22:14.9429613Z         },
+2026-11-17T00:22:14.9430093Z         "run_attempt": 1,
+2026-11-17T00:22:14.9430687Z         "referenced_workflows": [],
+2026-11-17T00:22:14.9431387Z         "run_started_at": "2026-11-16T23:51:15Z",
+2026-11-17T00:22:14.9432108Z         "triggering_actor": {
+2026-11-17T00:22:14.9432739Z           "login": "ryansctt1994-sudo",
+2026-11-17T00:22:14.9433396Z           "id": 249354480,
+2026-11-17T00:22:14.9434001Z           "node_id": "U_kgDODtzY8A",
+2026-11-17T00:22:14.9434899Z           "avatar_url": "https://avatars.githubusercontent.com/u/249354480?v=4",
+2026-11-17T00:22:14.9435838Z           "gravatar_id": "",
+2026-11-17T00:22:14.9436715Z           "url": "https://api.github.com/users/ryansctt1994-sudo",
+2026-11-17T00:22:14.9437656Z           "html_url": "https://github.com/ryansctt1994-sudo",
+2026-11-17T00:22:14.9438734Z           "followers_url": "https://api.github.com/users/ryansctt1994-sudo/followers",
+2026-11-17T00:22:14.9440116Z           "following_url": "https://api.github.com/users/ryansctt1994-sudo/following{/other_user}",
+2026-11-17T00:22:14.9441475Z           "gists_url": "https://api.github.com/users/ryansctt1994-sudo/gists{/gist_id}",
+2026-11-17T00:22:14.9442816Z           "starred_url": "https://api.github.com/users/ryansctt1994-sudo/starred{/owner}{/repo}",
+2026-11-17T00:22:14.9444271Z           "subscriptions_url": "https://api.github.com/users/ryansctt1994-sudo/subscriptions",
+2026-11-17T00:22:14.9445596Z           "organizations_url": "https://api.github.com/users/ryansctt1994-sudo/orgs",
+2026-11-17T00:22:14.9446872Z           "repos_url": "https://api.github.com/users/ryansctt1994-sudo/repos",
+2026-11-17T00:22:14.9448097Z           "events_url": "https://api.github.com/users/ryansctt1994-sudo/events{/privacy}",
+2026-11-17T00:22:14.9449479Z           "received_events_url": "https://api.github.com/users/ryansctt1994-sudo/received_events",
+2026-11-17T00:22:14.9450549Z           "type": "User",
+2026-11-17T00:22:14.9451107Z           "user_view_type": "public",
+2026-11-17T00:22:14.9451743Z           "site_admin": false
+2026-11-17T00:22:14.9452290Z         },
+2026-11-17T00:22:14.9453334Z         "jobs_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/runs/43982815855/jobs",
+2026-11-17T00:22:14.9455135Z         "logs_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/runs/43982815855/logs",
+2026-11-17T00:22:14.9457163Z         "check_suite_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/check-suites/119067761388",
+2026-11-17T00:22:14.9459109Z         "artifacts_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/runs/43982815855/artifacts",
+2026-11-17T00:22:14.9461148Z         "cancel_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/runs/43982815855/cancel",
+2026-11-17T00:22:14.9463053Z         "rerun_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/runs/43982815855/rerun",
+2026-11-17T00:22:14.9464358Z         "previous_attempt_url": null,
+2026-11-17T00:22:14.9466072Z         "workflow_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172",
+2026-11-17T00:22:14.9467646Z         "head_commit": {
+2026-11-17T00:22:14.9468242Z           "id": "74fb628459a98db44364b05d92539afd1efc8364",
+2026-11-17T00:22:14.9469064Z           "tree_id": "90a446a16066d34554ce0d4f3c38eefde8e69e7f",
+2026-11-17T00:22:14.9470043Z           "message": "Report schedule and execution timing separately (#16)",
+2026-11-17T00:22:14.9470940Z           "timestamp": "2026-11-13T14:38:19Z",
+2026-11-17T00:22:14.9471573Z           "author": {
+2026-11-17T00:22:14.9472091Z             "name": "ryansctt1994-sudo",
+2026-11-17T00:22:14.9472744Z             "email": "ryan.sctt1994@gmail.com"
+2026-11-17T00:22:14.9473377Z           },
+2026-11-17T00:22:14.9473820Z           "committer": {
+2026-11-17T00:22:14.9474340Z             "name": "GitHub",
+2026-11-17T00:22:14.9474912Z             "email": "noreply@github.com"
+2026-11-17T00:22:14.9475532Z           }
+2026-11-17T00:22:14.9475946Z         },
+2026-11-17T00:22:14.9476378Z         "repository": {
+2026-11-17T00:22:14.9476988Z           "id": 1404140442,
+2026-11-17T00:22:14.9477532Z           "node_id": "R_kgDOU7F7mg",
+2026-11-17T00:22:14.9478167Z           "name": "introspection-twin",
+2026-11-17T00:22:14.9533349Z           "full_name": "ryansctt1994-sudo/introspection-twin",
+2026-11-17T00:22:14.9534228Z           "private": false,
+2026-11-17T00:22:14.9534816Z           "owner": {
+2026-11-17T00:22:14.9535335Z             "login": "ryansctt1994-sudo",
+2026-11-17T00:22:14.9535968Z             "id": 249354480,
+2026-11-17T00:22:14.9536538Z             "node_id": "U_kgDODtzY8A",
+2026-11-17T00:22:14.9537544Z             "avatar_url": "https://avatars.githubusercontent.com/u/249354480?v=4",
+2026-11-17T00:22:14.9538463Z             "gravatar_id": "",
+2026-11-17T00:22:14.9539184Z             "url": "https://api.github.com/users/ryansctt1994-sudo",
+2026-11-17T00:22:14.9540101Z             "html_url": "https://github.com/ryansctt1994-sudo",
+2026-11-17T00:22:14.9541164Z             "followers_url": "https://api.github.com/users/ryansctt1994-sudo/followers",
+2026-11-17T00:22:14.9542527Z             "following_url": "https://api.github.com/users/ryansctt1994-sudo/following{/other_user}",
+2026-11-17T00:22:14.9543924Z             "gists_url": "https://api.github.com/users/ryansctt1994-sudo/gists{/gist_id}",
+2026-11-17T00:22:14.9545257Z             "starred_url": "https://api.github.com/users/ryansctt1994-sudo/starred{/owner}{/repo}",
+2026-11-17T00:22:14.9546756Z             "subscriptions_url": "https://api.github.com/users/ryansctt1994-sudo/subscriptions",
+2026-11-17T00:22:14.9548161Z             "organizations_url": "https://api.github.com/users/ryansctt1994-sudo/orgs",
+2026-11-17T00:22:14.9549342Z             "repos_url": "https://api.github.com/users/ryansctt1994-sudo/repos",
+2026-11-17T00:22:14.9550535Z             "events_url": "https://api.github.com/users/ryansctt1994-sudo/events{/privacy}",
+2026-11-17T00:22:14.9551916Z             "received_events_url": "https://api.github.com/users/ryansctt1994-sudo/received_events",
+2026-11-17T00:22:14.9552968Z             "type": "User",
+2026-11-17T00:22:14.9553528Z             "user_view_type": "public",
+2026-11-17T00:22:14.9554150Z             "site_admin": false
+2026-11-17T00:22:14.9554688Z           },
+2026-11-17T00:22:14.9555543Z           "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin",
+2026-11-17T00:22:14.9557355Z           "description": "MIT Lean 4 introspection receipt lattice and read-only authority gate. Evolution of the local v0 twin. No AGPL import.",
+2026-11-17T00:22:14.9558882Z           "fork": false,
+2026-11-17T00:22:14.9559678Z           "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin",
+2026-11-17T00:22:14.9560974Z           "forks_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/forks",
+2026-11-17T00:22:14.9562427Z           "keys_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/keys{/key_id}",
+2026-11-17T00:22:14.9564186Z           "collaborators_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/collaborators{/collaborator}",
+2026-11-17T00:22:14.9565860Z           "teams_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/teams",
+2026-11-17T00:22:14.9567312Z           "hooks_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/hooks",
+2026-11-17T00:22:14.9568921Z           "issue_events_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/issues/events{/number}",
+2026-11-17T00:22:14.9570540Z           "events_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/events",
+2026-11-17T00:22:14.9572073Z           "assignees_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/assignees{/user}",
+2026-11-17T00:22:14.9573701Z           "branches_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/branches{/branch}",
+2026-11-17T00:22:14.9575169Z           "tags_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/tags",
+2026-11-17T00:22:14.9576676Z           "blobs_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/blobs{/sha}",
+2026-11-17T00:22:14.9578231Z           "git_tags_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/tags{/sha}",
+2026-11-17T00:22:14.9579771Z           "git_refs_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/refs{/sha}",
+2026-11-17T00:22:14.9581307Z           "trees_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/trees{/sha}",
+2026-11-17T00:22:14.9582871Z           "statuses_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/statuses/{sha}",
+2026-11-17T00:22:14.9584407Z           "languages_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/languages",
+2026-11-17T00:22:14.9585914Z           "stargazers_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/stargazers",
+2026-11-17T00:22:14.9587626Z           "contributors_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/contributors",
+2026-11-17T00:22:14.9589217Z           "subscribers_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/subscribers",
+2026-11-17T00:22:14.9590805Z           "subscription_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/subscription",
+2026-11-17T00:22:14.9592364Z           "commits_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/commits{/sha}",
+2026-11-17T00:22:14.9593933Z           "git_commits_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/commits{/sha}",
+2026-11-17T00:22:14.9595534Z           "comments_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/comments{/number}",
+2026-11-17T00:22:14.9597372Z           "issue_comment_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/issues/comments{/number}",
+2026-11-17T00:22:14.9599021Z           "contents_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/contents/{+path}",
+2026-11-17T00:22:14.9600610Z           "compare_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/compare/{base}...{head}",
+2026-11-17T00:22:14.9602171Z           "merges_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/merges",
+2026-11-17T00:22:14.9603640Z           "archive_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/{archive_format}{/ref}",
+2026-11-17T00:22:14.9605270Z           "downloads_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/downloads",
+2026-11-17T00:22:14.9606781Z           "issues_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/issues{/number}",
+2026-11-17T00:22:14.9608227Z           "pulls_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/pulls{/number}",
+2026-11-17T00:22:14.9609738Z           "milestones_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/milestones{/number}",
+2026-11-17T00:22:14.9611593Z           "notifications_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/notifications{?since,all,participating}",
+2026-11-17T00:22:14.9613319Z           "labels_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/labels{/name}",
+2026-11-17T00:22:14.9614776Z           "releases_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/releases{/id}",
+2026-11-17T00:22:14.9616260Z           "deployments_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/deployments"
+2026-11-17T00:22:14.9617363Z         },
+2026-11-17T00:22:14.9617793Z         "head_repository": {
+2026-11-17T00:22:14.9618296Z           "id": 1404140442,
+2026-11-17T00:22:14.9618811Z           "node_id": "R_kgDOU7F7mg",
+2026-11-17T00:22:14.9619399Z           "name": "introspection-twin",
+2026-11-17T00:22:14.9620099Z           "full_name": "ryansctt1994-sudo/introspection-twin",
+2026-11-17T00:22:14.9620799Z           "private": false,
+2026-11-17T00:22:14.9621301Z           "owner": {
+2026-11-17T00:22:14.9621777Z             "login": "ryansctt1994-sudo",
+2026-11-17T00:22:14.9622360Z             "id": 249354480,
+2026-11-17T00:22:14.9622886Z             "node_id": "U_kgDODtzY8A",
+2026-11-17T00:22:14.9623702Z             "avatar_url": "https://avatars.githubusercontent.com/u/249354480?v=4",
+2026-11-17T00:22:14.9624542Z             "gravatar_id": "",
+2026-11-17T00:22:14.9625221Z             "url": "https://api.github.com/users/ryansctt1994-sudo",
+2026-11-17T00:22:14.9626065Z             "html_url": "https://github.com/ryansctt1994-sudo",
+2026-11-17T00:22:14.9627160Z             "followers_url": "https://api.github.com/users/ryansctt1994-sudo/followers",
+2026-11-17T00:22:14.9628376Z             "following_url": "https://api.github.com/users/ryansctt1994-sudo/following{/other_user}",
+2026-11-17T00:22:14.9629598Z             "gists_url": "https://api.github.com/users/ryansctt1994-sudo/gists{/gist_id}",
+2026-11-17T00:22:14.9630799Z             "starred_url": "https://api.github.com/users/ryansctt1994-sudo/starred{/owner}{/repo}",
+2026-11-17T00:22:14.9632053Z             "subscriptions_url": "https://api.github.com/users/ryansctt1994-sudo/subscriptions",
+2026-11-17T00:22:14.9633249Z             "organizations_url": "https://api.github.com/users/ryansctt1994-sudo/orgs",
+2026-11-17T00:22:14.9634311Z             "repos_url": "https://api.github.com/users/ryansctt1994-sudo/repos",
+2026-11-17T00:22:14.9635389Z             "events_url": "https://api.github.com/users/ryansctt1994-sudo/events{/privacy}",
+2026-11-17T00:22:14.9636740Z             "received_events_url": "https://api.github.com/users/ryansctt1994-sudo/received_events",
+2026-11-17T00:22:14.9637680Z             "type": "User",
+2026-11-17T00:22:14.9638195Z             "user_view_type": "public",
+2026-11-17T00:22:14.9638765Z             "site_admin": false
+2026-11-17T00:22:14.9639261Z           },
+2026-11-17T00:22:14.9639897Z           "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin",
+2026-11-17T00:22:14.9641399Z           "description": "MIT Lean 4 introspection receipt lattice and read-only authority gate. Evolution of the local v0 twin. No AGPL import.",
+2026-11-17T00:22:14.9642668Z           "fork": false,
+2026-11-17T00:22:14.9643500Z           "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin",
+2026-11-17T00:22:14.9644664Z           "forks_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/forks",
+2026-11-17T00:22:14.9646071Z           "keys_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/keys{/key_id}",
+2026-11-17T00:22:14.9647705Z           "collaborators_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/collaborators{/collaborator}",
+2026-11-17T00:22:14.9649210Z           "teams_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/teams",
+2026-11-17T00:22:14.9650455Z           "hooks_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/hooks",
+2026-11-17T00:22:14.9651884Z           "issue_events_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/issues/events{/number}",
+2026-11-17T00:22:14.9653322Z           "events_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/events",
+2026-11-17T00:22:14.9654697Z           "assignees_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/assignees{/user}",
+2026-11-17T00:22:14.9656164Z           "branches_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/branches{/branch}",
+2026-11-17T00:22:14.9657570Z           "tags_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/tags",
+2026-11-17T00:22:14.9658876Z           "blobs_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/blobs{/sha}",
+2026-11-17T00:22:14.9660283Z           "git_tags_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/tags{/sha}",
+2026-11-17T00:22:14.9661686Z           "git_refs_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/refs{/sha}",
+2026-11-17T00:22:14.9663082Z           "trees_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/trees{/sha}",
+2026-11-17T00:22:14.9664483Z           "statuses_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/statuses/{sha}",
+2026-11-17T00:22:14.9665882Z           "languages_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/languages",
+2026-11-17T00:22:14.9667403Z           "stargazers_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/stargazers",
+2026-11-17T00:22:14.9668816Z           "contributors_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/contributors",
+2026-11-17T00:22:14.9670228Z           "subscribers_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/subscribers",
+2026-11-17T00:22:14.9671637Z           "subscription_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/subscription",
+2026-11-17T00:22:14.9673032Z           "commits_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/commits{/sha}",
+2026-11-17T00:22:14.9674433Z           "git_commits_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/git/commits{/sha}",
+2026-11-17T00:22:14.9675867Z           "comments_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/comments{/number}",
+2026-11-17T00:22:14.9677424Z           "issue_comment_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/issues/comments{/number}",
+2026-11-17T00:22:14.9678923Z           "contents_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/contents/{+path}",
+2026-11-17T00:22:14.9680370Z           "compare_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/compare/{base}...{head}",
+2026-11-17T00:22:14.9681711Z           "merges_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/merges",
+2026-11-17T00:22:14.9683071Z           "archive_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/{archive_format}{/ref}",
+2026-11-17T00:22:14.9684569Z           "downloads_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/downloads",
+2026-11-17T00:22:14.9685911Z           "issues_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/issues{/number}",
+2026-11-17T00:22:14.9687318Z           "pulls_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/pulls{/number}",
+2026-11-17T00:22:14.9688801Z           "milestones_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/milestones{/number}",
+2026-11-17T00:22:14.9690462Z           "notifications_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/notifications{?since,all,participating}",
+2026-11-17T00:22:14.9692049Z           "labels_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/labels{/name}",
+2026-11-17T00:22:14.9693392Z           "releases_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/releases{/id}",
+2026-11-17T00:22:14.9694748Z           "deployments_url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/deployments"
+2026-11-17T00:22:14.9695701Z         }
+2026-11-17T00:22:14.9696088Z       }
+2026-11-17T00:22:14.9696463Z     ],
+2026-11-17T00:22:14.9696906Z     "complete": true,
+2026-11-17T00:22:14.9697350Z     "queries": [
+2026-11-17T00:22:14.9698179Z       "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172",
+2026-11-17T00:22:14.9700280Z       "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172/runs?event=schedule&branch=main&created=2026-11-16T15%3A47%3A00Z..2026-11-17T00%3A22%3A14Z&per_page=100&page=1"
+2026-11-17T00:22:14.9701945Z     ]
+2026-11-17T00:22:14.9702319Z   },
+2026-11-17T00:22:14.9702720Z   "workflow_state": "active",
+2026-11-17T00:22:14.9703213Z   "run": {
+2026-11-17T00:22:14.9703613Z     "id": 43982815855,
+2026-11-17T00:22:14.9704544Z     "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43982815855",
+2026-11-17T00:22:14.9705563Z     "head_sha": "74fb628459a98db44364b05d92539afd1efc8364",
+2026-11-17T00:22:14.9706216Z     "event": "schedule",
+2026-11-17T00:22:14.9706819Z     "run_attempt": 1,
+2026-11-17T00:22:14.9707294Z     "created_at": "2026-11-16T23:51:15Z",
+2026-11-17T00:22:14.9707848Z     "status": "completed",
+2026-11-17T00:22:14.9708340Z     "conclusion": "success"
+2026-11-17T00:22:14.9708805Z   },
+2026-11-17T00:22:14.9709210Z   "dispatch_lag_seconds": 29055.0,
+2026-11-17T00:22:14.9709773Z   "execution_duration_seconds": null,
+2026-11-17T00:22:14.9710396Z   "execution_duration_upper_bound_seconds": 217.0,
+2026-11-17T00:22:14.9711034Z   "queue_delay_seconds": 0.0,
+2026-11-17T00:22:14.9711537Z   "status": "LATE_RUN",
+2026-11-17T00:22:14.9711986Z   "exit_code": 1,
+2026-11-17T00:22:14.9712703Z   "policy_sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70"
+2026-11-17T00:22:14.9713535Z }
+2026-11-17T00:22:14.9722266Z ##[error]Process completed with exit code 1.
+2026-11-17T00:22:14.9777236Z ##[group]Run if [[ -s schedule-liveness.json ]]; then
+2026-11-17T00:22:14.9777982Z [36;1mif [[ -s schedule-liveness.json ]]; then[0m
+2026-11-17T00:22:14.9778707Z [36;1m  cat schedule-liveness.json >> "$GITHUB_STEP_SUMMARY"[0m
+2026-11-17T00:22:14.9779348Z [36;1melse[0m
+2026-11-17T00:22:14.9780019Z [36;1m  echo "INCONCLUSIVE: no liveness receipt produced" >> "$GITHUB_STEP_SUMMARY"[0m
+2026-11-17T00:22:14.9780823Z [36;1m  exit 1[0m
+2026-11-17T00:22:14.9781224Z [36;1mfi[0m
+2026-11-17T00:22:14.9822029Z shell: /usr/bin/bash -e {0}
+2026-11-17T00:22:14.9822661Z ##[endgroup]
+2026-11-17T00:22:15.0089080Z ##[group]Run actions/upload-artifact@v4
+2026-11-17T00:22:15.0089636Z with:
+2026-11-17T00:22:15.0090045Z   name: schedule-liveness
+2026-11-17T00:22:15.0090537Z   path: schedule-liveness.json
+2026-11-17T00:22:15.0091051Z   if-no-files-found: error
+2026-11-17T00:22:15.0091533Z   compression-level: 6
+2026-11-17T00:22:15.0091977Z   overwrite: false
+2026-11-17T00:22:15.0092419Z   include-hidden-files: false
+2026-11-17T00:22:15.0092903Z ##[endgroup]
+2026-11-17T00:22:15.1134622Z (node:2179) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-17T00:22:15.1135989Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-17T00:22:15.1164218Z With the provided path, there will be 1 file uploaded
+2026-11-17T00:22:15.1169607Z Artifact name is valid!
+2026-11-17T00:22:15.1170448Z Root directory input is valid!
+2026-11-17T00:22:15.4642825Z Beginning upload of artifact content to blob storage
+2026-11-17T00:22:15.4773132Z (node:2179) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-17T00:22:15.7076440Z Uploaded bytes 2507
+2026-11-17T00:22:15.7725330Z Finished uploading artifact content to blob storage!
+2026-11-17T00:22:15.7725954Z SHA256 digest of uploaded artifact zip is 9c1ebd91a403a514b1ab8b086b66520c30e621015648b1cdcffea63f8495613f
+2026-11-17T00:22:15.7727012Z Finalizing artifact upload
+2026-11-17T00:22:16.1662263Z Artifact schedule-liveness.zip successfully finalized. Artifact ID 14286410273
+2026-11-17T00:22:16.1670128Z Artifact schedule-liveness has been successfully uploaded! Final size is 2507 bytes. Artifact ID is 14286410273
+2026-11-17T00:22:16.1672504Z Artifact download URL: https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/43987051140/artifacts/14286410273
+2026-11-17T00:22:16.2120123Z Post job cleanup.
+2026-11-17T00:22:16.2928476Z [command]/usr/bin/git version
+2026-11-17T00:22:16.2937494Z git version 2.56.1
+2026-11-17T00:22:16.2960135Z Temporarily overriding HOME='/home/runner/work/_temp/86f8f6e0-5065-4a08-b94c-81b91480f53a' before making global git config changes
+2026-11-17T00:22:16.2960903Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-17T00:22:16.2963472Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/introspection-twin/introspection-twin
+2026-11-17T00:22:16.3003937Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-17T00:22:16.3032007Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-17T00:22:16.3285442Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-17T00:22:16.3307953Z http.https://github.com/.extraheader
+2026-11-17T00:22:16.3323438Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-17T00:22:16.3350122Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-17T00:22:16.3584111Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-17T00:22:16.3613401Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-17T00:22:16.3951355Z Cleaning up orphan processes
+2026-11-17T00:22:16.4213671Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
