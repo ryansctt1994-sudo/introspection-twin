@@ -1,0 +1,368 @@
+﻿2026-11-18T22:43:02.3269654Z Current runner version: '2.338.2'
+2026-11-18T22:43:02.3295733Z ##[group]Runner Image Provisioner
+2026-11-18T22:43:02.3296733Z Hosted Compute Agent
+2026-11-18T22:43:02.3297429Z Version: 20261103.629
+2026-11-18T22:43:02.3298097Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-18T22:43:02.3298843Z Build Date: 2026-11-03T17:26:59Z
+2026-11-18T22:43:02.3299930Z Worker ID: {4f8f6830-b3eb-4090-bcfd-8e136f1239da}
+2026-11-18T22:43:02.3300644Z Region: southcentralus
+2026-11-18T22:43:02.3301249Z Cloud: Azure
+2026-11-18T22:43:02.3301801Z ##[endgroup]
+2026-11-18T22:43:02.3303535Z ##[group]Operating System
+2026-11-18T22:43:02.3304241Z Ubuntu
+2026-11-18T22:43:02.3304823Z 26.04.1
+2026-11-18T22:43:02.3305406Z LTS
+2026-11-18T22:43:02.3305988Z ##[endgroup]
+2026-11-18T22:43:02.3306531Z ##[group]Runner Image
+2026-11-18T22:43:02.3307171Z Image: ubuntu-26.04
+2026-11-18T22:43:02.3307765Z Version: 20261111.196.1
+2026-11-18T22:43:02.3309121Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-18T22:43:02.3311316Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+2026-11-18T22:43:02.3312353Z ##[endgroup]
+2026-11-18T22:43:02.3313868Z ##[group]GITHUB_TOKEN Permissions
+2026-11-18T22:43:02.3316292Z Contents: read
+2026-11-18T22:43:02.3316856Z Metadata: read
+2026-11-18T22:43:02.3317989Z Packages: read
+2026-11-18T22:43:02.3318655Z ##[endgroup]
+2026-11-18T22:43:02.3321332Z Secret source: Actions
+2026-11-18T22:43:02.3322330Z Cache mode: write
+2026-11-18T22:43:02.3323011Z Prepare workflow directory
+2026-11-18T22:43:02.3715914Z Prepare all required actions
+2026-11-18T22:43:02.3768477Z Getting action download info
+2026-11-18T22:43:02.6542428Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-18T22:43:02.7961187Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-18T22:43:02.9857656Z Complete job name: build-and-replay
+2026-11-18T22:43:03.0707845Z ##[group]Run actions/checkout@v4
+2026-11-18T22:43:03.0708757Z with:
+2026-11-18T22:43:03.0709626Z   ref: 74fb628459a98db44364b05d92539afd1efc8364
+2026-11-18T22:43:03.0710406Z   repository: ryansctt1994-sudo/introspection-twin
+2026-11-18T22:43:03.0714667Z   token: ***
+2026-11-18T22:43:03.0715140Z   ssh-strict: true
+2026-11-18T22:43:03.0715692Z   ssh-user: git
+2026-11-18T22:43:03.0716232Z   persist-credentials: true
+2026-11-18T22:43:03.0716792Z   clean: true
+2026-11-18T22:43:03.0717311Z   sparse-checkout-cone-mode: true
+2026-11-18T22:43:03.0717890Z   fetch-depth: 1
+2026-11-18T22:43:03.0718413Z   fetch-tags: false
+2026-11-18T22:43:03.0718983Z   show-progress: true
+2026-11-18T22:43:03.0719845Z   lfs: false
+2026-11-18T22:43:03.0720389Z   submodules: false
+2026-11-18T22:43:03.0721011Z   set-safe-directory: true
+2026-11-18T22:43:03.0721896Z   allow-unsafe-pr-checkout: false
+2026-11-18T22:43:03.0723069Z ##[endgroup]
+2026-11-18T22:43:03.3586017Z Syncing repository: ryansctt1994-sudo/introspection-twin
+2026-11-18T22:43:03.3590021Z ##[group]Getting Git version info
+2026-11-18T22:43:03.3591538Z Working directory is '/home/runner/work/introspection-twin/introspection-twin'
+2026-11-18T22:43:03.3621789Z [command]/usr/bin/git version
+2026-11-18T22:43:03.3668304Z git version 2.56.1
+2026-11-18T22:43:03.3687641Z ##[endgroup]
+2026-11-18T22:43:03.3712221Z Temporarily overriding HOME='/home/runner/work/_temp/2dee0b72-1e19-4e18-b092-e1552bb6454a' before making global git config changes
+2026-11-18T22:43:03.3713932Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T22:43:03.3729870Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/introspection-twin/introspection-twin
+2026-11-18T22:43:03.3814964Z Deleting the contents of '/home/runner/work/introspection-twin/introspection-twin'
+2026-11-18T22:43:03.3818938Z ##[group]Initializing the repository
+2026-11-18T22:43:03.3824233Z [command]/usr/bin/git init /home/runner/work/introspection-twin/introspection-twin
+2026-11-18T22:43:03.3955359Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-18T22:43:03.3956806Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-18T22:43:03.3958046Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-18T22:43:03.3960045Z hint: call:
+2026-11-18T22:43:03.3960895Z hint:
+2026-11-18T22:43:03.3961915Z hint: 	git config --global init.defaultBranch <name>
+2026-11-18T22:43:03.3963050Z hint:
+2026-11-18T22:43:03.3964015Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-18T22:43:03.3965360Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-18T22:43:03.3966519Z hint:
+2026-11-18T22:43:03.3967300Z hint: 	git branch -m <name>
+2026-11-18T22:43:03.3968127Z hint:
+2026-11-18T22:43:03.3972386Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-18T22:43:03.3981522Z Initialized empty Git repository in /home/runner/work/introspection-twin/introspection-twin/.git/
+2026-11-18T22:43:03.3985058Z [command]/usr/bin/git remote add origin https://github.com/ryansctt1994-sudo/introspection-twin
+2026-11-18T22:43:03.4046516Z ##[endgroup]
+2026-11-18T22:43:03.4048339Z ##[group]Disabling automatic garbage collection
+2026-11-18T22:43:03.4050956Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-18T22:43:03.4091677Z ##[endgroup]
+2026-11-18T22:43:03.4092927Z ##[group]Setting up auth
+2026-11-18T22:43:03.4099442Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T22:43:03.4130098Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T22:43:03.4579060Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T22:43:03.4633644Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T22:43:03.4860621Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T22:43:03.4891776Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T22:43:03.5139697Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-18T22:43:03.5183897Z ##[endgroup]
+2026-11-18T22:43:03.5185378Z ##[group]Fetching the repository
+2026-11-18T22:43:03.5195151Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 74fb628459a98db44364b05d92539afd1efc8364
+2026-11-18T22:43:03.9059558Z From https://github.com/ryansctt1994-sudo/introspection-twin
+2026-11-18T22:43:03.9061135Z  * branch            74fb628459a98db44364b05d92539afd1efc8364 -> FETCH_HEAD
+2026-11-18T22:43:03.9063824Z ##[endgroup]
+2026-11-18T22:43:03.9065179Z ##[group]Determining the checkout info
+2026-11-18T22:43:03.9066468Z ##[endgroup]
+2026-11-18T22:43:03.9071112Z [command]/usr/bin/git sparse-checkout disable
+2026-11-18T22:43:03.9130323Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-18T22:43:03.9320635Z ##[group]Checking out the ref
+2026-11-18T22:43:03.9325302Z [command]/usr/bin/git checkout --progress --force 74fb628459a98db44364b05d92539afd1efc8364
+2026-11-18T22:43:03.9405638Z Note: switching to '74fb628459a98db44364b05d92539afd1efc8364'.
+2026-11-18T22:43:03.9406570Z 
+2026-11-18T22:43:03.9407178Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-18T22:43:03.9408591Z changes and commit them, and you can discard any commits you make in this
+2026-11-18T22:43:03.9409916Z state without impacting any branches by switching back to a branch.
+2026-11-18T22:43:03.9410534Z 
+2026-11-18T22:43:03.9411416Z If you want to create a new branch to retain commits you create, you may
+2026-11-18T22:43:03.9412556Z do so (now or later) by using -c with the switch command. Example:
+2026-11-18T22:43:03.9413132Z 
+2026-11-18T22:43:03.9413403Z   git switch -c <new-branch-name>
+2026-11-18T22:43:03.9413876Z 
+2026-11-18T22:43:03.9414235Z Or undo this operation with:
+2026-11-18T22:43:03.9414871Z 
+2026-11-18T22:43:03.9415204Z   git switch -
+2026-11-18T22:43:03.9415551Z 
+2026-11-18T22:43:03.9416123Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-18T22:43:03.9416701Z 
+2026-11-18T22:43:03.9417214Z HEAD is now at 74fb628 Report schedule and execution timing separately (#16)
+2026-11-18T22:43:03.9419924Z ##[endgroup]
+2026-11-18T22:43:03.9459545Z [command]/usr/bin/git log -1 --format=%H
+2026-11-18T22:43:03.9481493Z 74fb628459a98db44364b05d92539afd1efc8364
+2026-11-18T22:43:03.9713440Z ##[group]Run python3 - <<'PY'
+2026-11-18T22:43:03.9714251Z [36;1mpython3 - <<'PY'[0m
+2026-11-18T22:43:03.9715047Z [36;1mimport json, os, pathlib[0m
+2026-11-18T22:43:03.9715860Z [36;1mrecord = {key: os.environ.get(key, "") for key in ([0m
+2026-11-18T22:43:03.9716890Z [36;1m    "TRIGGER_EVENT", "TRIGGER_CRON", "GITHUB_RUN_ID", "GITHUB_RUN_ATTEMPT",[0m
+2026-11-18T22:43:03.9717780Z [36;1m    "GITHUB_SHA", "GITHUB_REF")}[0m
+2026-11-18T22:43:03.9718497Z [36;1mtext = json.dumps(record, indent=2) + "\n"[0m
+2026-11-18T22:43:03.9719635Z [36;1mpathlib.Path("trigger-record.json").write_text(text)[0m
+2026-11-18T22:43:03.9720458Z [36;1mprint(text, end="")[0m
+2026-11-18T22:43:03.9721071Z [36;1mPY[0m
+2026-11-18T22:43:03.9757507Z shell: /usr/bin/bash -e {0}
+2026-11-18T22:43:03.9758328Z env:
+2026-11-18T22:43:03.9758912Z   TRIGGER_EVENT: schedule
+2026-11-18T22:43:03.9759761Z   TRIGGER_CRON: 47 15 * * *
+2026-11-18T22:43:03.9760376Z ##[endgroup]
+2026-11-18T22:43:04.0067019Z {
+2026-11-18T22:43:04.0068295Z   "TRIGGER_EVENT": "schedule",
+2026-11-18T22:43:04.0069195Z   "TRIGGER_CRON": "47 15 * * *",
+2026-11-18T22:43:04.0070712Z   "GITHUB_RUN_ID": "44414197649",
+2026-11-18T22:43:04.0071437Z   "GITHUB_RUN_ATTEMPT": "1",
+2026-11-18T22:43:04.0072199Z   "GITHUB_SHA": "74fb628459a98db44364b05d92539afd1efc8364",
+2026-11-18T22:43:04.0072966Z   "GITHUB_REF": "refs/heads/main"
+2026-11-18T22:43:04.0074132Z }
+2026-11-18T22:43:04.0165556Z ##[group]Run python3 scripts/test_schedule_liveness.py
+2026-11-18T22:43:04.0166399Z [36;1mpython3 scripts/test_schedule_liveness.py[0m
+2026-11-18T22:43:04.0201011Z shell: /usr/bin/bash -e {0}
+2026-11-18T22:43:04.0201750Z ##[endgroup]
+2026-11-18T22:43:04.1595703Z ...................
+2026-11-18T22:43:04.1596826Z ----------------------------------------------------------------------
+2026-11-18T22:43:04.1597685Z Ran 19 tests in 0.004s
+2026-11-18T22:43:04.1598032Z 
+2026-11-18T22:43:04.1598281Z OK
+2026-11-18T22:43:04.1812900Z ##[group]Run bash scripts/test_ci_replay_gate.sh
+2026-11-18T22:43:04.1813750Z [36;1mbash scripts/test_ci_replay_gate.sh[0m
+2026-11-18T22:43:04.1850452Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T22:43:04.1851408Z ##[endgroup]
+2026-11-18T22:43:04.2327064Z POSITIVE CONTROL ACCEPTED: pass
+2026-11-18T22:43:04.2493620Z NEGATIVE CONTROL REJECTED: empty (FAILED)
+2026-11-18T22:43:04.2690013Z NEGATIVE CONTROL REJECTED: error (FAILED)
+2026-11-18T22:43:04.2850290Z NEGATIVE CONTROL REJECTED: fake_pass (FAILED)
+2026-11-18T22:43:04.3020778Z NEGATIVE CONTROL REJECTED: trailing_line (FAILED)
+2026-11-18T22:43:04.3175578Z NEGATIVE CONTROL REJECTED: substr (FAILED)
+2026-11-18T22:43:04.3335252Z NEGATIVE CONTROL REJECTED: empty (FAILED)
+2026-11-18T22:43:04.3481217Z NEGATIVE CONTROL REJECTED: missing_script (NOT_RUN)
+2026-11-18T22:43:04.3931489Z REPLAY GATE CONTROLS: PASS
+2026-11-18T22:43:04.4048210Z ##[group]Run bash scripts/test_checker_logging.sh
+2026-11-18T22:43:04.4050424Z [36;1mbash scripts/test_checker_logging.sh[0m
+2026-11-18T22:43:04.4086049Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T22:43:04.4088066Z ##[endgroup]
+2026-11-18T22:43:04.7572060Z CHECKER DIAGNOSTIC CONTROLS: PASS (mock checker; not kernel evidence)
+2026-11-18T22:43:04.7675905Z ##[group]Run python3 scripts/test_earr_lineage.py
+2026-11-18T22:43:04.7677689Z [36;1mpython3 scripts/test_earr_lineage.py[0m
+2026-11-18T22:43:04.7715253Z shell: /usr/bin/bash -e {0}
+2026-11-18T22:43:04.7716478Z ##[endgroup]
+2026-11-18T22:43:04.8254442Z ...........
+2026-11-18T22:43:04.8256011Z ----------------------------------------------------------------------
+2026-11-18T22:43:04.8257751Z Ran 11 tests in 0.000s
+2026-11-18T22:43:04.8258418Z 
+2026-11-18T22:43:04.8258813Z OK
+2026-11-18T22:43:04.8430260Z ##[group]Run curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+2026-11-18T22:43:04.8433225Z [36;1mcurl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \[0m
+2026-11-18T22:43:04.8435385Z [36;1m  | sh -s -- -y --default-toolchain none[0m
+2026-11-18T22:43:04.8437301Z [36;1mecho "$HOME/.elan/bin" >> "$GITHUB_PATH"[0m
+2026-11-18T22:43:04.8471884Z shell: /usr/bin/bash -e {0}
+2026-11-18T22:43:04.8473068Z ##[endgroup]
+2026-11-18T22:43:04.9343190Z info: downloading installer
+2026-11-18T22:43:05.4531822Z ##[group]Run set -euo pipefail
+2026-11-18T22:43:05.4532341Z [36;1mset -euo pipefail[0m
+2026-11-18T22:43:05.4532788Z [36;1mlake build 2>&1 | tee build.log[0m
+2026-11-18T22:43:05.4533427Z [36;1m! grep -q '^warning' build.log || { echo "warnings are failures"; exit 1; }[0m
+2026-11-18T22:43:05.4575454Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T22:43:05.4576032Z ##[endgroup]
+2026-11-18T22:43:06.0120576Z info: downloading https://releases.lean-lang.org/lean4/v4.22.0/lean-4.22.0-linux.tar.zst
+2026-11-18T22:43:11.4444686Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.22.0
+2026-11-18T22:43:15.8451757Z ✔ [2/15] Built IntrospectionTwin.Twin.Observation
+2026-11-18T22:43:16.2448155Z ✔ [3/15] Built IntrospectionTwin.Witness
+2026-11-18T22:43:16.2449629Z ✔ [4/15] Built IntrospectionTwin.Twin.Bounds
+2026-11-18T22:43:17.1491637Z ✔ [5/15] Built IntrospectionTwin.Receipt
+2026-11-18T22:43:17.7464445Z ✔ [6/15] Built IntrospectionTwin.Gate
+2026-11-18T22:43:18.2471130Z ✔ [7/15] Built IntrospectionTwin.Admit
+2026-11-18T22:43:18.6473886Z ✔ [8/15] Built IntrospectionTwin.Twin.State
+2026-11-18T22:43:19.0491575Z ✔ [9/15] Built IntrospectionTwin
+2026-11-18T22:43:19.4487880Z ✔ [11/15] Built Test.FreshReplayRoot
+2026-11-18T22:43:19.5501660Z ✔ [12/15] Built Test.Harness
+2026-11-18T22:43:20.0494644Z ✔ [13/15] Built Test.NativeDecide
+2026-11-18T22:43:20.2497744Z ✔ [14/15] Built Test.Hostile
+2026-11-18T22:43:20.2499653Z Build completed successfully.
+2026-11-18T22:43:20.3335141Z ##[group]Run tag="$(sed 's/.*://' lean-toolchain)"          # leanprover/lean4:v4.22.0 -> v4.22.0
+2026-11-18T22:43:20.3335895Z [36;1mtag="$(sed 's/.*://' lean-toolchain)"          # leanprover/lean4:v4.22.0 -> v4.22.0[0m
+2026-11-18T22:43:20.3336574Z [36;1mgit clone --depth 1 --branch "$tag" https://github.com/leanprover/lean4checker /tmp/lean4checker[0m
+2026-11-18T22:43:20.3337224Z [36;1m(cd /tmp/lean4checker && lake build lean4checker)[0m
+2026-11-18T22:43:20.3370392Z shell: /usr/bin/bash -e {0}
+2026-11-18T22:43:20.3370931Z ##[endgroup]
+2026-11-18T22:43:20.4225151Z Cloning into '/tmp/lean4checker'...
+2026-11-18T22:43:21.5210873Z Note: switching to '0531c5e62c6bbc21af6c8b4adc2a16d201bf8b65'.
+2026-11-18T22:43:21.5212439Z 
+2026-11-18T22:43:21.5213326Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-18T22:43:21.5214524Z changes and commit them, and you can discard any commits you make in this
+2026-11-18T22:43:21.5215846Z state without impacting any branches by switching back to a branch.
+2026-11-18T22:43:21.5216481Z 
+2026-11-18T22:43:21.5217065Z If you want to create a new branch to retain commits you create, you may
+2026-11-18T22:43:21.5218141Z do so (now or later) by using -c with the switch command. Example:
+2026-11-18T22:43:21.5218862Z 
+2026-11-18T22:43:21.5219244Z   git switch -c <new-branch-name>
+2026-11-18T22:43:21.5220008Z 
+2026-11-18T22:43:21.5220899Z Or undo this operation with:
+2026-11-18T22:43:21.5221421Z 
+2026-11-18T22:43:21.5221908Z   git switch -
+2026-11-18T22:43:21.5222260Z 
+2026-11-18T22:43:21.5222787Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-18T22:43:21.5223437Z 
+2026-11-18T22:43:21.9254943Z ✔ [2/8] Built Lean4Checker.Lean
+2026-11-18T22:43:22.0255076Z ✔ [3/8] Built Lean4Checker.Lean:c.o
+2026-11-18T22:43:22.4282027Z ✔ [4/8] Built Lean4Checker.Replay
+2026-11-18T22:43:22.9266712Z ✔ [5/8] Built Main
+2026-11-18T22:43:23.3274558Z ✔ [6/8] Built Lean4Checker.Replay:c.o
+2026-11-18T22:43:23.6277202Z ✔ [7/8] Built Main:c.o
+2026-11-18T22:43:23.9285538Z ✔ [8/8] Built lean4checker:exe
+2026-11-18T22:43:23.9286258Z Build completed successfully.
+2026-11-18T22:43:23.9364618Z ##[group]Run bash scripts/ci_replay_gate.sh scripts/check_kernel_replay.sh replay.log replay-record.txt
+2026-11-18T22:43:23.9365426Z [36;1mbash scripts/ci_replay_gate.sh scripts/check_kernel_replay.sh replay.log replay-record.txt[0m
+2026-11-18T22:43:23.9397987Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T22:43:23.9398478Z env:
+2026-11-18T22:43:23.9398879Z   LEAN4CHECKER: /tmp/lean4checker/.lake/build/bin/lean4checker
+2026-11-18T22:43:23.9399466Z   FRESH: 1
+2026-11-18T22:43:23.9399794Z ##[endgroup]
+2026-11-18T22:43:24.6546961Z Honest modules (must replay):
+2026-11-18T22:43:24.6547763Z   checker stdout+stderr: IntrospectionTwin.Admit
+2026-11-18T22:43:25.1083825Z 
+2026-11-18T22:43:25.1085378Z   replay ok      IntrospectionTwin.Admit
+2026-11-18T22:43:25.1086164Z   checker stdout+stderr: IntrospectionTwin.Gate
+2026-11-18T22:43:25.5972248Z 
+2026-11-18T22:43:25.5973211Z   replay ok      IntrospectionTwin.Gate
+2026-11-18T22:43:25.5974253Z   checker stdout+stderr: IntrospectionTwin.Receipt
+2026-11-18T22:43:26.0650251Z 
+2026-11-18T22:43:26.0651149Z   replay ok      IntrospectionTwin.Receipt
+2026-11-18T22:43:26.0653050Z   checker stdout+stderr: IntrospectionTwin.Twin.Bounds
+2026-11-18T22:43:26.3555822Z 
+2026-11-18T22:43:26.3556683Z   replay ok      IntrospectionTwin.Twin.Bounds
+2026-11-18T22:43:26.6437284Z   checker stdout+stderr: IntrospectionTwin.Twin.Observation
+2026-11-18T22:43:26.6437815Z 
+2026-11-18T22:43:26.6438069Z   replay ok      IntrospectionTwin.Twin.Observation
+2026-11-18T22:43:26.6438700Z   checker stdout+stderr: IntrospectionTwin.Twin.State
+2026-11-18T22:43:27.0108900Z 
+2026-11-18T22:43:27.0109815Z   replay ok      IntrospectionTwin.Twin.State
+2026-11-18T22:43:27.0110655Z   checker stdout+stderr: IntrospectionTwin.Witness
+2026-11-18T22:43:27.4617195Z 
+2026-11-18T22:43:27.4617978Z   replay ok      IntrospectionTwin.Witness
+2026-11-18T22:43:27.4618899Z   checker stdout+stderr: Test.FreshReplayRoot
+2026-11-18T22:43:27.9191571Z 
+2026-11-18T22:43:27.9192562Z   replay ok      Test.FreshReplayRoot
+2026-11-18T22:43:27.9194009Z   checker stdout+stderr: Test.Harness
+2026-11-18T22:43:28.3881712Z 
+2026-11-18T22:43:28.3882811Z   replay ok      Test.Harness
+2026-11-18T22:43:28.3883415Z   checker stdout+stderr: Test.Hostile
+2026-11-18T22:43:28.8372835Z 
+2026-11-18T22:43:28.8373611Z   replay ok      Test.Hostile
+2026-11-18T22:43:28.8374346Z   checker stdout+stderr: IntrospectionTwin
+2026-11-18T22:43:30.8230038Z 
+2026-11-18T22:43:30.8230886Z   replay ok      IntrospectionTwin
+2026-11-18T22:43:30.8231493Z Poisoned modules (must be refused):
+2026-11-18T22:43:30.8232229Z   checker stdout+stderr: Bypass.KernelBypass
+2026-11-18T22:43:31.2710189Z lean4checker found a problem in Bypass.KernelBypass
+2026-11-18T22:43:31.2711183Z uncaught exception: (kernel) declaration type mismatch, 'bypass_false' has type
+2026-11-18T22:43:31.2711830Z   True
+2026-11-18T22:43:31.2712213Z but it is expected to have type
+2026-11-18T22:43:31.2712792Z   False
+2026-11-18T22:43:31.2713298Z   refused ok     Bypass.KernelBypass  ('bypass_false' has type)
+2026-11-18T22:43:31.2713945Z   checker stdout+stderr: Test.NativeDecide
+2026-11-18T22:43:31.7075842Z lean4checker found a problem in Test.NativeDecide
+2026-11-18T22:43:31.7076657Z uncaught exception: (kernel) (interpreter) unknown declaration 'hostile_lie._nativeDecide_1_1'
+2026-11-18T22:43:31.7077588Z   refused ok     Test.NativeDecide  (_nativeDecide_)
+2026-11-18T22:43:31.7079994Z Fresh checker stdout+stderr: Test.FreshReplayRoot
+2026-11-18T22:47:49.8138693Z fresh_checker_exit_status: 0
+2026-11-18T22:47:49.8272923Z fresh_log_tee_exit_status: 0
+2026-11-18T22:47:49.8273490Z   fresh replay ok IntrospectionTwin (+ all dependencies)
+2026-11-18T22:47:49.8273916Z KERNEL REPLAY: PASS
+2026-11-18T22:47:49.8274218Z REPLAY GATE: PASS
+2026-11-18T22:47:49.8323110Z ##[group]Run if [[ -s replay-record.txt ]]; then
+2026-11-18T22:47:49.8323618Z [36;1mif [[ -s replay-record.txt ]]; then[0m
+2026-11-18T22:47:49.8324345Z [36;1m  cat replay-record.txt[0m
+2026-11-18T22:47:49.8324766Z [36;1melse[0m
+2026-11-18T22:47:49.8325178Z [36;1m  # Absence denotes no recorded gate execution, not an inferred exit code.[0m
+2026-11-18T22:47:49.8325797Z [36;1m  echo "REPLAY RECORD: NOT_RUN (no observed receipt was written)"[0m
+2026-11-18T22:47:49.8326255Z [36;1mfi[0m
+2026-11-18T22:47:49.8358204Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T22:47:49.8358644Z ##[endgroup]
+2026-11-18T22:47:49.8433177Z schema: ci-replay-observed-v1
+2026-11-18T22:47:49.8433940Z commit: 74fb628459a98db44364b05d92539afd1efc8364
+2026-11-18T22:47:49.8434999Z tree: 90a446a16066d34554ce0d4f3c38eefde8e69e7f
+2026-11-18T22:47:49.8436081Z toolchain: leanprover/lean4:v4.22.0
+2026-11-18T22:47:49.8436794Z fresh_requested: true
+2026-11-18T22:47:49.8437373Z fresh_verified: true
+2026-11-18T22:47:49.8437746Z replay_exit_status: 0
+2026-11-18T22:47:49.8438162Z tee_exit_status: 0
+2026-11-18T22:47:49.8438516Z observed_status: PASS
+2026-11-18T22:47:49.8438896Z last_replay_log_line: KERNEL REPLAY: PASS
+2026-11-18T22:47:49.8500654Z ##[group]Run actions/upload-artifact@v4
+2026-11-18T22:47:49.8501052Z with:
+2026-11-18T22:47:49.8501363Z   name: replay-record
+2026-11-18T22:47:49.8501886Z   path: trigger-record.json
+replay-record.txt
+replay.log
+fresh-replay-output.txt
+build.log
+
+2026-11-18T22:47:49.8502533Z   if-no-files-found: warn
+2026-11-18T22:47:49.8502876Z   compression-level: 6
+2026-11-18T22:47:49.8503214Z   overwrite: false
+2026-11-18T22:47:49.8503539Z   include-hidden-files: false
+2026-11-18T22:47:49.8503906Z ##[endgroup]
+2026-11-18T22:47:50.0216611Z (node:3151) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T22:47:50.0217437Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T22:47:50.0283659Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-18T22:47:50.0297320Z The least common ancestor is /home/runner/work/introspection-twin/introspection-twin. This will be the root directory of the artifact
+2026-11-18T22:47:50.0298658Z With the provided path, there will be 5 files uploaded
+2026-11-18T22:47:50.0300244Z Artifact name is valid!
+2026-11-18T22:47:50.0300841Z Root directory input is valid!
+2026-11-18T22:47:50.3766104Z Beginning upload of artifact content to blob storage
+2026-11-18T22:47:50.4084124Z (node:3151) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-18T22:47:50.5674832Z Uploaded bytes 1787
+2026-11-18T22:47:50.6103663Z Finished uploading artifact content to blob storage!
+2026-11-18T22:47:50.6104366Z SHA256 digest of uploaded artifact zip is b4aacb2dcdb2e86e19573d1458989bb4eaf7789736bb32e90ae7ac8725341e77
+2026-11-18T22:47:50.6106974Z Finalizing artifact upload
+2026-11-18T22:47:50.9731997Z Artifact replay-record.zip successfully finalized. Artifact ID 14478272867
+2026-11-18T22:47:50.9733236Z Artifact replay-record has been successfully uploaded! Final size is 1787 bytes. Artifact ID is 14478272867
+2026-11-18T22:47:50.9739049Z Artifact download URL: https://github.com/ryansctt1994-sudo/introspection-twin/actions/runs/44414197649/artifacts/14478272867
+2026-11-18T22:47:50.9980614Z Post job cleanup.
+2026-11-18T22:47:51.0832792Z [command]/usr/bin/git version
+2026-11-18T22:47:51.0874944Z git version 2.56.1
+2026-11-18T22:47:51.0943301Z Temporarily overriding HOME='/home/runner/work/_temp/1a3af7f7-d07a-47bd-b05e-18e4f36143df' before making global git config changes
+2026-11-18T22:47:51.0944682Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T22:47:51.0946025Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/introspection-twin/introspection-twin
+2026-11-18T22:47:51.0985406Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T22:47:51.1020769Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T22:47:51.1297922Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T22:47:51.1337112Z http.https://github.com/.extraheader
+2026-11-18T22:47:51.1348327Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-18T22:47:51.1388558Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T22:47:51.1647189Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T22:47:51.1690187Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T22:47:51.2101283Z Cleaning up orphan processes
+2026-11-18T22:47:51.2483535Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
