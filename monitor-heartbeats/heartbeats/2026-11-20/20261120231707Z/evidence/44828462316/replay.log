@@ -1,0 +1,51 @@
+Honest modules (must replay):
+  checker stdout+stderr: IntrospectionTwin.Admit
+
+  replay ok      IntrospectionTwin.Admit
+  checker stdout+stderr: IntrospectionTwin.Gate
+
+  replay ok      IntrospectionTwin.Gate
+  checker stdout+stderr: IntrospectionTwin.Receipt
+
+  replay ok      IntrospectionTwin.Receipt
+  checker stdout+stderr: IntrospectionTwin.Twin.Bounds
+
+  replay ok      IntrospectionTwin.Twin.Bounds
+  checker stdout+stderr: IntrospectionTwin.Twin.Observation
+
+  replay ok      IntrospectionTwin.Twin.Observation
+  checker stdout+stderr: IntrospectionTwin.Twin.State
+
+  replay ok      IntrospectionTwin.Twin.State
+  checker stdout+stderr: IntrospectionTwin.Witness
+
+  replay ok      IntrospectionTwin.Witness
+  checker stdout+stderr: Test.FreshReplayRoot
+
+  replay ok      Test.FreshReplayRoot
+  checker stdout+stderr: Test.Harness
+
+  replay ok      Test.Harness
+  checker stdout+stderr: Test.Hostile
+
+  replay ok      Test.Hostile
+  checker stdout+stderr: IntrospectionTwin
+
+  replay ok      IntrospectionTwin
+Poisoned modules (must be refused):
+  checker stdout+stderr: Bypass.KernelBypass
+lean4checker found a problem in Bypass.KernelBypass
+uncaught exception: (kernel) declaration type mismatch, 'bypass_false' has type
+  True
+but it is expected to have type
+  False
+  refused ok     Bypass.KernelBypass  ('bypass_false' has type)
+  checker stdout+stderr: Test.NativeDecide
+lean4checker found a problem in Test.NativeDecide
+uncaught exception: (kernel) (interpreter) unknown declaration 'hostile_lie._nativeDecide_1_1'
+  refused ok     Test.NativeDecide  (_nativeDecide_)
+Fresh checker stdout+stderr: Test.FreshReplayRoot
+fresh_checker_exit_status: 0
+fresh_log_tee_exit_status: 0
+  fresh replay ok IntrospectionTwin (+ all dependencies)
+KERNEL REPLAY: PASS
