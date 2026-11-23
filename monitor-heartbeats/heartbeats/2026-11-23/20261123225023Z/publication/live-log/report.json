@@ -1,0 +1,40 @@
+{
+  "status": "VERIFIED_LIVE_CHECKPOINT_CONNECTION",
+  "reason_codes": [],
+  "checkpoint_sha256": "222c7a9e8e0533e37e161e6236e41f42bc5dc1050569d0fdcf572c7a1398723b",
+  "entry_url": "https://rekor.sigstore.dev/api/v1/log/entries/108e9186e8c5677a31ab9bf609527c26ce78d2746490f6a255940ee9dbda6fbe8bf605b213ee5df5",
+  "bundled_tree_size": 3937386735,
+  "bundled_root": "b343a2b9dc0c64b9471e7dc28c67b00e2f2e8397a8850bfa91fa803bac693d08",
+  "live_tree_size": 3937387656,
+  "live_root": "bcd1840fad2f346213792206880c889c94469207a876df17fc2c148378042e62",
+  "tree_id": "1193050959916656506",
+  "signed_live_checkpoint_verified": true,
+  "consistency_verified": true,
+  "proof_response_rootHash": "7fa83be006e38c2b98f4a8be0e803140f3f1641899ea067ceef09ed90e7de6e8",
+  "proof_root_policy": "Recompute both roots; compare signed checkpoints. Unsigned response rootHash is not an acceptance input.",
+  "schema": "rekor-live-checkpoint-audit/1",
+  "observations": [
+    {
+      "url": "https://rekor.sigstore.dev/api/v1/log/publicKey",
+      "http_status": 200,
+      "observed_at_utc": "2026-11-23T22:52:35.500505+00:00"
+    },
+    {
+      "url": "https://rekor.sigstore.dev/api/v1/log?treeID=1193050959916656506",
+      "http_status": 200,
+      "observed_at_utc": "2026-11-23T22:52:36.760418+00:00"
+    },
+    {
+      "url": "https://rekor.sigstore.dev/api/v1/log/proof?firstSize=3937386735&lastSize=3937387656&treeID=1193050959916656506",
+      "http_status": 200,
+      "observed_at_utc": "2026-11-23T22:52:36.839490+00:00"
+    }
+  ],
+  "observed_at_utc": "2026-11-23T22:52:36.839794+00:00",
+  "independent_observer": false,
+  "route": "Direct Rekor HTTPS API, same principal",
+  "execution_or_compilation_proved": false,
+  "silicon_E3_1": "NOT_READY",
+  "full_TUF_chain_verified": false,
+  "production_authority_earned": false
+}
