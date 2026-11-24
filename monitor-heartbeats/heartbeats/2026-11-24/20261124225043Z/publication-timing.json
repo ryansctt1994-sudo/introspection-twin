@@ -1,0 +1,16 @@
+{
+  "schema": "replay-monitor-publication-timing/1",
+  "execution_id": "20261124225043Z",
+  "intended_fire_time": null,
+  "actual_arrival_time": "2026-11-24T22:50:43Z",
+  "publication_integrated_at": "2026-11-24T22:53:04+00:00",
+  "publication_deadline_misses": [
+    {
+      "date": "2026-11-24",
+      "deadline": "2026-11-24T17:17:00Z",
+      "later_publication_does_not_erase_miss": true
+    }
+  ],
+  "original_invocation_slot_attribution": "UNKNOWN",
+  "recorded_at": "2026-11-24T22:53:05.324361+00:00"
+}
