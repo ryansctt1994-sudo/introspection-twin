@@ -1,0 +1,36 @@
+{
+  "schema": "schedule-liveness-v1",
+  "repository": "ryansctt1994-sudo/introspection-twin",
+  "workflow_id": 374465172,
+  "expected_at": "2026-11-26T15:47:00Z",
+  "arrival_deadline": "2026-11-26T16:07:00Z",
+  "completion_deadline": "2026-11-26T16:27:00Z",
+  "observed_at": "2026-11-26T22:33:42Z",
+  "qualification": "NOT_ASSESSED",
+  "independence": "SAME_PRINCIPAL; no independent witness claimed",
+  "slot_attribution": "API creation-time window; verify trigger-record.json for exact cron",
+  "observation": {
+    "workflow": {
+      "id": 374465172,
+      "node_id": "W_kwDOU7F7ms4WUeKU",
+      "name": "ci",
+      "path": ".github/workflows/ci.yml",
+      "state": "active",
+      "created_at": "2026-10-04T03:30:38.000-05:00",
+      "updated_at": "2026-10-04T03:30:38.000-05:00",
+      "url": "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172",
+      "html_url": "https://github.com/ryansctt1994-sudo/introspection-twin/blob/main/.github/workflows/ci.yml",
+      "badge_url": "https://github.com/ryansctt1994-sudo/introspection-twin/workflows/ci/badge.svg"
+    },
+    "runs": [],
+    "complete": true,
+    "queries": [
+      "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172",
+      "https://api.github.com/repos/ryansctt1994-sudo/introspection-twin/actions/workflows/374465172/runs?event=schedule&branch=main&created=2026-11-26T15%3A47%3A00Z..2026-11-26T22%3A33%3A42Z&per_page=100&page=1"
+    ]
+  },
+  "workflow_state": "active",
+  "status": "MISSED_SCHEDULE",
+  "exit_code": 1,
+  "policy_sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70"
+}

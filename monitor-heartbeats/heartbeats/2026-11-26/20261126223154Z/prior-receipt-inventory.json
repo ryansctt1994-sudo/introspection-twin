@@ -1,0 +1,154 @@
+[
+  {
+    "path": "slots/2026-11-04/20261104T224214Z.json",
+    "sha256": "60ddf1a51aa4aa91a3bf1025e21ef884668a533f99329a3e757e4816da8da248"
+  },
+  {
+    "path": "slots/2026-11-04/20261105T232643Z.json",
+    "sha256": "a6055123c49c3274242a9e7fd21679367919ca35cb054ffe4dcd7a004d145f52"
+  },
+  {
+    "path": "slots/2026-11-05/20261105T232643Z.json",
+    "sha256": "b5970b4ed30d21b9b341d61194fd39326552d3829072405d1f7280f818d198ad"
+  },
+  {
+    "path": "slots/2026-11-05/20261106T232224Z.json",
+    "sha256": "e161f003dd9d85b9e818c17e9743ba465f3e1f93266fb2be33058ce913b96a44"
+  },
+  {
+    "path": "slots/2026-11-06/20261106T232224Z.json",
+    "sha256": "5831594224a3344d28c52114dcbfe3ff7376fa0d66bd631e28ac8117ea11ea5d"
+  },
+  {
+    "path": "slots/2026-11-06/20261111T231747Z.json",
+    "sha256": "aad50fe1df7f57076629f9088f26d62b60817dfa8a7e8cd63eefca053a99d65c"
+  },
+  {
+    "path": "slots/2026-11-07/20261111T231747Z.json",
+    "sha256": "c9878230afc3a74ac0e986479b2ba384360a2da391884e64d45b09ebfa139e9f"
+  },
+  {
+    "path": "slots/2026-11-08/20261111T231747Z.json",
+    "sha256": "ed72b204a93f20d22734693cf4d6e0aea1e8b2bb73fcc114668c36c154e380b3"
+  },
+  {
+    "path": "slots/2026-11-09/20261111T231747Z.json",
+    "sha256": "2f65c1f3c204edef42b55f4e528973377895d13ca8790a8c2ff76460bab6751a"
+  },
+  {
+    "path": "slots/2026-11-10/20261111T231747Z.json",
+    "sha256": "037883ba100e751bb91ce33e32e38ff8265c6a6f8d935b7bb4566f928e385410"
+  },
+  {
+    "path": "slots/2026-11-11/20261111T231747Z.json",
+    "sha256": "1b5f62e983c1b0bd72528a3a6ef3d29a632d13480aca9c2ca5f4ce5383dc5fcb"
+  },
+  {
+    "path": "slots/2026-11-11/20261113T225307Z.json",
+    "sha256": "3fcccf7d52b7d1391d97251ceb5bc8f089470c49bf43040198a3ed51cfb9d0d3"
+  },
+  {
+    "path": "slots/2026-11-12/20261113T225307Z.json",
+    "sha256": "000ab9210faf3b754632eb86186cdda7568b973cfc96a9d8d22ad25f63584da4"
+  },
+  {
+    "path": "slots/2026-11-13/20261113T225307Z.json",
+    "sha256": "11d95672ebb5ab63cb76d19c9777f64310d962ce63847d848e1b084715dfa37f"
+  },
+  {
+    "path": "slots/2026-11-13/20261114223246Z.json",
+    "sha256": "12004ad534dc6350e9d4fafc0e8556df1004b3711f78fa170d1b7636c4921aa1"
+  },
+  {
+    "path": "slots/2026-11-13/20261114T033614Z.json",
+    "sha256": "185a1b361cd1c11ced28a3d1e9a907587fa3b5f1c9d831ff24bef31b92e67530"
+  },
+  {
+    "path": "slots/2026-11-14/20261114223246Z.json",
+    "sha256": "1765e9f2fc806bee561affbc3a6ee7e486bbe389a3d87f02a29a17e5383bfcb6"
+  },
+  {
+    "path": "slots/2026-11-14/20261115231227Z.json",
+    "sha256": "0452ae19b9bf5e4c2f284ebde466795c6e31f76265c3a015c2c1cafe1a5955c4"
+  },
+  {
+    "path": "slots/2026-11-15/20261115231227Z.json",
+    "sha256": "35ea37421830b97d02dedef99104308c6a1366c92dc8de770aaed9124f2d3b5b"
+  },
+  {
+    "path": "slots/2026-11-15/20261117230825Z.json",
+    "sha256": "274fb4b5050aaca6aca163c1f2e5655357921de7b2b15349b811c5804dd6ded2"
+  },
+  {
+    "path": "slots/2026-11-16/20261117230825Z.json",
+    "sha256": "822665a2e9e8a8a16ee82b22303c91044408ea21485dbda3c2df05f80e88a61b"
+  },
+  {
+    "path": "slots/2026-11-17/20261117230825Z.json",
+    "sha256": "e1473b26352c55f03e865179e43cbf2f018b02792f7a14585b8b77bf787ebf59"
+  },
+  {
+    "path": "slots/2026-11-17/20261118222719Z.json",
+    "sha256": "bd4514d7cd7b4ad505511b27db1499a726275b9f71eb0cc6bcebf75d400015c6"
+  },
+  {
+    "path": "slots/2026-11-18/20261118222719Z.json",
+    "sha256": "28537eaf65b9b7bb9321b3cb9b817ed7adb77b9e9e10d74ceb9ab11930782b26"
+  },
+  {
+    "path": "slots/2026-11-18/20261119225745Z.json",
+    "sha256": "2cc8ccc2827523fe140aa7059a676564743e37021b97fa18c8b18b41edad5a1c"
+  },
+  {
+    "path": "slots/2026-11-19/20261119225745Z.json",
+    "sha256": "6c3c2b112e3a8b4d2076871e60a0d3e184386325a858c12365391958fa71aadc"
+  },
+  {
+    "path": "slots/2026-11-19/20261120231707Z.json",
+    "sha256": "f68bd749bacf130a91701dc610ba7ea8f592a1ab3ad129174cd3c53afe843b55"
+  },
+  {
+    "path": "slots/2026-11-20/20261120231707Z.json",
+    "sha256": "5dca3d676c7f7e8fe653d8c31b949acb760ead0db2375770042ae335c2d16bea"
+  },
+  {
+    "path": "slots/2026-11-20/20261121223816Z.json",
+    "sha256": "ac886829b847789ff210a48de459b84a2f6782cb1034bc9b87332bf8f284ba1f"
+  },
+  {
+    "path": "slots/2026-11-21/20261121223816Z.json",
+    "sha256": "bbc0db1bf75e886fbf0071412c6046da659679b95e4efa59ecfcf14785e0978a"
+  },
+  {
+    "path": "slots/2026-11-21/20261122230509Z.json",
+    "sha256": "c0a59f97303bd41ef5a854d91b8c0336e54762e1c2e3bd377bfaa54fb0f9f444"
+  },
+  {
+    "path": "slots/2026-11-22/20261122230509Z.json",
+    "sha256": "78d7a423718578bb3287d2de108b877ad3ad913b30c96382330018be99f19559"
+  },
+  {
+    "path": "slots/2026-11-22/20261123225023Z.json",
+    "sha256": "f3cc4e252cb094bc23f3b0dc67c325ab089d3da92c5ff16334e48fdd43e67a5c"
+  },
+  {
+    "path": "slots/2026-11-23/20261123225023Z.json",
+    "sha256": "b817d211d2395423310a4e09fce47e521197c0ef0c09394fe4ae83bbb2ceed04"
+  },
+  {
+    "path": "slots/2026-11-23/20261124225043Z.json",
+    "sha256": "2e09e3f28d915981f27bceea2c24d551dc49c0ccf4708a2c54e84ae0eee926b9"
+  },
+  {
+    "path": "slots/2026-11-24/20261124225043Z.json",
+    "sha256": "df0db4b0e6e35b80e22d4bef558cdb8f92a79d5223e2f0480fe2c59890d099f8"
+  },
+  {
+    "path": "slots/2026-11-24/20261125231154Z.json",
+    "sha256": "9ae1c0386114a54ee3ef187891cb6f612c5b8aa7edbf98373b8ddb5a983ae0cb"
+  },
+  {
+    "path": "slots/2026-11-25/20261125231154Z.json",
+    "sha256": "0b18db8e161c3733f6768ac664d24fa7569eadb8f2c48fee6f9d9e78ae66147b"
+  }
+]
