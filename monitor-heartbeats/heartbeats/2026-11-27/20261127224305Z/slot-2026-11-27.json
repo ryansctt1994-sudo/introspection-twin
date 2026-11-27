@@ -1,0 +1,42 @@
+{
+  "schema": "replay-schedule-slot-receipt/1",
+  "audit_id": "20261127224305Z",
+  "slot_date": "2026-11-27",
+  "observed_at": "2026-11-27T22:44:53.759097+00:00",
+  "audit_kind": "NEW_ELAPSED_SLOT",
+  "repository": "ryansctt1994-sudo/introspection-twin",
+  "source_commit": "74fb628459a98db44364b05d92539afd1efc8364",
+  "source_tree": "90a446a16066d34554ce0d4f3c38eefde8e69e7f",
+  "policy_sha256": "b6f945f91fba991517b948fdbc29d7e8feed590e6d558f788ae690f165680f70",
+  "checker_sha256": "99a7c3c4e2613b4db1309e73b6179d83bb506bad9c4b9494dd5e8cf00941029b",
+  "pr12_merged": true,
+  "intended_occurrence_attribution": "UNKNOWN: creation-time window and repeating daily cron do not prove original intended date",
+  "independence": "SAME_PRINCIPAL",
+  "guaranteed_availability": false,
+  "liveness_compliant": false,
+  "replay": {
+    "status": "MISSED_SCHEDULE",
+    "run_id": null,
+    "expected_at": "2026-11-27T15:47:00Z",
+    "arrival_deadline": "2026-11-27T16:07:00Z",
+    "completion_deadline": "2026-11-27T16:27:00Z",
+    "workflow_state": "active",
+    "observed_at": "2026-11-27T22:44:52Z",
+    "late_success_does_not_erase": true
+  },
+  "watchdog": {
+    "status": "MISSED_SCHEDULE",
+    "run_id": null,
+    "expected_at": "2026-11-27T16:29:00Z",
+    "arrival_deadline": "2026-11-27T16:49:00Z",
+    "completion_deadline": "2026-11-27T16:54:00Z",
+    "workflow_state": "active",
+    "observed_at": "2026-11-27T22:44:53Z",
+    "late_success_does_not_erase": true
+  },
+  "qualification_missing": true,
+  "fresh_replay_qualification": {
+    "status": "MISSING_FOR_THIS_SLOT",
+    "reason": "No new schedule-event run observed"
+  }
+}
